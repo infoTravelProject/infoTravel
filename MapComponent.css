@@ -1,0 +1,13 @@
+body {
+    background-color: #0f1010;
+}
+
+.country {
+    fill: #4D4D4D; /* Default fill color for countries */
+    transition: fill 0.05s ease; /* Smooth transition */
+}
+
+.country:hover {
+    fill: #4A90E2; /* Highlight color when hovered */
+    cursor: pointer; /* Show pointer cursor */
+}
