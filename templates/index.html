@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>News App</title>
+</head>
+<body>
+    <h1>Welcome to the News App</h1>
+    <h2>Latest News:</h2>
+    {% if news %}
+        <ul>
+            {% for article in news %}
+                <li>
+                    <h3>{{ article.title }}</h3>
+                    <p><strong>Summary:</strong> {{ article.summary }}</p>
+                    <p><strong>Category:</strong> {{ article.category }}</p>
+                    <p><strong>Source:</strong> {{ article.source }}</p>
+                    <p><strong>Date:</strong> {{ article.date }}</p>
+                    <p><strong>Country:</strong> {{ article.country }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No news found.</p>
+    {% endif %}
+</body>
+</html>
