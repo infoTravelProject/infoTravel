@@ -1,4 +1,0 @@
-celery
-flask
-requests
-transformers
