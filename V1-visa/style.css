@@ -78,29 +78,30 @@ select {
 
 /* Kolory kart */
 .visa-free {
-    background-color: #66bb6a;
+    background-color: #388e3c;
 }
 
 .visa-required {
-    background-color: #ef5350;
+    background-color: #d32f2f;
 }
 
 .visa-on-arrival {
-    background-color: #ffb74d;
+    background-color: #f57c00;
 }
 
 .evisa {
-    background-color: #64b5f6;
+    background-color: #1976d2;
 }
 
 .freedom-of-movement {
-    background-color: #4dd0e1;
+    background-color: #00838f;
 }
 
 .admission-refused {
-    background-color: #9e9e9e;
+    background-color: #616161;
 }
 
 .other-requirements {
-    background-color: #ab47bc;
+    background-color: #7b1fa2;
 }
+
