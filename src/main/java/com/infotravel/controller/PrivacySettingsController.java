@@ -1,8 +1,9 @@
 package com.infotravel.controller;
 
-import com.infotravel.entity.SecuritySettings;
-import com.infotravel.exception.SecuritySettingsNotFoundException;
-import com.infotravel.service.SecurityService;
+import com.infotravel.entity.PrivacySettings;
+import com.infotravel.exception.PrivacySettingsNotFoundException;
+import com.infotravel.service.PrivacyService;
+import com.sun.jdi.PrimitiveValue;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,46 +12,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/security-settings")
-public class SecuritySettingsController {
-    private final SecurityService securitySettingsService;
+@RequestMapping("/api/privacy-settings")
+public class PrivacySettingsController {
+    private final PrivacyService privacyService;
 
-    public SecuritySettingsController(SecurityService securitySettings) {
-        this.securitySettingsService = securitySettings;
+    public PrivacySettingsController(PrivacyService privacyService) {
+        this.privacyService = privacyService;
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Object> getSecuritySettings(@PathVariable int userId) {
+    public ResponseEntity<Object> getPrivacySettings(@PathVariable int userId){
         try {
-            SecuritySettings settings = securitySettingsService.getSecuritySettingsByUserId(userId);
+            PrivacySettings settings = privacyService.getPrivacySettingsByUserId(userId);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Security settings retrieved successfully",
+                    "message", "Privacy settings retrieved successfully",
                     "data", settings
             ));
-        }catch(SecuritySettingsNotFoundException ex){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(Map.of(
-                            "timestamp", System.currentTimeMillis(),
-                            "status", HttpStatus.NOT_FOUND.value(),
-                            "message", ex.getMessage()
-                    ));
-        }
-    }
-    @PostMapping("/{userId}")
-    public ResponseEntity<Object> createSecuritySettings(
-            @PathVariable int userId,
-            @RequestBody @Valid SecuritySettings securitySettings) {
-        try {
-            SecuritySettings createdSecuritySettings = securitySettingsService.createSecuritySettings(userId, securitySettings);
-            return ResponseEntity.ok(Map.of(
-                    "timestamp", System.currentTimeMillis(),
-                    "status", HttpStatus.OK.value(),
-                    "message", "Security settings created successfully",
-                    "data", createdSecuritySettings
-            ));
-        }catch(SecuritySettingsNotFoundException ex){
+        } catch (PrivacySettingsNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -60,39 +40,44 @@ public class SecuritySettingsController {
         }
     }
 
+    @PostMapping("/{userId}")
+    public ResponseEntity<Object> createPrivacySettings(
+            @PathVariable int userId,
+            @RequestBody @Valid PrivacySettings privacySettings
+            ){
+        try{
+            PrivacySettings createdPrivacySettings = privacyService.createPrivacySettings(userId, privacySettings);
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "Privacy settings created successfully",
+                    "data", createdPrivacySettings
+            ));
+        }catch(PrivacySettingsNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
+        }
+
+    }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<Object> updateSecuritySettings(
+    public ResponseEntity<Object> updatedPrivacySettings(
             @PathVariable int userId,
-            @RequestBody @Valid SecuritySettings updatedSettings) {
-        try{
-            SecuritySettings updated = securitySettingsService.updateSecuritySettings(userId, updatedSettings);
+            @RequestBody @Valid PrivacySettings updatedSettings){
+
+        try {
+            PrivacySettings updated = privacyService.updatePrivacySettings(userId, updatedSettings);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Security settings updated successfully",
+                    "message", "Privacy settings updated successfully",
                     "data", updated
             ));
-        }catch(SecuritySettingsNotFoundException ex){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(Map.of(
-                            "timestamp", System.currentTimeMillis(),
-                            "status", HttpStatus.NOT_FOUND.value(),
-                            "message", ex.getMessage()
-                    ));
-        }
-    }
-    @DeleteMapping("/{userId}")
-    public ResponseEntity<Object> deleteSecuritySettings(@PathVariable Integer userId) {
-        try {
-            securitySettingsService.deleteSecuritySettings(userId);
-            return ResponseEntity.status(HttpStatus.OK)
-                    .body(Map.of(
-                            "timestamp", System.currentTimeMillis(),
-                            "status", HttpStatus.OK.value(),
-                            "message", "Security settings for user with ID " + userId + " have been deleted"
-                    ));
-        } catch (SecuritySettingsNotFoundException ex) {
+        } catch (PrivacySettingsNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -102,4 +87,24 @@ public class SecuritySettingsController {
         }
     }
 
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<Object> deletePrivacySettings(@PathVariable Integer userId){
+        try{
+            privacyService.deletePrivacySettings(userId);
+            return ResponseEntity.status(HttpStatus.OK)
+                        .body(Map.of(
+                        "timestamp", System.currentTimeMillis(),
+                        "status", HttpStatus.OK.value(),
+                        "message", "Privacy settings for user with ID " + userId + " have been deleted"
+            ));
+        }catch(PrivacySettingsNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
+
+        }
+    }
 }

@@ -6,6 +6,7 @@ import com.infotravel.exception.SecuritySettingsNotFoundException;
 import com.infotravel.exception.UserNotFoundException;
 import com.infotravel.repository.SecuritySettingsRepository;
 import com.infotravel.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -45,6 +46,7 @@ public class SecurityService {
 
         return securitySettingsRepository.save(existingSettings);
     }
+    @Transactional
     public void deleteSecuritySettings(int userId){
         if(securitySettingsRepository.existsByUser_UserId(userId)){
             securitySettingsRepository.deleteByUser_UserId(userId);
