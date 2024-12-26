@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="bg-black bg-opacity-95 text-white border-t-2 border-it-blue">
 
-            <div className="pt-20 pb-10 p-4 flex flex-wrap justify-between ml-40">
+            <div className="pt-20 pb-10 p-4 flex flex-wrap justify-between ml-8 2xl:ml-40">
 
                 <div className="flex flex-col space-y-6 ml-6 md:ml-16 justify-center">
                     <div>
@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full md:w-auto mt-8 md:mt-6 px-6 md:px-16 space-x-8 justify-center mr-32 text-sm md:text-base">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full md:w-auto mt-8 md:mt-6 px-6 md:px-16 space-x-8 justify-center mr-4 2xl:mr-32 text-sm md:text-base">
 
                     <ul className="space-y-2">
                         <li className="space-y-2">
