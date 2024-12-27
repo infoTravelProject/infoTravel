@@ -1,0 +1,77 @@
+{
+  "The United Kingdom": {
+    "risk": {
+      "riskLevel": "High safety risk",
+      "description": "Exercise a high degree of caution",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "1 day ago"
+    },
+    "flag": "/uk_flag.png",
+    "background": "/london_test2.jpg",
+    "summary": "The United Kingdom (UK) is a captivating destination that combines rich history, vibrant culture, and breathtaking landscapes. Comprised of England, Scotland, Wales, and Northern Ireland, the UK offers something for every traveler. Explore iconic landmarks like London's Big Ben, Edinburgh Castle, and Stonehenge, or lose yourself in the charming countryside of the Lake District and Scottish Highlands. Renowned for its world-class museums, traditional pubs, and diverse culinary scene, the UK seamlessly blends modernity with timeless traditions. Whether you're interested in historic cities, coastal escapes, or cultural festivals, the UK promises an unforgettable experience.",
+    "recommendation": {
+      "title": "Skye",
+      "description": "The Isle of Skye, a gem of Scotland’s Inner Hebrides, offers breathtaking landscapes that feel otherworldly. With its rugged mountains, dramatic coastlines, and iconic landmarks like the Quiraing, Fairy Pools, and Old Man of Storr, Skye is a haven for nature lovers and adventurers. Rich in history and folklore, it also boasts charming villages, medieval castles, and authentic Scottish hospitality. Whether you're hiking, stargazing, or savoring fresh local seafood, the Isle of Skye promises an unforgettable escape into wild beauty and tranquility.",
+      "image": "/skye_test.jpg",
+      "flag": "/scotland_flag.png",
+      "buttonText": "Open in trip planner"
+    },
+    "visa": {
+      "description": "You don’t need a visa to enter",
+      "link": "#"
+    },
+    "borderControl": {
+      "description": "Low-restrictive border control",
+      "details": "Border control should be quick and free of significant difficulties"
+    },
+    "memberships": {
+      "EU": false,
+      "Schengen": false,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Get updated with new safety remarks"
+      },
+      {
+        "label": "Economy",
+        "description": "Get economic news"
+      },
+      {
+        "label": "Politics",
+        "description": "Get political news and updates"
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Entry requirements, visa updates, or prohibited items"
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "In recent months, concerns about safety on UK streets have risen due to a combination of violent incidents, riots, and protests, many of which are tied to tensions surrounding immigration. A significant flashpoint was the stabbing attack in Southport in July 2024, which led to a wave of riots targeting immigrants, asylum seekers, mosques, etc. The unrest spread across major cities, including Manchester, London, and Bristol, causing extensive damage, including property damage, injuries to police officers, and arrests of over 1,300 individuals. While the UK remains generally safe, these events have raised concerns in specific areas where riots occurred. Travelers and residents alike are advised to stay informed about local conditions and avoid areas where tensions may be high.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "When visiting the UK, travelers should be aware of its rich cultural etiquette and customs. Politeness and respect are highly valued; saying 'please,' 'thank you,' and queuing (lining up) patiently are deeply ingrained in British culture. Punctuality is also important, particularly for social and professional engagements. The UK boasts a diverse cultural heritage, from iconic afternoon tea traditions to vibrant multicultural festivals like Notting Hill Carnival. Visitors should also note that the UK consists of four distinct nations—England, Scotland, Wales, and Northern Ireland—each with its own traditions, dialects, and identity. Understanding these regional differences can enhance interactions and show respect for local culture. Finally, pubs are central to British social life, but tipping is not mandatory, and knowing pub etiquette, like ordering at the bar, is helpful. Travelers embracing these nuances will find their UK experience more enriching.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "The UK’s local cuisine reflects its history, geography, and multicultural influences, offering travelers a variety of dishes to explore. Traditional British foods include fish and chips, a popular takeaway option, and Sunday roast, often served with Yorkshire pudding and vegetables. Regional specialties vary, such as haggis in Scotland, Welsh rarebit in Wales, and Ulster fry in Northern Ireland. For breakfast, travelers can try a full English breakfast, which typically includes eggs, bacon, sausage, beans, and toast. Pubs often serve classics like steak and ale pie or bangers and mash (sausages with mashed potatoes). While some may find traditional UK food simple compared to global cuisines, its evolution in recent years has brought a focus on fresh, locally sourced ingredients and diverse influences. Travelers should also be aware that tipping is not always expected in casual eateries but is appreciated for good service in restaurants.",
+        "image": "/breakfast.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "The UK is home to some of the world’s most prestigious higher education institutions, including Oxford, Cambridge, and University College London (UCL), attracting students from over 200 countries. Its universities are renowned for cutting-edge research, diverse academic programs, and innovative teaching. International students benefit from a wide range of scholarships, such as the Chevening and Commonwealth programs, aimed at reducing financial barriers. Popular fields of study include engineering, medicine, arts, and business. The UK's Graduate Immigration Route also allows students to remain in the country for up to two years post-graduation (or three years for doctoral graduates) to seek employment. This combination of academic excellence and opportunities for career growth makes the UK a leading destination for higher education.",
+        "image": "/oxford.jpg"
+      }
+    ]
+  }
+}
