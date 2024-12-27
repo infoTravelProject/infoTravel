@@ -1,10 +1,11 @@
 package com.infotravel.controller;
 
-import com.infotravel.entity.PrivacySettings;
-import com.infotravel.exception.PrivacySettingsNotFoundException;
+import com.infotravel.entity.Notification;
+import com.infotravel.entity.Subscription;
+import com.infotravel.exception.NotificationNotFoundException;
+import com.infotravel.exception.SubscriptionNotFoundException;
 import com.infotravel.exception.UserNotFoundException;
-import com.infotravel.service.PrivacyService;
-import com.sun.jdi.PrimitiveValue;
+import com.infotravel.service.NotificationService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,25 +14,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/privacy-settings")
-public class PrivacySettingsController {
-    private final PrivacyService privacyService;
+@RequestMapping("/api/notification")
+public class NotificationController {
+    private final NotificationService notificationService;
 
-    public PrivacySettingsController(PrivacyService privacyService) {
-        this.privacyService = privacyService;
+    public NotificationController(NotificationService notificationService) {
+        this.notificationService = notificationService;
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Object> getPrivacySettings(@PathVariable int userId){
-        try {
-            PrivacySettings settings = privacyService.getPrivacySettingsByUserId(userId);
+    public ResponseEntity<Object> getNotification(@PathVariable int userId){
+        try{
+            Notification notification = notificationService.getNotificationByUserId(userId);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Privacy settings retrieved successfully",
-                    "data", settings
+                    "message", "Subscription retrieved successfully",
+                    "data", notification
             ));
-        } catch (PrivacySettingsNotFoundException ex) {
+        }catch (NotificationNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -42,19 +43,19 @@ public class PrivacySettingsController {
     }
 
     @PostMapping("/{userId}")
-    public ResponseEntity<Object> createPrivacySettings(
+    public ResponseEntity<Object> createNotification(
             @PathVariable int userId,
-            @RequestBody @Valid PrivacySettings privacySettings
-            ){
-        try{
-            PrivacySettings createdPrivacySettings = privacyService.createPrivacySettings(userId, privacySettings);
+            @RequestBody @Valid Notification notification
+    ){
+        try {
+            Notification createdNotification = notificationService.createNotification(userId, notification);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Privacy settings created successfully",
-                    "data", createdPrivacySettings
+                    "message", "Notification created successfully",
+                    "data", createdNotification
             ));
-        }catch(UserNotFoundException ex){
+        }catch (UserNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -62,23 +63,22 @@ public class PrivacySettingsController {
                             "message", ex.getMessage()
                     ));
         }
-
     }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<Object> updatedPrivacySettings(
+    public ResponseEntity<Object> updateNotification(
             @PathVariable int userId,
-            @RequestBody @Valid PrivacySettings updatedSettings){
-
-        try {
-            PrivacySettings updated = privacyService.updatePrivacySettings(userId, updatedSettings);
+            @RequestBody @Valid Notification notification
+    ){
+        try{
+            Notification updated = notificationService.updateNotification(userId, notification);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Privacy settings updated successfully",
+                    "message", "Notification updated successfully",
                     "data", updated
             ));
-        } catch (PrivacySettingsNotFoundException ex) {
+        }catch (NotificationNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -89,23 +89,22 @@ public class PrivacySettingsController {
     }
 
     @DeleteMapping("/{userId}")
-    public ResponseEntity<Object> deletePrivacySettings(@PathVariable Integer userId){
+    public ResponseEntity<Object> deleteNotification(@PathVariable int userId){
         try{
-            privacyService.deletePrivacySettings(userId);
+            notificationService.deleteNotification(userId);
             return ResponseEntity.status(HttpStatus.OK)
-                        .body(Map.of(
-                        "timestamp", System.currentTimeMillis(),
-                        "status", HttpStatus.OK.value(),
-                        "message", "Privacy settings for user with ID " + userId + " have been deleted"
-            ));
-        }catch(PrivacySettingsNotFoundException ex){
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.OK.value(),
+                            "message", "Notification for user with ID " + userId + " have been deleted"
+                    ));
+        }catch (NotificationNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
                             "status", HttpStatus.NOT_FOUND.value(),
                             "message", ex.getMessage()
                     ));
-
         }
     }
 }

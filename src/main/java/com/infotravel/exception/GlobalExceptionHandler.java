@@ -1,5 +1,6 @@
 package com.infotravel.exception;
 
+import com.infotravel.entity.Notification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -64,6 +65,18 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(SubscriptionNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleSubscriptionNotFound(SubscriptionNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(Map.of(
+                        "timestamp", System.currentTimeMillis(),
+                        "status", HttpStatus.NOT_FOUND.value(),
+                        "error", "Not Found",
+                        "message", ex.getMessage()
+                ));
+    }
+
+    @ExceptionHandler(NotificationNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> handleNotificationNotFound(NotificationNotFoundException ex){
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(Map.of(
                         "timestamp", System.currentTimeMillis(),
