@@ -1,9 +1,9 @@
 package com.infotravel.controller;
 
-import com.infotravel.entity.SecuritySettings;
-import com.infotravel.exception.SecuritySettingsNotFoundException;
+import com.infotravel.entity.Subscription;
+import com.infotravel.exception.SubscriptionNotFoundException;
 import com.infotravel.exception.UserNotFoundException;
-import com.infotravel.service.SecurityService;
+import com.infotravel.service.SubscriptionService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,46 +12,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/security-settings")
-public class SecuritySettingsController {
-    private final SecurityService securitySettingsService;
+@RequestMapping("/api/subscription")
+public class SubscriptionController {
+    private final SubscriptionService subscriptionService;
 
-    public SecuritySettingsController(SecurityService securitySettings) {
-        this.securitySettingsService = securitySettings;
+    public SubscriptionController(SubscriptionService subscriptionService) {
+        this.subscriptionService = subscriptionService;
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Object> getSecuritySettings(@PathVariable int userId) {
-        try {
-            SecuritySettings settings = securitySettingsService.getSecuritySettingsByUserId(userId);
+    public ResponseEntity<Object> getSubscription(@PathVariable int userId){
+        try{
+            Subscription subscription = subscriptionService.getSubscriptionByUserId(userId);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Security settings retrieved successfully",
-                    "data", settings
+                    "message", "Subscription retrieved successfully",
+                    "data", subscription
             ));
-        }catch(SecuritySettingsNotFoundException ex){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(Map.of(
-                            "timestamp", System.currentTimeMillis(),
-                            "status", HttpStatus.NOT_FOUND.value(),
-                            "message", ex.getMessage()
-                    ));
-        }
-    }
-    @PostMapping("/{userId}")
-    public ResponseEntity<Object> createSecuritySettings(
-            @PathVariable int userId,
-            @RequestBody @Valid SecuritySettings securitySettings) {
-        try {
-            SecuritySettings createdSecuritySettings = securitySettingsService.createSecuritySettings(userId, securitySettings);
-            return ResponseEntity.ok(Map.of(
-                    "timestamp", System.currentTimeMillis(),
-                    "status", HttpStatus.OK.value(),
-                    "message", "Security settings created successfully",
-                    "data", createdSecuritySettings
-            ));
-        }catch(UserNotFoundException ex){
+        }catch (SubscriptionNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -61,20 +40,43 @@ public class SecuritySettingsController {
         }
     }
 
+    @PostMapping("/{userId}")
+    public ResponseEntity<Object> createSubscription(
+            @PathVariable int userId,
+            @RequestBody @Valid Subscription subscription
+    ){
+        try {
+            Subscription createdSubscription = subscriptionService.createSubscription(userId, subscription);
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "Subscription created successfully",
+                    "data", createdSubscription
+            ));
+        }catch (UserNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
+        }
+    }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<Object> updateSecuritySettings(
+    public ResponseEntity<Object> updateSubscription(
             @PathVariable int userId,
-            @RequestBody @Valid SecuritySettings updatedSettings) {
+            @RequestBody @Valid Subscription subscription
+    ){
         try{
-            SecuritySettings updated = securitySettingsService.updateSecuritySettings(userId, updatedSettings);
+            Subscription updated = subscriptionService.updateSubscription(userId, subscription);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Security settings updated successfully",
+                    "message", "Subscription updated successfully",
                     "data", updated
             ));
-        }catch(SecuritySettingsNotFoundException ex){
+        }catch (SubscriptionNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -83,17 +85,18 @@ public class SecuritySettingsController {
                     ));
         }
     }
+
     @DeleteMapping("/{userId}")
-    public ResponseEntity<Object> deleteSecuritySettings(@PathVariable Integer userId) {
-        try {
-            securitySettingsService.deleteSecuritySettings(userId);
+    public ResponseEntity<Object> deleteSubscription(@PathVariable int userId){
+        try{
+            subscriptionService.deleteSubscription(userId);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
                             "status", HttpStatus.OK.value(),
-                            "message", "Security settings for user with ID " + userId + " have been deleted"
+                            "message", "Subscription for user with ID " + userId + " have been deleted"
                     ));
-        } catch (SecuritySettingsNotFoundException ex) {
+        }catch (SubscriptionNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -102,5 +105,4 @@ public class SecuritySettingsController {
                     ));
         }
     }
-
 }
