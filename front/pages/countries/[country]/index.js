@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
-import countries from "../../data/countries.json";
-import CountryHeader from "../../components/CountryHeader";
-import HeaderBar from "../../components/HeaderBar";
-import CountryPageSection from "../../components/CountryPageSection";
-import RecommendationCard from "../../components/RecommendationCard";
-import VisaInfo from "../../components/VisaInfo";
-import BorderInfo from "../../components/BorderInfo";
-import MembershipInfo from "../../components/MembershipInfo";
-import CurrencyInfo from "../../components/CurrencyInfo";
-import Notifications from "../../components/Notifications";
+import countries from "../../../data/countries.json";
+import CountryHeader from "../../../components/CountryHeader";
+import HeaderBar from "../../../components/HeaderBar";
+import CountryPageSection from "../../../components/CountryPageSection";
+import RecommendationCard from "../../../components/RecommendationCard";
+import VisaInfo from "../../../components/VisaInfo";
+import BorderInfo from "../../../components/BorderInfo";
+import MembershipInfo from "../../../components/MembershipInfo";
+import CurrencyInfo from "../../../components/CurrencyInfo";
+import Notifications from "../../../components/Notifications";
 
 export default function CountryPage() {
     const router = useRouter();
