@@ -1,11 +1,11 @@
 package com.infotravel.controller;
 
 import com.infotravel.entity.Notification;
-import com.infotravel.entity.Subscription;
+import com.infotravel.entity.Preferences;
 import com.infotravel.exception.NotificationNotFoundException;
-import com.infotravel.exception.SubscriptionNotFoundException;
+import com.infotravel.exception.PreferencesNotFoundException;
 import com.infotravel.exception.UserNotFoundException;
-import com.infotravel.service.NotificationService;
+import com.infotravel.service.PreferencesService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,25 +14,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/notification")
-public class NotificationController {
-    private final NotificationService notificationService;
+@RequestMapping("/api/preference")
+public class PreferencesController {
+    private final PreferencesService preferencesService;
 
-    public NotificationController(NotificationService notificationService) {
-        this.notificationService = notificationService;
+    public PreferencesController(PreferencesService preferencesService) {
+        this.preferencesService = preferencesService;
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Object> getNotification(@PathVariable int userId){
+    public ResponseEntity<Object> getPreferences(@PathVariable int userId){
         try{
-            Notification notification = notificationService.getNotificationByUserId(userId);
+            Preferences preferences = preferencesService.getPreferencesByUserId(userId);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Notification settings retrieved successfully",
-                    "data", notification
+                    "message", "Preferences retrieved successfully",
+                    "data", preferences
             ));
-        }catch (NotificationNotFoundException ex){
+        }catch (PreferencesNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -43,17 +43,17 @@ public class NotificationController {
     }
 
     @PostMapping("/{userId}")
-    public ResponseEntity<Object> createNotification(
+    public ResponseEntity<Object> createSubscription(
             @PathVariable int userId,
-            @RequestBody @Valid Notification notification
+            @RequestBody @Valid Preferences preferences
     ){
-        try {
-            Notification createdNotification = notificationService.createNotification(userId, notification);
+        try{
+            Preferences createdPreferences = preferencesService.createPreferences(userId, preferences);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Notification created successfully",
-                    "data", createdNotification
+                    "message", "Preferences created successfully",
+                    "data", createdPreferences
             ));
         }catch (UserNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
@@ -66,19 +66,19 @@ public class NotificationController {
     }
 
     @PutMapping("/{userId}")
-    public ResponseEntity<Object> updateNotification(
+    public ResponseEntity<Object> updatePreferences(
             @PathVariable int userId,
-            @RequestBody @Valid Notification notification
+            @RequestBody @Valid Preferences preferences
     ){
         try{
-            Notification updated = notificationService.updateNotification(userId, notification);
+            Preferences updated = preferencesService.updatePreferences(userId, preferences);
             return ResponseEntity.ok(Map.of(
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
-                    "message", "Notification updated successfully",
+                    "message", "Preferences updated successfully",
                     "data", updated
             ));
-        }catch (NotificationNotFoundException ex){
+        }catch (PreferencesNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
@@ -89,16 +89,16 @@ public class NotificationController {
     }
 
     @DeleteMapping("/{userId}")
-    public ResponseEntity<Object> deleteNotification(@PathVariable int userId){
+    public ResponseEntity<Object> deletePreferences(@PathVariable int userId){
         try{
-            notificationService.deleteNotification(userId);
+            preferencesService.deletePreferences(userId);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),
                             "status", HttpStatus.OK.value(),
-                            "message", "Notification for user with ID " + userId + " have been deleted"
+                            "message", "Preferences for user with ID " + userId + " have been deleted"
                     ));
-        }catch (NotificationNotFoundException ex){
+        }catch (PreferencesNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Map.of(
                             "timestamp", System.currentTimeMillis(),

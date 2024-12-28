@@ -10,7 +10,8 @@ import java.util.Date;
 public class Device {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer device_id;
+    @Column(name = "device_id")
+    private Integer deviceId;
 
     @ManyToOne
     @JoinColumn(name = "user_id",nullable = false)
@@ -23,8 +24,8 @@ public class Device {
     @Column(name = "last_active")
     private Date lastActive;
 
-    public Integer getDevice_id() {
-        return device_id;
+    public Integer getDeviceId() {
+        return deviceId;
     }
 
     public User getUser() {
