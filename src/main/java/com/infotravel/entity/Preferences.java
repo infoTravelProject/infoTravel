@@ -1,6 +1,7 @@
 package com.infotravel.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
@@ -20,7 +21,7 @@ public class Preferences {
     @Column(name = "theme")
     private Theme theme;
 
-    @NotNull
+    @NotBlank(message = "Language is mandatory")
     @Column(name = "language")
     private String language;
 
@@ -29,7 +30,7 @@ public class Preferences {
     @Column(name = "units")
     private Units units;
 
-    @NotNull
+    @NotBlank(message = "Currency is mandatory")
     @Column(name = "currency")
     private String currency;
 

@@ -9,12 +9,14 @@ import com.infotravel.service.NotificationService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/notification")
+@Validated
 public class NotificationController {
     private final NotificationService notificationService;
 

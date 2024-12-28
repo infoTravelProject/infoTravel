@@ -16,27 +16,27 @@ public class Notification {
     @JoinColumn(name = "user_id",nullable = false)
     private User user;
 
-    @NotNull
+    @NotNull(message = "Login alerts choice is required")
     @Column(name = "login_alerts")
     private boolean loginAlerts;
 
-    @NotNull
+    @NotNull(message = "New features choice is required")
     @Column(name = "new_features")
     private boolean newFeatures;
 
-    @NotNull
+    @NotNull(message = "Recommended events choice is required")
     @Column(name = "recommended_events")
     private boolean recommendedEvents;
 
-    @NotNull
+    @NotNull(message = "Special offers choice is required")
     @Column(name = "special_offers")
     private boolean specialOffers;
 
-    @NotNull
+    @NotNull(message = "Upcoming events choice is required")
     @Column(name = "upcoming_trips")
     private boolean upcomingTrips;
 
-    @NotNull
+    @NotNull(message = "Personalized news choice is required")
     @Column(name = "personalized_news")
     private boolean personalizedNews;
 

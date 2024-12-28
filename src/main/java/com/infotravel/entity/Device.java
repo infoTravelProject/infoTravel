@@ -1,6 +1,7 @@
 package com.infotravel.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
@@ -17,7 +18,7 @@ public class Device {
     @JoinColumn(name = "user_id",nullable = false)
     private User user;
 
-    @NotNull
+    @NotBlank(message = "Device name is mandatory")
     @Column(name = "device_name")
     private String deviceName;
 

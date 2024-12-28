@@ -26,12 +26,14 @@ public class UserController {
     }
     // Create User
     @PostMapping
-    public ResponseEntity<?> createUser(@Valid @RequestBody User user) {
+    public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 
         User createdUser = userService.createUser(user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
+        return ResponseEntity.ok(Map.of(
+                "timestamp", System.currentTimeMillis(),
+                "status", HttpStatus.CREATED.value(),
                 "message", "User created successfully",
-                "user", createdUser
+                "data", createdUser
         ));
     }
 
@@ -42,13 +44,20 @@ public class UserController {
         try {
             User user = userService.getUserById(id)
                     .orElseThrow(() -> new UserNotFoundException("User with ID " + id + " not found"));
-            return ResponseEntity.ok(user);
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "User retrieved successfully",
+                    "data", user
+            ));
 
         } catch (UserNotFoundException ex) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of(
-                    "message", ex.getMessage(),
-                    "timestamp", System.currentTimeMillis()
-            ));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
         }
     }
 
@@ -60,14 +69,18 @@ public class UserController {
         try {
             User updatedUser = userService.updateUser(id, user);
             return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
                     "message", "User updated successfully",
-                    "user", updatedUser
+                    "data", updatedUser
             ));
         } catch (UserNotFoundException ex) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of(
-                    "message", ex.getMessage(),
-                    "timestamp", System.currentTimeMillis()
-            ));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
         }
     }
 
@@ -76,15 +89,19 @@ public class UserController {
     public ResponseEntity<Object> deleteUser(@PathVariable int id) {
         try {
             userService.deleteUser(id);
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(Map.of(
-                    "message", "User deleted successfully",
-                    "timestamp", System.currentTimeMillis()
-            ));
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.OK.value(),
+                            "message", "User with ID " + id + " has been deleted"
+                    ));
         } catch (UserNotFoundException ex) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of(
-                    "message", ex.getMessage(),
-                    "timestamp", System.currentTimeMillis()
-            ));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
         }
     }
 }
