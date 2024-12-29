@@ -84,6 +84,17 @@ public class GlobalExceptionHandler {
                         "message", ex.getMessage()
                 ));
     }
+    @ExceptionHandler(CountryVisitsNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> handleCountryVisitsNotFound(CountryVisitsNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(Map.of(
+                        "timestamp", System.currentTimeMillis(),
+                        "status", HttpStatus.NOT_FOUND.value(),
+                        "error", "Not Found",
+                        "message", ex.getMessage()
+                ));
+    }
 
     @ExceptionHandler(SubscriptionNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
