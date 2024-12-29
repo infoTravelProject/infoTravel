@@ -60,6 +60,18 @@ public class GlobalExceptionHandler {
                 ));
     }
 
+    @ExceptionHandler(CountryContentNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> handleCountryContentNotFound(CountryContentNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(Map.of(
+                        "timestamp", System.currentTimeMillis(),
+                        "status", HttpStatus.NOT_FOUND.value(),
+                        "error", "Not Found",
+                        "message", ex.getMessage()
+                ));
+    }
+
     @ExceptionHandler(SecuritySettingsNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleSecuritySettingsNotFound(SecuritySettingsNotFoundException ex) {
