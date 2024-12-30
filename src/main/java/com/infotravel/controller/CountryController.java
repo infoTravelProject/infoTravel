@@ -93,4 +93,13 @@ public class CountryController {
                     ));
         }
     }
+    @PostMapping("/fetch-from-api")
+    public ResponseEntity<Object> fetchAndSaveCountry(@RequestParam String name) {
+        try {
+            Country country = countryService.fetchAndSaveCountryFromApi(name);
+            return ResponseEntity.ok(country);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
 }

@@ -43,6 +43,23 @@ public class Country {
     @Column(name = "official_language")
     private String officialLanguage;
 
+    public Country(String name, String code, String flagUrl, String region, String subregion, Long population, float area, String capital, String currency, String officialLanguage) {
+        this.name = name;
+        this.code = code;
+        this.flagUrl = flagUrl;
+        this.region = region;
+        this.subregion = subregion;
+        this.population = population;
+        this.area = area;
+        this.capital = capital;
+        this.currency = currency;
+        this.officialLanguage = officialLanguage;
+    }
+
+    public Country() {
+
+    }
+
     public Integer getCountryId() {
         return countryId;
     }
