@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="bg-black bg-opacity-95 text-white border-t-2 border-it-blue">
+        <footer className="relative z-30 bg-black bg-opacity-95 text-white border-t-2 border-it-blue">
 
             <div className="pt-20 pb-10 p-4 flex flex-wrap justify-between ml-8 2xl:ml-40">
 
