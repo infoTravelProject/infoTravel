@@ -23,6 +23,10 @@ public class UserService {
         return userRepository.findAll();
     }
     public User createUser(User user){
+        Optional<User> existingUser = userRepository.findByNickname(user.getNickname());
+        if (existingUser.isPresent()) {
+            throw new IllegalArgumentException("Nickname '" + user.getNickname() + "' is already taken.");
+        }
         return userRepository.save(user);
     }
     @Transactional

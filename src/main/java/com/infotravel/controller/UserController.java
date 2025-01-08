@@ -27,14 +27,21 @@ public class UserController {
     // Create User
     @PostMapping
     public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
-
-        User createdUser = userService.createUser(user);
-        return ResponseEntity.ok(Map.of(
-                "timestamp", System.currentTimeMillis(),
-                "status", HttpStatus.CREATED.value(),
-                "message", "User created successfully",
-                "data", createdUser
-        ));
+        try {
+            User createdUser = userService.createUser(user);
+            return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.CREATED.value(),
+                    "message", "User created successfully",
+                    "data", createdUser
+            ));
+        } catch (IllegalArgumentException ex) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.BAD_REQUEST.value(),
+                    "message", ex.getMessage()
+            ));
+        }
     }
 
     // Get User by ID
