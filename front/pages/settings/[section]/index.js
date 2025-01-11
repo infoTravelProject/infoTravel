@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import Account from "../../../components/settings/Account";
 import Preferences from "../../../components/settings/Preferences";
 import Notifications from "../../../components/settings/Notifications";
 import Privacy from "../../../components/settings/Privacy";
 import Payments from "../../../components/settings/Payments";
+import SettingsSelector from "@/components/settings/SettingsSelector";
 
 const SettingsSection = () => {
     const router = useRouter();
@@ -30,27 +30,7 @@ const SettingsSection = () => {
     return (
         <div className="flex min-h-screen">
             {/* left navbar */}
-            <nav className="w-1/3 bg-gray-800 p-4 text-white font-bold">
-                <ul>
-                    <li className="mb-2">
-                        <Link href="/settings/preferences">Preferences</Link>
-                    </li>
-                    <li className="mb-2">
-                        <Link href="/settings/account">Account</Link>
-                    </li>
-                    <li className="mb-2">
-                        <Link href="/settings/privacy">Privacy & Security</Link>
-                    </li>
-                    <li className="mb-2">
-                        <Link href="/settings/notifications">Notifications</Link>
-                    </li>
-                    <li className="mb-2">
-                        <Link href="/settings/payments">Payments</Link>
-                    </li>
-                </ul>
-            </nav>
-
-
+            <SettingsSelector/>
             {/* right section */}
             <main className="w-2/3 p-4">
                 {renderSection()}
