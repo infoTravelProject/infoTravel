@@ -1,5 +1,5 @@
 import data from '@/data/world.json';
-import CountryList from '@/components/CountryList';
+import CountryList from '@/components/countries/CountryList';
 import React from "react";
 
 export default function CountriesPage(){

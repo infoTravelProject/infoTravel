@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function SideBar({sidebar}) {
     if (sidebar) return (
         <div className="fixed top-20 z-30 right-0 w-72 h-[calc(100%-5rem)] bg-[#1B1B1B]/[0.95] shadow-lg shadow-neutral-950">
-            <div className="w-full h-fit mt-8">
+            <div className="w-full h-fit mt-1">
                 <SideBarBox title={"Home"} icon={"/side_home.png"} isActive={true}/>
                 <SideBarBox title={"Profile"} icon={"/side_user.png"} isActive={false}/>
                 <SideBarBox title={"News"} icon={"/side_news.png"} isActive={false}/>
