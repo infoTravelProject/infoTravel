@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function SideBar({sidebar}) {
     if (sidebar) return (
-        <div className="absolute z-20 right-0 w-72 h-full bg-[#1E1E1E]/[0.8] shadow-lg shadow-neutral-950">
+        <div className="fixed top-20 z-30 right-0 w-72 h-[calc(100%-5rem)] bg-[#1B1B1B]/[0.95] shadow-lg shadow-neutral-950">
             <div className="w-full h-fit mt-8">
                 <SideBarBox title={"Home"} icon={"/side_home.png"} isActive={true}/>
                 <SideBarBox title={"Profile"} icon={"/side_user.png"} isActive={false}/>
@@ -14,7 +14,7 @@ export default function SideBar({sidebar}) {
                 <SideBarBox title={"Support"} icon={"/side_support.png"} isActive={false}/>
             </div>
             <div className="absolute w-full bottom-0 h-72 flex flex-col justify-end items-center">
-                <div className="flex flex-row bg-black/[0.15] rounded-full mb-12 cursor-pointer transition hover:bg-black/[0.25]">
+                <div className="flex flex-row bg-black/[0.25] rounded-full mb-12 cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
                     <div className="w-8 flex flex-col justify-center ml-8">
                         <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
                     </div>
