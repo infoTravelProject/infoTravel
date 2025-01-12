@@ -1,12 +1,10 @@
-'use client';
-import { useState } from 'react';
 import { FaCircleUser } from "react-icons/fa6";
 import SideBar from "@/components/SideBar";
 import Link from "next/link";
+import {useGlobalContext} from "@/components/context/GlobalContext";
 
 export default function Navbar() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const toggleSidebar = () => {setSidebarOpen(!sidebarOpen);}
+    const {sidebarOpen, toggleSidebar} = useGlobalContext();
 
     return (
         <nav>
