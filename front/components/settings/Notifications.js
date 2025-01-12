@@ -1,4 +1,9 @@
+import {useGlobalContext} from "@/components/context/GlobalContext";
+
 const Notifications = () => {
+    const {setSettingsPage} = useGlobalContext();
+    setSettingsPage("Notifications");
+
     return (
         <div className="text-white font-bold">
             <h1>Notifications</h1>

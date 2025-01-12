@@ -8,13 +8,16 @@ export const GlobalProvider = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const toggleSidebar = () => {setSidebarOpen(!sidebarOpen);}
 
-    const [sidebarPage, setSidebarPage] = useState(" ");
+    const [sidebarPage, setSidebarPage] = useState(null);
+    const [settingsPage, setSettingsPage] = useState(null);
 
     return (<GlobalContext.Provider value={{
         sidebarOpen,
         toggleSidebar,
         sidebarPage,
-        setSidebarPage
+        setSidebarPage,
+        settingsPage,
+        setSettingsPage
     }}>{children}</GlobalContext.Provider>);
 }
 export const useGlobalContext = () => useContext(GlobalContext);
