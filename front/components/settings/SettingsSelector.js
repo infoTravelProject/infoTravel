@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SelectorBox from "@/components/settings/SelectorBox";
+import Button from "@/components/Button";
 
 const SettingsSelector = () =>{
     return(
@@ -21,12 +22,7 @@ const SettingsSelector = () =>{
                                  icon={"/notifications.png"}/>
                     <SelectorBox title={"Payments"} isActive={false} link={"/settings/payments"} icon={"/payments.png"}/>
                 </div>
-                <div className="flex flex-row bg-black/[0.25] w-fit rounded-full mb-24 cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
-                    <div className="w-8 flex flex-col justify-center ml-8">
-                        <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
-                    </div>
-                    <div className="pr-10 pl-2 py-4 text-white/[0.9] text-xl">Sign out</div>
-                </div>
+                <div className={"mb-24"}><Button type={"logout"} text={"Sign Out"}/></div>
             </div>
         </div>
     );

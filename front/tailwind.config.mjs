@@ -9,6 +9,10 @@ export default {
     extend: {
       colors: {
         'it-blue': "#1F90E0",
+        'it-blue-dark': "#004390",
+        'it-amber': "#E06F1F",
+        'it-amber-light': "#AB4D1F",
+        'it-grey': "#1E1E1E"
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

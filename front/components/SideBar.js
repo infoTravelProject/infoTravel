@@ -1,6 +1,6 @@
 import SideBarBox from "@/components/SideBarBox";
-import Image from 'next/image'
 import {useGlobalContext} from "@/components/context/GlobalContext";
+import Button from "@/components/Button";
 
 export default function SideBar() {
     const {sidebarOpen, sidebarPage} = useGlobalContext();
@@ -16,13 +16,8 @@ export default function SideBar() {
                 <SideBarBox title={"About"} icon={"/side_about.png"} isActive={sidebarPage==="About"} link={"/#"}/>
                 <SideBarBox title={"Support"} icon={"/side_support.png"} isActive={sidebarPage==="Support"} link={"/#"}/>
             </div>
-            <div className="absolute w-full bottom-0 h-72 flex flex-col justify-end items-center">
-                <div className="flex flex-row bg-black/[0.25] rounded-full mb-12 cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
-                    <div className="w-8 flex flex-col justify-center ml-8">
-                        <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
-                    </div>
-                    <div className="pr-10 pl-2 py-4 text-white/[0.9] text-xl">Sign out</div>
-                </div>
+            <div className="absolute w-full bottom-12 h-fit flex flex-row justify-center">
+                <div className="scale-90"><Button type={"logout"} text={"Sign Out"}/></div>
             </div>
         </div>
     );
