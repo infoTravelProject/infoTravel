@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <GlobalProvider>
         <div>
             <Head>
-                <title>Info Travel</title>
+                <title>infoTravel</title>
             </Head>
             <Navbar />
             <main className="bg-black bg-gradient-to-t from-black/0 to-[#1F90E0]/[0.12] mt-20 min-h-screen min-w-screen">

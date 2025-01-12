@@ -30,7 +30,7 @@ export default function Navbar() {
                 <div className={`fixed top-0 z-10 w-screen h-screen bg-transparent cursor-default`} onClick={toggleSidebar}></div>
             )}
             <div>
-                <SideBar sidebar={sidebarOpen}/>
+                <SideBar/>
             </div>
         </nav>
     );

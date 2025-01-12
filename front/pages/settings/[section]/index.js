@@ -6,10 +6,14 @@ import Privacy from "../../../components/settings/Privacy";
 import Payments from "../../../components/settings/Payments";
 import SettingsSelector from "@/components/settings/SettingsSelector";
 import Head from "next/head";
+import {useGlobalContext} from "@/components/context/GlobalContext";
 
 const SettingsSection = () => {
     const router = useRouter();
     const { section } = router.query;
+
+    const {setSidebarPage} = useGlobalContext();
+    setSidebarPage("Settings");
 
     const renderSection = () => {
         switch (section) {
