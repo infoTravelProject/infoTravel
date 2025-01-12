@@ -5,6 +5,7 @@ import Notifications from "../../../components/settings/Notifications";
 import Privacy from "../../../components/settings/Privacy";
 import Payments from "../../../components/settings/Payments";
 import SettingsSelector from "@/components/settings/SettingsSelector";
+import Head from "next/head";
 
 const SettingsSection = () => {
     const router = useRouter();
@@ -29,6 +30,9 @@ const SettingsSection = () => {
 
     return (
         <div className="flex min-h-screen">
+            <Head>
+                <title>Settings - infoTravel</title>
+            </Head>
             {/* left navbar */}
             <SettingsSelector/>
             {/* right section */}
