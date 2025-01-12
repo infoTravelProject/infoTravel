@@ -33,14 +33,14 @@ const SettingsSection = () => {
     };
 
     return (
-        <div className="flex min-h-screen">
+        <div className="flex flex-row">
             <Head>
                 <title>Settings - infoTravel</title>
             </Head>
             {/* left navbar */}
             <SettingsSelector/>
             {/* right section */}
-            <main className="w-2/3 p-4">
+            <main className="flex-grow px-16">
                 {renderSection()}
             </main>
         </div>

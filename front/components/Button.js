@@ -29,7 +29,7 @@ const Button = ({type, text, color, icon}) => {
         case "contrast":
             return (
                 <div className="rounded-full p-0.5" style={{backgroundColor: hex}}>
-                    <div className="flex flex-row items-center pr-9 pt-1 pb-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition">
+                    <div className="flex flex-row items-center pr-9 py-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition">
                         <div className="h-5 w-8 ml-0.5 mr-1 flex flex-row justify-end">
                             {icon && (
                                 <Image src={icon} alt={"?"} width={20} height={20}/>
@@ -55,7 +55,7 @@ const Button = ({type, text, color, icon}) => {
             return (
                 <div className="rounded-full" style={{backgroundColor: hex}}>
                     <div
-                        className={`flex flex-row items-center pr-10 pt-1.5 pb-2 rounded-full ${color === "grey" ? 'text-white/[0.7]' : 'text-white'} text-sm font-normal font-inter hover:bg-[#1E1E1E]/[0.15]`}>
+                        className={`flex flex-row items-center pr-10 py-2 rounded-full ${color === "grey" ? 'text-white/[0.7]' : 'text-white'} text-sm font-normal font-inter hover:bg-[#1E1E1E]/[0.15]`}>
                         <div className="h-5 w-9 mr-1 flex flex-row justify-end">
                             {icon && (
                                 <Image src={icon} alt={"?"} width={20} height={20}/>
