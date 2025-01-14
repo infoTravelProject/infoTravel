@@ -102,4 +102,14 @@ public class CountryController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+    @PostMapping("/fetch-all")
+    public ResponseEntity<Object> fetchAndSaveAllCountries() {
+        try {
+            countryService.fetchAndSaveAllCountries();
+            return ResponseEntity.ok("All countries processed successfully.");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
+
 }
