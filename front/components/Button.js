@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { FaSearch } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
 
@@ -51,18 +52,59 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
             return (<div>TODO</div>);
         case "input":
             switch (inputType){
-                default:
                 case "search":
                     return(
                         <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
                             <FaSearch className="w-5 h-5 absolute ml-3 pointer-events-none"/>
                             <input
                             type="text"
-                            name="search"
                             autoComplete="off"
                             placeholder={inputPlaceholder}
-                            aria-label="Search"
                             className={`pr-3 pl-10 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                            ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                        </div>
+                    );
+                case "search-button":
+                    return(
+                        <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
+                            <FaSearch className="w-5 h-5 absolute ml-3 pointer-events-none"/>
+                            <input
+                            type="text"
+                            autoComplete="off"
+                            placeholder={inputPlaceholder}
+                            className={`pr-3 pl-10 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                            ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                            <button className="absolute right-0 w-10 h-10 rounded-full bg-white/[0.4] hover:bg-white/[0.9] hover:-rotate-90 transition flex items-center justify-center scale-90">
+                            <IoIosArrowForward className="text-black rotate-90 w-6 h-6 pl-0.5"/>
+                            </button>
+                        </div>
+                    );
+                case "password":
+
+                    //TODO: hide/show password on eye-button click
+
+                    return (
+                        <div>
+                            <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
+                                <input
+                                type="text"
+                                id="password"
+                                autoComplete="off"
+                                placeholder={inputPlaceholder}
+                                className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                                ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                            </div>
+                        </div>
+                    );
+                default:
+                case "none":
+                    return (
+                        <div className="text-white/[0.4] focus-within:text-white/[0.9]">
+                            <input
+                            type="text"
+                            autoComplete="off"
+                            placeholder={inputPlaceholder}
+                            className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
                             ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
                         </div>
                     );
