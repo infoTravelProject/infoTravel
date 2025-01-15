@@ -8,12 +8,11 @@ const SettingsSelector = () =>{
     return(
         <div className="flex flex-col items-center w-72 h-screen bg-[#1E1E1E]/[0.8]">
             <div className="flex-none w-full h-20 bg-white/[0.1] shadow-lg text-white/[0.6] font-inter text-2xl flex flex-col justify-center text-center">SETTINGS</div>
-            <div className="flex-none w-64 h-12 rounded-full bg-white/[0.11] shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] flex-row flex row items-center mt-4">
-                <Image src={"/search_white.png"} width={512} height={512} alt={"?"} className="w-5 h-5 ml-4 opacity-50"/>
-                <div className="font-inter text-white/[0.35] ml-4 cursor-default">Search placeholder</div>
-            </div>
+            <form className="w-full px-4 mt-6">
+                <Button type={"input"} inputType={"search"} inputPlaceholder={"Search settings"} color="amber"/>
+            </form>
             <div className="flex flex-col w-full h-full justify-between items-center">
-                <div className="w-full h-fit mt-6">
+                <div className="w-full h-fit mt-5">
                     <SelectorBox title={"Preferences"}
                                  isActive={settingsPage==="Preferences"}
                                  link={"/settings/preferences"}

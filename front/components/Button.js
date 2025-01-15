@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import { FaSearch } from "react-icons/fa";
 
-const Button = ({type, text, color, icon}) => {
+const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
+
     let hex;
+
     switch (color) {
         case "blue":
             hex = "#004390";
@@ -19,12 +22,17 @@ const Button = ({type, text, color, icon}) => {
         default:
             if(typeof color === "undefined"){
                 hex="#004390";
+                color = "blue";
             }
             else{
                 Array.from(color)[0] === '#' && color.length === 7 ? hex=color : hex="#004390";
             }
             break
     }
+
+    if (typeof text === "undefined") text="Button text here";
+    if (typeof inputPlaceholder === "undefined") inputPlaceholder = "";
+
     switch(type) {
         case "contrast":
             return (
@@ -41,6 +49,25 @@ const Button = ({type, text, color, icon}) => {
             );
         case "select":
             return (<div>TODO</div>);
+        case "input":
+            switch (inputType){
+                default:
+                case "search":
+                    return(
+                        <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
+                            <FaSearch className="w-5 h-5 absolute ml-3 pointer-events-none"/>
+                            <input
+                            type="text"
+                            name="search"
+                            autoComplete="off"
+                            placeholder={inputPlaceholder}
+                            aria-label="Search"
+                            className={`pr-3 pl-10 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                            ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                        </div>
+                    );
+            }
+            break;
         case "logout":
             return (
                 <div className="flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">

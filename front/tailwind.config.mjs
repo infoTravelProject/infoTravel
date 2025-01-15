@@ -12,7 +12,9 @@ export default {
         'it-blue-dark': "#004390",
         'it-amber': "#E06F1F",
         'it-amber-light': "#AB4D1F",
-        'it-grey': "#1E1E1E"
+        'it-grey': "#1E1E1E",
+        'it-red': "#7E1C1C",
+        'it-red-light': "#cc1e1e"
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
