@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SelectorBox from "@/components/settings/SelectorBox";
 import Button from "@/components/Button";
 import {useGlobalContext} from "@/components/context/GlobalContext";

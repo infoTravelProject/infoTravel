@@ -87,7 +87,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
                         <div>
                             <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
                                 <input
-                                type="text"
+                                type="password"
                                 id="password"
                                 autoComplete="off"
                                 placeholder={inputPlaceholder}
