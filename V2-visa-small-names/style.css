@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    margin: 10px 0 20px;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    background-color: #444;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.details {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.notes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Kolory kart */
+.visa-free {
+    background-color: #388e3c;
+}
+
+.visa-required {
+    background-color: #d32f2f;
+}
+
+.visa-on-arrival {
+    background-color: #f57c00;
+}
+
+.evisa {
+    background-color: #1976d2;
+}
+
+.freedom-of-movement {
+    background-color: #00838f;
+}
+
+.admission-refused {
+    background-color: #616161;
+}
+
+.other-requirements {
+    background-color: #7b1fa2;
+}
+
