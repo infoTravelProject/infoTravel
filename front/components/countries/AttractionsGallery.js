@@ -53,11 +53,11 @@ export default function AttractionsGallery({ attractions }) {
             <button
                 onClick={() => {
                     if (galleryRef.current) {
-                        galleryRef.current.scrollLeft -= 200;
+                        galleryRef.current.scrollLeft -= 350;
                         updateScrollProgress();
                     }
                 }}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-600 border-2 border-gray-800"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-600 border-2 border-amber-600"
             >
                 ←
             </button>
@@ -66,11 +66,11 @@ export default function AttractionsGallery({ attractions }) {
             <button
                 onClick={() => {
                     if (galleryRef.current) {
-                        galleryRef.current.scrollLeft += 200;
+                        galleryRef.current.scrollLeft += 350;
                         updateScrollProgress();
                     }
                 }}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-600 border-2 border-gray-800"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-600 border-2 border-amber-600"
             >
                 →
             </button>

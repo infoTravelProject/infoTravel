@@ -13,12 +13,28 @@ import Notifications from "../../../components/countries/Notifications";
 import AttractionsGallery from "../../../components/countries/AttractionsGallery";
 import CountrySelector from "../../../components/CountrySelector";
 
+const normalizeCountryName = (name) => {
+    return name?.toLowerCase().replace(/^the\s+/i, "").trim();
+};
+
 export default function CountryPage() {
     const router = useRouter();
     const { country } = router.query;
 
-    const countryData = countries[country] || null;
-    const countryAttractions = attractionsData[country] || [];
+    const normalizedCountry = normalizeCountryName(country);
+
+    const normalizedCountries = Object.entries(countries).reduce((acc, [key, value]) => {
+        acc[normalizeCountryName(key)] = value;
+        return acc;
+    }, {});
+
+    const countryData = normalizedCountries[normalizedCountry] || null;
+
+    const normalizedAttractionsData = Object.entries(attractionsData).reduce((acc, [key, value]) => {
+        acc[normalizeCountryName(key)] = value;
+        return acc;
+    }, {});
+    const countryAttractions = normalizedAttractionsData[normalizedCountry] || [];
 
     if (!countryData) {
         return <p className="text-white">Country data not found.</p>;
@@ -45,13 +61,12 @@ export default function CountryPage() {
 
                 {/* Right column */}
                 <div className="space-y-1">
-                    <CountrySelector />
+                    <CountrySelector currentCountry={normalizedCountry} />
                     <CurrencyInfo
                         currencyName="Great Britain Pound"
                         todo="Exchange rates available soon"
                     />
-                    {/*<VisaInfo {...countryData.visa} />*/}
-                    <VisaInfo currentCountry={country}/>
+                    <VisaInfo currentCountry={normalizedCountry} />
                     <BorderInfo {...countryData.borderControl} />
                     <MembershipInfo memberships={countryData.memberships} />
                     <Notifications items={countryData.notifications} />
@@ -61,8 +76,8 @@ export default function CountryPage() {
             {/* Gallery of attractions */}
             <div className="px-16 py-4">
                 <h2 className="text-2xl font-bold mb-2">Recommended Points of Interest</h2>
-                <hr className="h-px mb-12 bg-gray-700 border-0"/>
-                <AttractionsGallery attractions={countryAttractions}/>
+                <hr className="h-px mb-12 bg-gray-700 border-0" />
+                <AttractionsGallery attractions={countryAttractions} />
             </div>
 
             {/* Additional sections */}
