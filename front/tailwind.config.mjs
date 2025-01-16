@@ -14,7 +14,15 @@ export default {
         'it-amber-light': "#AB4D1F",
         'it-grey': "#1E1E1E",
         'it-red': "#7E1C1C",
-        'it-red-light': "#cc1e1e"
+        'it-red-light': "#cc1e1e",
+        "visa-free": "#28a745",
+        "visa-required": "#dc3545",
+        "visa-on-arrival": "#ffc107",
+        "evisa": "#17a2b8",
+        "freedom-of-movement": "#007bff",
+        "admission-refused": "#6c757d",
+        "other-requirements": "#6610f2",
+        "unknown": "#343a40"
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
@@ -25,5 +33,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 };
