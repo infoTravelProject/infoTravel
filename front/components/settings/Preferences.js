@@ -1,6 +1,7 @@
 import {useGlobalContext} from "@/components/context/GlobalContext";
 import SettingsHeader from "@/components/settings/SettingsHeader";
 import Button from "@/components/Button";
+import Label from "@/components/Label";
 
 const Preferences = () => {
     const {setSettingsPage} = useGlobalContext();
@@ -34,11 +35,14 @@ const Preferences = () => {
     return (
         <div>
             <SettingsHeader/>
-            <h1>Preferences</h1>
-            <p>This is the Preferences section.</p>
-            <div className={"w-64"}>
-                <Button type={"select"} color={"amber"} selectData={tempData}/>
+            <Label text={"General"}/>
+            <div className={"flex justify-between"}>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
             </div>
+            <Label text={"Profile"}/>
         </div>
     );
 };

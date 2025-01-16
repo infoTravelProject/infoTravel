@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa6";
 import {useState, useEffect, useRef} from "react";
 
-const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType}) => {
+const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType, label, required}) => {
 
     let hex;
     const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -14,7 +14,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
     });
     const dropdownRef = useRef(null);
 
-    //<this is used to hide the dropdown when clicked off>
+    //<This is used to hide the dropdown when clicked off>
     useEffect(() => {
         function handler(e){
             if(dropdownRef.current) {
@@ -55,8 +55,10 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             break
     }
 
+    //DEFAULT VALUES IF PROPERTY NOT SET
     if (typeof text === "undefined") text="Button text here";
     if (typeof inputPlaceholder === "undefined") inputPlaceholder = "";
+    if (typeof label === "undefined") label = "";
 
     switch(type) {
         case "contrast":
@@ -76,18 +78,31 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             if(selectData === undefined || selectData.length === 0) {
                 return(<div>NO DATA</div>);
             }
+            //TODO scrolling
             return (
-                <div ref={dropdownRef} className="flex flex-col min-w-fit h-fit font-inter font-normal text-sm text-white/[0.9]">
+                <div ref={dropdownRef} className="relative flex flex-col min-w-fit h-fit font-inter font-normal text-sm text-white/[0.9]">
+
+                    <label className={"relative w-fit pb-1"}>
+                        <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
+                        <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
+                    </label>
+
                     <button className={`flex justify-between items-center bg-it-background rounded-md border-none ring-2
                     ${!dropdownToggle ? 'ring-white/[0.4]' : color === "blue" ? 'ring-it-blue' : color === "amber" ? 'ring-it-amber' : color === "red" ? 'ring-it-red-light' : 'ring-white'}`}
                             onClick={()=>{setDropdownToggle(!dropdownToggle)}}>
-                        <span className={"pl-6 pr-16"}>{selectedOption ? selectedOption.label : "Select"}</span>
+                        <span className="pl-6 pr-16">{selectedOption ? selectedOption.label : "Select"}</span>
                         <div className="w-10 h-10 flex items-center justify-center p-0.5">
                             <FaChevronDown className={`w-full h-full p-2.5 rounded-r-md text-black 
-                            ${selectType === "simple" && dropdownToggle ? 'scale-y-[-1] text-white/[0.9]' : selectType === "simple" && !dropdownToggle ? 'text-white/[0.9]' : dropdownToggle ? 'scale-y-[-1] bg-white/[0.8]' : 'bg-white/[0.4]'}`}/>
+                            ${selectType === "simple" && dropdownToggle && color === "blue" ? 'scale-y-[-1] text-it-blue' :
+                                selectType === "simple" && dropdownToggle && color === "amber" ? 'scale-y-[-1] text-it-amber' :
+                                    selectType === "simple" && dropdownToggle && color === "red" ? 'scale-y-[-1] text-it-red-light' :
+                                        selectType === "simple" && dropdownToggle && color === "white" ? 'scale-y-[-1] text-white/[0.9]' : 
+                                            selectType === "simple" && !dropdownToggle ? 'text-white/[0.4]' : 
+                                                dropdownToggle ? 'scale-y-[-1] bg-white/[0.8]' : 'bg-white/[0.4]'}`}/>
                         </div>
                     </button>
-                    <div className={`${dropdownToggle ? 'visible' : 'hidden'} flex flex-col bg-it-background/[0.6] mt-2 rounded-md border-none ring-2 ring-white/[0.6]`}>
+
+                    <div className={`${dropdownToggle ? 'visible' : 'hidden'} absolute w-full top-16 flex flex-col bg-it-background/[0.6] backdrop-blur mt-2 rounded-md border-none ring-2 ring-white/[0.6]`}>
                         {selectData.map((item) => (
                             <button className={`flex items-center mr-1 hover:bg-black/[0.2] ${selectedOption === item ? 'bg-black/[0.2] hover:text-white/[0.6]' : ''}`}
                                 type={"submit"} key={item.id} value={item.value} onClick={()=>{
@@ -99,6 +114,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                             </button>
                         ))}
                     </div>
+
                 </div>
             );
         case "input":
