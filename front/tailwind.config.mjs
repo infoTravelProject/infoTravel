@@ -22,7 +22,8 @@ export default {
         "freedom-of-movement": "#007bff",
         "admission-refused": "#6c757d",
         "other-requirements": "#6610f2",
-        "unknown": "#343a40"
+        "unknown": "#343a40",
+        "it-background": "#121212"
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

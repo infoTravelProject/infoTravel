@@ -1,6 +1,5 @@
-import { useGlobalContext } from "../components/context/GlobalContext";
+import { useGlobalContext } from "@/components/context/GlobalContext";
 import visaData from "../data/visa_data.json";
-
 
 const normalizeCountryName = (name) => {
     return name?.toLowerCase().replace(/^the\s+/i, "").trim();
@@ -23,10 +22,6 @@ const CountrySelector = ({ currentCountry }) => {
     const normalizedVisaData = normalizeVisaData(visaData);
     const normalizedCurrentCountry = normalizeCountryName(currentCountry);
 
-    console.log("Normalized current country:", normalizedCurrentCountry);
-    console.log("Sample normalized visa data:", Object.keys(normalizedVisaData).slice(0, 5)); // Wyświetl pierwsze 5 krajów
-    console.log("Sample destinations for a country:", normalizedVisaData["afghanistan"]);
-
     const validCountries = Object.keys(normalizedVisaData).filter((country) =>
         normalizedVisaData[country]?.some(
             (entry) =>
@@ -34,8 +29,6 @@ const CountrySelector = ({ currentCountry }) => {
                 entry.details?.trim()
         )
     );
-
-    console.log("Valid countries:", validCountries);
 
     if (!validCountries.length) {
         return (

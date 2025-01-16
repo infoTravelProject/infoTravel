@@ -1,10 +1,34 @@
 import Image from 'next/image'
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaChevronDown } from "react-icons/fa6";
+import {useState, useEffect, useRef} from "react";
 
-const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
+const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType}) => {
 
     let hex;
+    const [dropdownToggle, setDropdownToggle] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(()=>{
+        if(selectDefault === undefined) return null;
+        else return selectDefault;
+    });
+    const dropdownRef = useRef(null);
+
+    //<this is used to hide the dropdown when clicked off>
+    useEffect(() => {
+        function handler(e){
+            if(dropdownRef.current) {
+                if(!dropdownRef.current.contains(e.target)) {
+                    setDropdownToggle(false);
+                }
+            }
+        }
+        document.addEventListener("click", handler);
+        return () => {
+            document.removeEventListener("click", handler);
+        }
+    })
+    //</>
 
     switch (color) {
         case "blue":
@@ -37,7 +61,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
     switch(type) {
         case "contrast":
             return (
-                <div className="rounded-full p-0.5" style={{backgroundColor: hex}}>
+                <div className="w-fit rounded-full p-0.5" style={{backgroundColor: hex}}>
                     <div className="flex flex-row items-center pr-9 py-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition">
                         <div className="h-5 w-8 ml-0.5 mr-1 flex flex-row justify-end">
                             {icon && (
@@ -49,7 +73,34 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
                 </div>
             );
         case "select":
-            return (<div>TODO</div>);
+            if(selectData === undefined || selectData.length === 0) {
+                return(<div>NO DATA</div>);
+            }
+            return (
+                <div ref={dropdownRef} className="flex flex-col min-w-fit h-fit font-inter font-normal text-sm text-white/[0.9]">
+                    <button className={`flex justify-between items-center bg-it-background rounded-md border-none ring-2
+                    ${!dropdownToggle ? 'ring-white/[0.4]' : color === "blue" ? 'ring-it-blue' : color === "amber" ? 'ring-it-amber' : color === "red" ? 'ring-it-red-light' : 'ring-white'}`}
+                            onClick={()=>{setDropdownToggle(!dropdownToggle)}}>
+                        <span className={"pl-6 pr-16"}>{selectedOption ? selectedOption.label : "Select"}</span>
+                        <div className="w-10 h-10 flex items-center justify-center p-0.5">
+                            <FaChevronDown className={`w-full h-full p-2.5 rounded-r-md text-black 
+                            ${selectType === "simple" && dropdownToggle ? 'scale-y-[-1] text-white/[0.9]' : selectType === "simple" && !dropdownToggle ? 'text-white/[0.9]' : dropdownToggle ? 'scale-y-[-1] bg-white/[0.8]' : 'bg-white/[0.4]'}`}/>
+                        </div>
+                    </button>
+                    <div className={`${dropdownToggle ? 'visible' : 'hidden'} flex flex-col bg-it-background/[0.6] mt-2 rounded-md border-none ring-2 ring-white/[0.6]`}>
+                        {selectData.map((item) => (
+                            <button className={`flex items-center mr-1 hover:bg-black/[0.2] ${selectedOption === item ? 'bg-black/[0.2] hover:text-white/[0.6]' : ''}`}
+                                type={"submit"} key={item.id} value={item.value} onClick={()=>{
+                                setSelectedOption(item);
+                                setDropdownToggle(false);
+                            }}>
+                                <div className={`w-1 h-10 ml-0.5 ${selectedOption === item ? color === "blue" ? 'bg-it-blue' : color === "amber" ? 'bg-it-amber' : color === "red" ? 'bg-it-red-light' : 'bg-white/[0.8]' : ''}`}></div>
+                                <div className="py-3 w-fit pl-4">{item.label}</div>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            );
         case "input":
             switch (inputType){
                 case "search":
@@ -112,7 +163,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
             break;
         case "logout":
             return (
-                <div className="flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
+                <div className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
                     <div className="w-8 h-8 flex flex-col justify-center ml-8">
                         <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
                     </div>
@@ -122,7 +173,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder}) => {
         default:
         case "normal":
             return (
-                <div className="rounded-full" style={{backgroundColor: hex}}>
+                <div className="w-fit rounded-full" style={{backgroundColor: hex}}>
                     <div
                         className={`flex flex-row items-center pr-10 py-2 rounded-full ${color === "grey" ? 'text-white/[0.7]' : 'text-white'} text-sm font-normal font-inter hover:bg-[#1E1E1E]/[0.15]`}>
                         <div className="h-5 w-9 mr-1 flex flex-row justify-end">
