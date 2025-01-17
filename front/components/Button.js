@@ -4,18 +4,25 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa6";
 import {useState, useEffect, useRef} from "react";
 
-const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType, label, required, onSelect}) => {
+const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType, label, required, onSelect, onPress}) => {
 
     let hex;
     const [dropdownToggle, setDropdownToggle] = useState(false);
     const [selectedOption, setSelectedOption] = useState(()=>{
         if(typeof selectDefault === undefined) return null;
+        else if(selectDefault === "disabled" || selectDefault==="off") return false;
+        else if(selectDefault === "on") return true;
         else return selectDefault;
     });
     const dropdownRef = useRef(null);
     const selectHandler = (item)=>{
         if(typeof onSelect === "function"){
             onSelect(item);
+        }
+    }
+    const buttonHandler = (item)=>{
+        if(typeof onPress === "function"){
+            onPress(item);
         }
     }
 
@@ -66,7 +73,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
     if (typeof label === "undefined") label = "";
 
     switch(type) {
-        case "contrast":
+        case "button-contrast":
             return (
                 <div className="w-fit rounded-full p-0.5" style={{backgroundColor: hex}}>
                     <div className="flex flex-row items-center pr-9 py-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition">
@@ -86,7 +93,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             return (
                 <div ref={dropdownRef} className="relative flex flex-col min-w-fit h-fit font-inter font-normal text-sm text-white/[0.9]">
 
-                    <label className={"relative w-fit pb-1"}>
+                    <label className="relative w-fit pb-1 text-xs">
                         <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
                         <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
                     </label>
@@ -195,8 +202,29 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                     <div className="pr-10 pl-2 py-3 font-inter font-normal text-white/[0.9] text-lg">{text}</div>
                 </div>
             );
+        case "toggle":
+            return (
+                <label className="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" checked={!!selectedOption} className="sr-only peer" disabled={selectDefault==="disabled" || selectDefault==="enabled"}
+                           onChange={()=>{setSelectedOption(!selectedOption)}}/>
+                    <div className={`w-11 h-6 bg-gray-500 rounded-full peer
+                    ${color==="blue"?'peer-checked:bg-blue-500':color==="amber"?'peer-checked:bg-it-amber':color==="red"?'peer-checked:bg-it-red-light':'peer-checked:bg-gray-700'}`}></div>
+                    <div className="absolute left-0.5 top-0.5 scale-90 bg-white border-none rounded-full w-5 h-5 transition-all peer-checked:translate-x-5"></div>
+                </label>
+            );
+        case "toggle-contrast":
+            return (
+                <label className="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" checked={!!selectedOption} className="sr-only peer" disabled={selectDefault==="disabled" || selectDefault==="enabled"}
+                           onChange={()=>{setSelectedOption(!selectedOption)}}/>
+                    <div className={`w-11 h-6 bg-it-background rounded-full peer border-none ring-1
+                    ${color==="blue"?'ring-it-blue':color==="amber"?'ring-it-amber':color==="red"?'ring-it-red-light':'ring-white'}
+                    ${color==="blue"?'peer-checked:bg-blue-500':color==="amber"?'peer-checked:bg-it-amber':color==="red"?'peer-checked:bg-it-red-light':'peer-checked:bg-gray-700'}`}></div>
+                    <div className="absolute left-0.5 top-0.5 scale-90 bg-white border-none rounded-full w-5 h-5 transition-all peer-checked:translate-x-5 peer-checked:scale-100"></div>
+                </label>
+            );
         default:
-        case "normal":
+        case "button":
             return (
                 <div className="w-fit rounded-full" style={{backgroundColor: hex}}>
                     <div

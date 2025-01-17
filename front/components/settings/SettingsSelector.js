@@ -5,7 +5,7 @@ import {useGlobalContext} from "@/components/context/GlobalContext";
 const SettingsSelector = () =>{
     const {settingsPage} = useGlobalContext();
     return(
-        <div className="flex flex-col items-center w-72 h-screen bg-[#1E1E1E]/[0.8]">
+        <div className="flex flex-col items-center w-72 h-full min-h-screen bg-[#1E1E1E]/[0.8]">
             <div className="flex-none w-full h-20 bg-white/[0.1] shadow-lg text-white/[0.6] font-inter text-2xl flex flex-col justify-center text-center">SETTINGS</div>
             <form className="w-full px-4 mt-6">
                 <Button type={"input"} inputType={"search-button"} inputPlaceholder={"Search settings"} color="amber"/>

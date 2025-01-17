@@ -38,7 +38,7 @@ const SettingsSection = () => {
                 <title>Settings - infoTravel</title>
             </Head>
             {/* left navbar */}
-            <SettingsSelector/>
+            <div><SettingsSelector/></div>
             {/* right section */}
             <main className="flex-grow px-16">
                 {renderSection()}
