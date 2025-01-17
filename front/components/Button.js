@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa6";
 import {useState, useEffect, useRef} from "react";
 
-const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType, label, required}) => {
+const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectData, selectDefault, selectType, label, required, onSelect}) => {
 
     let hex;
     const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -13,6 +13,11 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
         else return selectDefault;
     });
     const dropdownRef = useRef(null);
+    const selectHandler = (item)=>{
+        if(typeof onSelect === "function"){
+            onSelect(item);
+        }
+    }
 
     //<This is used to hide the dropdown when clicked off>
     useEffect(() => {
@@ -101,16 +106,17 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                         </div>
                     </button>
 
-                    <div className={`${dropdownToggle ? 'visible' : 'hidden'} absolute w-full max-h-44 overflow-y-auto overscroll-contain top-16 flex flex-col bg-it-background/[0.6] backdrop-blur mt-2 rounded-md border-none ring-2 ring-white/[0.6]
+                    <div className={`${dropdownToggle ? 'visible' : 'hidden'} absolute z-40 w-full max-h-64 overflow-y-auto overscroll-contain top-16 flex flex-col bg-it-background/[0.6] backdrop-blur mt-2 rounded-md border-none ring-2 ring-white/[0.6]
                     [&::-webkit-scrollbar]:w-1.5
                     [&::-webkit-scrollbar-thumb]:rounded-full
                     [&::-webkit-scrollbar-track]:bg-transparent
-                    [&::-webkit-scrollbar-thumb]:${color === "blue" ? 'bg-it-blue' : color === "amber" ? 'bg-it-amber' : color === "red" ? 'bg-it-red-light' : 'bg-white'}`}>
+                    ${color==="blue"?'[&::-webkit-scrollbar-thumb]:bg-it-blue':color==="amber"?'[&::-webkit-scrollbar-thumb]:bg-it-amber':color==="red"?'[&::-webkit-scrollbar-thumb]:bg-it-red-light':'[&::-webkit-scrollbar-thumb]:bg-white'}`}>
                         {selectData.map((item) => (
                             <button className={`flex items-center mr-1 hover:bg-black/[0.2] ${JSON.stringify(selectedOption) === JSON.stringify(item) ? 'bg-black/[0.2] hover:text-white/[0.6]' : ''}`}
                                 type={"submit"} key={item.id} value={item.value} onClick={()=>{
                                 setSelectedOption(item);
                                 setDropdownToggle(false);
+                                selectHandler(item);
                             }}>
                                 <div className={`w-1 h-10 ml-0.5 ${JSON.stringify(selectedOption) === JSON.stringify(item) ? color === "blue" ? 'bg-it-blue' : color === "amber" ? 'bg-it-amber' : color === "red" ? 'bg-it-red-light' : 'bg-white/[0.8]' : ''}`}></div>
                                 <div className="py-3 w-fit pl-4">{item.label}</div>

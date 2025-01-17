@@ -1,5 +1,6 @@
 import { useGlobalContext } from "@/components/context/GlobalContext";
 import visaData from "../data/visa_data.json";
+import Button from "@/components/Button";
 
 const normalizeCountryName = (name) => {
     return name?.toLowerCase().replace(/^the\s+/i, "").trim();
@@ -29,6 +30,23 @@ const CountrySelector = ({ currentCountry }) => {
                 entry.details?.trim()
         )
     );
+    const jsonArray = validCountries.map((item) =>({
+        id: item.toString(),
+        value: item.toString(),
+        label: item.toString()
+    }));
+    function mapper(data, value){
+        let returnItem;
+        data.map(item => {
+            if(item.value === value){
+                returnItem = item;
+            }
+        });
+        return returnItem;
+    }
+    function submitHandler(e){
+        setSelectedCountry(e.value);
+    }
 
     if (!validCountries.length) {
         return (
@@ -42,21 +60,10 @@ const CountrySelector = ({ currentCountry }) => {
 
     return (
         <div className="flex flex-col bg-[#111111] p-6 rounded-lg items-center w-full">
-            <label htmlFor="country-select" className="block text-white font-bold mb-2 text-center">
-                Where are you from?
-            </label>
-            <select
-                id="country-select"
-                value={selectedCountry}
-                onChange={(e) => setSelectedCountry(e.target.value)}
-                className="w-1/2 p-2 bg-gray-700 text-white rounded-md"
-            >
-                {validCountries.map((country) => (
-                    <option key={country} value={country}>
-                        {country}
-                    </option>
-                ))}
-            </select>
+            <div className={"w-1/2"}>
+                <Button type={"select"} selectType={"simple"} label={"show information for:"}
+                        selectData={jsonArray} selectDefault={mapper(jsonArray, selectedCountry)} onSelect={submitHandler}/>
+            </div>
         </div>
     );
 };
