@@ -9,7 +9,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
     let hex;
     const [dropdownToggle, setDropdownToggle] = useState(false);
     const [selectedOption, setSelectedOption] = useState(()=>{
-        if(selectDefault === undefined) return null;
+        if(typeof selectDefault === undefined) return null;
         else return selectDefault;
     });
     const dropdownRef = useRef(null);
@@ -104,12 +104,12 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
 
                     <div className={`${dropdownToggle ? 'visible' : 'hidden'} absolute w-full top-16 flex flex-col bg-it-background/[0.6] backdrop-blur mt-2 rounded-md border-none ring-2 ring-white/[0.6]`}>
                         {selectData.map((item) => (
-                            <button className={`flex items-center mr-1 hover:bg-black/[0.2] ${selectedOption === item ? 'bg-black/[0.2] hover:text-white/[0.6]' : ''}`}
+                            <button className={`flex items-center mr-1 hover:bg-black/[0.2] ${JSON.stringify(selectedOption) === JSON.stringify(item) ? 'bg-black/[0.2] hover:text-white/[0.6]' : ''}`}
                                 type={"submit"} key={item.id} value={item.value} onClick={()=>{
                                 setSelectedOption(item);
                                 setDropdownToggle(false);
                             }}>
-                                <div className={`w-1 h-10 ml-0.5 ${selectedOption === item ? color === "blue" ? 'bg-it-blue' : color === "amber" ? 'bg-it-amber' : color === "red" ? 'bg-it-red-light' : 'bg-white/[0.8]' : ''}`}></div>
+                                <div className={`w-1 h-10 ml-0.5 ${JSON.stringify(selectedOption) === JSON.stringify(item) ? color === "blue" ? 'bg-it-blue' : color === "amber" ? 'bg-it-amber' : color === "red" ? 'bg-it-red-light' : 'bg-white/[0.8]' : ''}`}></div>
                                 <div className="py-3 w-fit pl-4">{item.label}</div>
                             </button>
                         ))}
