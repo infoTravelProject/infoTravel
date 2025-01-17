@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "label": "I hate my eyes",
+    "value": "ultra-light"
+  },
+  {
+    "id": 2,
+    "label": "Light",
+    "value": "light"
+  },
+  {
+    "id": 3,
+    "label": "Dark",
+    "value": "dark"
+  },
+  {
+    "id": 4,
+    "label": "Python developer",
+    "value": "ultra-dark"
+  }
+]

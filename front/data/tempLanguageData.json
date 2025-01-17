@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "label": "English - US",
+    "value": "enus"
+  },
+  {
+    "id": 2,
+    "label": "English - UK",
+    "value": "enuk"
+  },
+  {
+    "id": 3,
+    "label": "Spanish",
+    "value": "es"
+  },
+  {
+    "id": 4,
+    "label": "Polish",
+    "value": "pl"
+  },
+  {
+    "id": 5,
+    "label": "German",
+    "value": "de"
+  }
+]
