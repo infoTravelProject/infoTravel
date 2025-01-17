@@ -30,6 +30,42 @@ const Preferences = () => {
             value: "ultra-dark",
         }
     ];
+    const tempLanguageData =[
+        {
+            id: 1,
+            label: "English - US",
+            value: "enus",
+        },
+        {
+            id: 2,
+            label: "English - UK",
+            value: "enuk",
+        },
+        {
+            id: 3,
+            label: "Spanish",
+            value: "es",
+        },
+        {
+            id: 4,
+            label: "Polish",
+            value: "pl",
+        },
+        {
+            id: 5,
+            label: "German",
+            value: "de",
+        }
+    ];
+    function mapper(data, value){
+        let returnItem;
+        data.map(item => {
+            if(item.value === value){
+                returnItem = item;
+            }
+        });
+        return returnItem;
+    }
     //</temp>
 
     return (
@@ -37,8 +73,10 @@ const Preferences = () => {
             <SettingsHeader/>
             <Label text={"General"}/>
             <div className={"flex justify-between"}>
-                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
-                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}
+                selectDefault={mapper(tempData, "dark")}/>
+                <Button type={"select"} color={"amber"} selectType={"simple"} label={"language"} required={true} selectData={tempLanguageData}
+                selectDefault={mapper(tempLanguageData, "enus")}/>
                 <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
                 <Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} required={true} selectData={tempData}/>
             </div>
