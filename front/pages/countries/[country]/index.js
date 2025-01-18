@@ -12,16 +12,50 @@ import CurrencyInfo from "../../../components/countries/CurrencyInfo";
 import Notifications from "../../../components/countries/Notifications";
 import AttractionsGallery from "../../../components/countries/AttractionsGallery";
 import CountrySelector from "../../../components/CountrySelector";
+import {useEffect, useState} from "react";
+import {notFound} from "next/navigation";
 
-const normalizeCountryName = (name) => {
-    return name?.toLowerCase().replace(/^the\s+/i, "").trim();
-};
+
 
 export default function CountryPage() {
     const router = useRouter();
+    const [countryDBData, setCountryDBData] = useState(null);
     const { country } = router.query;
 
+    const normalizeCountryName = (name) => {
+        return name?.toLowerCase().replace(/^the\s+/i, "").trim();
+    };
+
+
     const normalizedCountry = normalizeCountryName(country);
+
+    useEffect(() => {
+        if (!normalizedCountry) return;
+
+        const fetchData = async () => {
+            try {
+                console.log(normalizedCountry);
+                const response = await fetch(`http://localhost:8080/api/country/name/${encodeURIComponent(normalizedCountry)}`, {
+                    method: "GET",
+                });
+
+                if (!response.ok) {
+                    throw new Error("Country not found");
+                }
+
+                const countryFromDBData = await response.json();
+                setCountryDBData(countryFromDBData.data);
+                console.log(countryFromDBData);
+                console.log(countryDBData);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                // Optional cleanup or final actions
+            }
+        };
+
+        fetchData();
+    }, [normalizedCountry]);
 
     const normalizedCountries = Object.entries(countries).reduce((acc, [key, value]) => {
         acc[normalizeCountryName(key)] = value;
@@ -42,50 +76,57 @@ export default function CountryPage() {
 
     return (
         <div className="text-white bg-[#121212]">
-            {/* Country header */}
-            <CountryHeader
-                countryName={country}
-                flagSrc={countryData.flag}
-                backgroundSrc={countryData.background}
-            />
-
-            {/* Header bar */}
-            <HeaderBar {...countryData.risk} />
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-16 py-8">
-                {/* Left column */}
-                <div className="md:col-span-2 space-y-8">
-                    <CountryPageSection title="Summary" content={countryData.summary} />
-                    <RecommendationCard {...countryData.recommendation} />
-                </div>
-
-                {/* Right column */}
-                <div className="space-y-1">
-                    <CountrySelector currentCountry={normalizedCountry} />
-                    <CurrencyInfo
-                        currencyName="Great Britain Pound"
-                        todo="Exchange rates available soon"
+            {/* Render only if countryDBData is available */}
+            {countryDBData ? (
+                <>
+                    {/* Country header */}
+                    <CountryHeader
+                        countryName={countryDBData.name}
+                        flagSrc={countryDBData.flagUrl}
+                        backgroundSrc={countryData.background}
                     />
-                    <VisaInfo currentCountry={normalizedCountry} />
-                    <BorderInfo {...countryData.borderControl} />
-                    <MembershipInfo memberships={countryData.memberships} />
-                    <Notifications items={countryData.notifications} />
-                </div>
-            </div>
 
-            {/* Gallery of attractions */}
-            <div className="px-16 py-4">
-                <h2 className="text-2xl font-bold mb-2">Recommended Points of Interest</h2>
-                <hr className="h-px mb-12 bg-gray-700 border-0" />
-                <AttractionsGallery attractions={countryAttractions} />
-            </div>
+                    {/* Header bar */}
+                    <HeaderBar {...countryData.risk} />
 
-            {/* Additional sections */}
-            <div className="px-16 py-8 mb-8">
-                {countryData.sections.map((section, index) => (
-                    <CountryPageSection key={index} {...section} />
-                ))}
-            </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-16 py-8">
+                        {/* Left column */}
+                        <div className="md:col-span-2 space-y-8">
+                            <CountryPageSection title="Summary" content={countryData.summary} />
+                            <RecommendationCard {...countryData.recommendation} />
+                        </div>
+
+                        {/* Right column */}
+                        <div className="space-y-1">
+                            <CountrySelector currentCountry={normalizedCountry} />
+                            <CurrencyInfo
+                                currencyName="Great Britain Pound"
+                                todo="Exchange rates available soon"
+                            />
+                            <VisaInfo currentCountry={normalizedCountry} />
+                            <BorderInfo {...countryData.borderControl} />
+                            <MembershipInfo memberships={countryData.memberships} />
+                            <Notifications items={countryData.notifications} />
+                        </div>
+                    </div>
+
+                    {/* Gallery of attractions */}
+                    <div className="px-16 py-4">
+                        <h2 className="text-2xl font-bold mb-2">Recommended Points of Interest</h2>
+                        <hr className="h-px mb-12 bg-gray-700 border-0" />
+                        <AttractionsGallery attractions={countryAttractions} />
+                    </div>
+
+                    {/* Additional sections */}
+                    <div className="px-16 py-8 mb-8">
+                        {countryData.sections.map((section, index) => (
+                            <CountryPageSection key={index} {...section} />
+                        ))}
+                    </div>
+                </>
+            ) : (
+                <p className="text-white">Loading country data...</p>
+            )}
         </div>
     );
 }

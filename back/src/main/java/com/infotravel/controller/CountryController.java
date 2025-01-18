@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -21,6 +22,7 @@ public class CountryController {
         this.countryService = countryService;
     }
 
+
     @GetMapping("/{id}")
     public ResponseEntity<Object> getCountryById(@PathVariable int id){
         try{
@@ -31,6 +33,26 @@ public class CountryController {
                     "status", HttpStatus.OK.value(),
                     "message", "Country retrieved successfully",
                     "data", country
+            ));
+        }catch (CountryNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
+        }
+    }
+    @GetMapping("/all")
+    public ResponseEntity<Object> getAllCountries(){
+        try{
+            List<Country> countries = countryService.getAllCountries();
+
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "Countries retrieved successfully",
+                    "data", countries
             ));
         }catch (CountryNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)

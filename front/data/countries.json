@@ -6,7 +6,6 @@
       "lastUpdated": "7 August 2024",
       "stillValid": "1 day ago"
     },
-    "flag": "/uk_flag.png",
     "background": "/london_test2.jpg",
     "summary": "The United Kingdom (UK) is a captivating destination that combines rich history, vibrant culture, and breathtaking landscapes. Comprised of England, Scotland, Wales, and Northern Ireland, the UK offers something for every traveler. Explore iconic landmarks like London's Big Ben, Edinburgh Castle, and Stonehenge, or lose yourself in the charming countryside of the Lake District and Scottish Highlands. Renowned for its world-class museums, traditional pubs, and diverse culinary scene, the UK seamlessly blends modernity with timeless traditions. Whether you're interested in historic cities, coastal escapes, or cultural festivals, the UK promises an unforgettable experience.",
     "recommendation": {
@@ -15,10 +14,6 @@
       "image": "/skye_test.jpg",
       "flag": "/scotland_flag.png",
       "buttonText": "Open in trip planner"
-    },
-    "visa": {
-      "description": "You don’t need a visa to enter",
-      "link": "#"
     },
     "borderControl": {
       "description": "Low-restrictive border control",
@@ -73,5 +68,574 @@
         "image": "/oxford.jpg"
       }
     ]
+  },
+  "Poland": {
+    "risk": {
+      "riskLevel": "Medium safety risk",
+      "description": "Exercise caution in certain areas",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "2 days ago"
+    },
+    "background": "/poland_test.jpg",
+    "summary": "Poland is a country of rich history, diverse landscapes, and vibrant cities. With its medieval castles, stunning natural parks, and welcoming culture, Poland offers something for every traveler. Explore the historic Old Town of Kraków, the modern streets of Warsaw, or relax by the serene lakes of Mazury. The country’s cultural scene includes world-class museums, art galleries, and performances that reflect its deep artistic roots. Poland is also known for its hearty cuisine and lively festivals, making it a must-visit destination for cultural and outdoor enthusiasts alike.",
+    "recommendation": {
+      "title": "Zakopane",
+      "description": "Zakopane, situated at the foot of the Tatra Mountains, is the perfect getaway for nature lovers and adventure seekers. With its stunning mountain views, hiking trails, and charming wooden houses, Zakopane offers a true Polish experience. In winter, it becomes a popular ski resort, while in summer, it attracts tourists with its picturesque landscapes and vibrant folk traditions.",
+      "image": "/zakopane_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Low-restrictive border control",
+      "details": "Border control procedures are efficient, with minimal restrictions."
+    },
+    "memberships": {
+      "EU": true,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay informed about the latest safety updates in Poland."
+      },
+      {
+        "label": "Economy",
+        "description": "Stay updated with economic news."
+      },
+      {
+        "label": "Politics",
+        "description": "Follow political developments in Poland."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Entry requirements and visa updates."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Poland is generally safe for travelers, but some areas, especially in big cities, may have incidents of petty crime like pickpocketing. It is recommended to stay vigilant in crowded places, such as public transportation hubs or tourist attractions. Additionally, some rural areas may have poor road conditions, so driving in these regions should be done with caution.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Poland has a rich and diverse cultural heritage, with a blend of Slavic, Jewish, and European influences. Poles are known for their hospitality and love for traditional festivals, like the famous Kraków Film Festival. Food is a big part of the culture, with dishes like pierogi, kielbasa, and bigos. The tradition of hospitality and respect for family values is at the heart of Polish society.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Polish cuisine is hearty and flavorful, often featuring ingredients such as cabbage, potatoes, meats, and rye bread. Traditional dishes include pierogi (dumplings), kielbasa (sausage), and bigos (hunter’s stew). The food scene in Poland is also modernizing, with a variety of international influences, particularly in the big cities like Warsaw and Gdańsk.",
+        "image": "/pierogi.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Poland boasts a strong educational system, with some prestigious universities like the University of Warsaw and Jagiellonian University. These institutions attract international students, especially in fields like law, medicine, and technology. The Polish government also offers scholarships to students from abroad to encourage academic collaboration and exchange.",
+        "image": "/warsaw_university.jpg"
+      }
+    ]
+  },
+  "Germany": {
+    "risk": {
+      "riskLevel": "Extreme safety risk",
+      "description": "Not safe destination for travelers",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "1 day ago"
+    },
+    "background": "/germany_test.jpg",
+    "summary": "Germany is renowned for its precision, rich history, and cutting-edge culture. From the historical charm of Berlin to the scenic beauty of the Bavarian Alps, Germany has something for everyone. Explore the magnificent castles along the Rhine, wander through lush forests and lakes in the Black Forest, or enjoy a night out in Munich's famous beer gardens. The country is also known for its strong economy, efficient transportation systems, and a global influence in technology and innovation.",
+    "recommendation": {
+      "title": "Neuschwanstein Castle",
+      "description": "One of the most iconic landmarks in Germany, Neuschwanstein Castle, nestled in the Bavarian Alps, offers stunning views and fairy-tale architecture. The castle was the inspiration for Disney's Sleeping Beauty Castle and remains a must-see destination for travelers from around the world.",
+      "image": "/neuschwanstein_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Moderately restrictive border control",
+      "details": "Crossing the border may involve some document checks, but generally smooth."
+    },
+    "memberships": {
+      "EU": true,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Get updates on safety risks in Germany."
+      },
+      {
+        "label": "Economy",
+        "description": "Follow the latest economic developments."
+      },
+      {
+        "label": "Politics",
+        "description": "Stay informed about German political affairs."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Keep updated with customs regulations and visa requirements."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Germany is a very safe country for travelers, with low crime rates and excellent healthcare services. However, petty crime, like pickpocketing, may occur in tourist-heavy areas. Travelers are advised to keep their belongings close and be cautious in crowded places.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Germany is known for its cultural depth, from classical music and opera to literature, philosophy, and modern art. The country celebrates its heritage through events like Oktoberfest in Munich and the Berlin Film Festival. Germans value punctuality and direct communication, making them highly regarded for efficiency and clarity.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "German cuisine is hearty and often features meats like pork, beef, and sausages, with potatoes, sauerkraut, and bread as common accompaniments. Dishes like bratwurst, schnitzel, and pretzels are well-known internationally. German beer culture is also significant, with numerous local breweries producing a variety of beer styles.",
+        "image": "/german_beer.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Germany is home to some of Europe’s top universities, including Ludwig Maximilian University in Munich and Heidelberg University. The country attracts many international students, especially in engineering, medicine, and natural sciences. Public universities in Germany also offer low or no tuition fees, making it an attractive option for students from around the world.",
+        "image": "/heidelberg_university.jpg"
+      }
+    ]
+  },
+  "Ireland": {
+    "risk": {
+      "riskLevel": "Low safety risk",
+      "description": "Generally safe, with minimal risks",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "3 days ago"
+    },
+    "background": "/ireland_test.jpg",
+    "summary": "Ireland is a country of lush landscapes, rugged coastlines, and a rich cultural heritage. From the vibrant streets of Dublin to the peaceful Irish countryside, Ireland is an ideal destination for nature lovers and history enthusiasts alike. Explore ancient castles, visit the Cliffs of Moher, or experience the charm of the small coastal towns. With its legendary hospitality, music, and pubs, Ireland provides an experience that is both relaxing and exhilarating.",
+    "recommendation": {
+      "title": "Ring of Kerry",
+      "description": "The Ring of Kerry is a scenic drive through the southwest of Ireland, offering stunning views of mountains, lakes, and the wild Atlantic coast. It is a haven for outdoor lovers, offering activities such as hiking, cycling, and wildlife watching.",
+      "image": "/ring_of_kerry_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Low-restrictive border control",
+      "details": "Border checks are minimal, mainly focused on customs."
+    },
+    "memberships": {
+      "EU": true,
+      "Schengen": false,
+      "NATO": false
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay informed about the latest safety risks in Ireland."
+      },
+      {
+        "label": "Economy",
+        "description": "Follow economic updates."
+      },
+      {
+        "label": "Politics",
+        "description": "Stay updated on Ireland's political scene."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Stay up to date with immigration and customs rules."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Ireland is one of the safest countries in Europe, with low crime rates and a welcoming atmosphere. However, travelers should exercise caution in large cities, particularly in areas known for nightlife. Pickpocketing can occasionally be an issue in crowded places.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Irish culture is deeply connected to music, storytelling, and community. Travelers can enjoy traditional Irish music in pubs, lively festivals, and ancient myths. The Irish are known for their warmth and friendliness, making visitors feel right at home.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Irish cuisine is hearty and comforting, often featuring potatoes, meat, and fresh vegetables. Traditional dishes include Irish stew, shepherd’s pie, and soda bread. Additionally, Irish breakfast is a popular choice, with eggs, bacon, sausages, and black pudding.",
+        "image": null
+      },
+      {
+        "title": "Higher education",
+        "content": "Ireland has a growing reputation for higher education, with institutions such as Trinity College Dublin and University College Dublin offering high-quality programs. The country’s emphasis on research, technology, and entrepreneurship makes it an attractive destination for international students.",
+        "image": null
+      }
+    ]
+  },
+  "Norway": {
+    "risk": {
+      "riskLevel": "Low safety risk",
+      "description": "Very safe destination for travelers",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "4 days ago"
+    },
+    "background": "/norway_test.jpg",
+    "summary": "Norway is known for its dramatic fjords, stunning landscapes, and outdoor adventure opportunities. From the breathtaking Northern Lights in Tromsø to the scenic beauty of the Lofoten Islands, Norway offers endless outdoor experiences. The country's rich history and Viking heritage are complemented by modern cities like Oslo, which offers world-class museums and cultural sites. Norway is the perfect destination for nature lovers, thrill-seekers, and those who enjoy a peaceful, clean environment.",
+    "recommendation": {
+      "title": "Geirangerfjord",
+      "description": "Geirangerfjord is one of Norway's most famous natural wonders, with towering cliffs, waterfalls, and crystal-clear waters. The fjord offers plenty of activities, including cruises, kayaking, and hiking. It’s a perfect destination for nature lovers and photographers.",
+      "image": "/geirangerfjord_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Low-restrictive border control",
+      "details": "Border control is smooth and efficient, with few restrictions."
+    },
+    "memberships": {
+      "EU": false,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Get updates on safety concerns in Norway."
+      },
+      {
+        "label": "Economy",
+        "description": "Stay informed on the economic situation."
+      },
+      {
+        "label": "Politics",
+        "description": "Get updates on Norway's political landscape."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Stay informed on visa requirements and customs regulations."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Norway is one of the safest countries in the world with low crime rates. However, travelers should be cautious in some urban areas, especially regarding petty crime like pickpocketing. Norway’s wilderness also demands respect and preparation for outdoor activities.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Norwegian culture is deeply rooted in nature, with a strong sense of community. Norwegians take pride in their Viking heritage, folklore, and traditions. Outdoor activities such as skiing, hiking, and fishing are central to Norwegian life.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Norwegian cuisine is simple, focusing on fresh, locally sourced ingredients. Common dishes include salmon, cod, and reindeer. Traditional dishes like klippfisk (dried cod) and raspeballer (potato dumplings) provide an authentic taste of Norway.",
+        "image": "/norwegian_salmon.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Norway offers high-quality education with institutions like the University of Oslo and the Norwegian School of Economics. The country is known for its focus on research, environmental studies, and technology.",
+        "image": "/university_of_oslo.jpg"
+      }
+    ]
+  },
+  "Italy": {
+    "risk": {
+      "riskLevel": "Medium safety risk",
+      "description": "Exercise caution in certain areas",
+      "lastUpdated": "7 August 2024",
+      "stillValid": "2 days ago"
+    },
+    "background": "/italy_test.jpg",
+    "summary": "Italy is a country of rich history, stunning art, delicious cuisine, and breathtaking landscapes. From the romantic canals of Venice to the historical landmarks of Rome, and the picturesque Amalfi Coast, Italy offers diverse experiences. Visitors can explore the ancient ruins of Pompeii, the iconic Colosseum, and the artistic treasures in Florence. Italy is also renowned for its world-class wine, cuisine, and vibrant culture, making it a top destination for travelers seeking history, beauty, and indulgence.",
+    "recommendation": {
+      "title": "Amalfi Coast",
+      "description": "The Amalfi Coast is a stunning stretch of coastline in southern Italy known for its dramatic cliffs, colorful villages, and crystal-clear waters. Travelers can enjoy scenic drives, luxurious beaches, and charming coastal towns like Positano and Ravello. It's the perfect destination for those looking for natural beauty and relaxation.",
+      "image": "/amalfi_coast_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Moderately restrictive border control",
+      "details": "Travelers may be subject to some checks, but the process is generally smooth."
+    },
+    "memberships": {
+      "EU": true,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay updated with safety risks in Italy."
+      },
+      {
+        "label": "Economy",
+        "description": "Get the latest economic news from Italy."
+      },
+      {
+        "label": "Politics",
+        "description": "Follow political developments in Italy."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Stay updated with customs and visa requirements."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Italy is generally safe for travelers, but certain cities or areas with heavy tourist traffic may be prone to pickpocketing. It is advised to stay vigilant in crowded areas, especially on public transportation and in popular tourist spots. Additionally, political protests or strikes occasionally occur in urban centers.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Italy has a vibrant culture that celebrates art, food, fashion, and family. The country is home to countless museums, art galleries, and historical landmarks. Italians have a deep sense of pride in their regional traditions, dialects, and food, and dining is an essential part of social life. Understanding the importance of meals, such as a leisurely lunch or dinner, is crucial for an authentic experience.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Italian cuisine is famous worldwide for its simplicity, fresh ingredients, and rich flavors. Classic dishes include pasta (spaghetti, lasagna, ravioli), pizza, and risotto. Each region has its own specialties, such as pesto in Liguria, seafood in Sicily, and truffles in Piedmont. Italian desserts like tiramisu, gelato, and cannoli are must-try treats for any visitor.",
+        "image": "/italian_pasta.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Italy is home to some of the world’s oldest and most prestigious universities, including the University of Bologna, the University of Rome La Sapienza, and the University of Florence. Italy offers a wide range of academic programs, with a strong emphasis on arts, architecture, history, and literature. Many universities also offer programs in English for international students.",
+        "image": "/university_of_bologna.jpg"
+      }
+    ]
+  },
+  "Japan": {
+    "risk": {
+      "riskLevel": "Moderate safety risk",
+      "description": "Exercise caution, but Japan is generally very safe",
+      "lastUpdated": "18 January 2025",
+      "stillValid": "Today"
+    },
+    "background": "/tokyo_test.jpg",
+    "summary": "Japan is a fascinating country that blends ancient traditions with cutting-edge technology. Known for its rich culture, scenic landscapes, and bustling cities, Japan offers a wide array of experiences. Explore Tokyo, a city that never sleeps, or visit Kyoto to immerse yourself in traditional temples and beautiful gardens. The natural beauty of Mount Fuji and the hot springs in Hakone are must-visit. Japanese cuisine, including sushi, ramen, and tempura, is internationally famous, and the country’s hospitality, or 'omotenashi,' ensures a warm welcome to all visitors.",
+    "recommendation": {
+      "title": "Kyoto",
+      "description": "Kyoto, the heart of traditional Japan, is home to stunning temples, shrines, and gardens. Its ancient atmosphere, combined with the beauty of the changing seasons, offers a unique experience. Visit the iconic Fushimi Inari Shrine, the tranquil Arashiyama Bamboo Grove, or the serene Kinkaku-ji (Golden Pavilion). Kyoto is also famous for its tea ceremonies and traditional ryokan inns.",
+      "image": "/kyoto_test.jpg",
+      "flag": null,
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Moderate border control",
+      "details": "Border control procedures in Japan are generally smooth but may include checks for travelers coming from specific regions."
+    },
+    "memberships": {
+      "EU": false,
+      "Schengen": false,
+      "NATO": false
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay informed on any regional safety updates."
+      },
+      {
+        "label": "Economy",
+        "description": "Get the latest economic updates on Japan."
+      },
+      {
+        "label": "Politics",
+        "description": "Keep track of political developments in Japan."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Important visa updates, prohibited items, and entry requirements."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Japan is one of the safest countries in the world, with a very low crime rate. However, travelers should be aware of occasional natural disasters like earthquakes and typhoons, which can affect certain regions. It's recommended to stay updated on local weather forecasts, especially during the summer and autumn months, when typhoon season is at its peak.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Japan is rich in cultural traditions, from tea ceremonies and kimono-wearing to its ancient temples and festivals. Etiquette is important in Japan, and travelers should be aware of practices such as bowing as a greeting, removing shoes when entering homes or certain traditional establishments, and handling chopsticks with care. The Japanese are also known for their hospitality and politeness, making it a very welcoming place to visit.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Japan’s cuisine is world-renowned, with dishes like sushi, sashimi, ramen, tempura, and takoyaki being staples of the culinary scene. For dessert lovers, Japanese sweets like mochi, matcha-flavored treats, and dorayaki are popular choices. Don't forget to try some local specialties such as okonomiyaki (savory pancake) in Osaka or kaiseki (traditional multi-course meal) in Kyoto. Japanese food culture is also heavily based on seasonal ingredients, so there’s always something new to try.",
+        "image": "/sushi.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Japan has a strong reputation for its advanced technology and scientific research. Leading universities like the University of Tokyo, Kyoto University, and Osaka University offer world-class education, especially in fields like engineering, technology, and medicine. Japan also has an increasing number of international students, supported by scholarships and exchange programs. The country’s rigorous academic system provides students with a strong foundation for their future careers.",
+        "image": "/university_tokyo.jpg"
+      }
+    ]
+  },
+  "Iceland": {
+    "risk": {
+      "riskLevel": "Low safety risk",
+      "description": "Iceland is one of the safest countries, with very low crime rates.",
+      "lastUpdated": "18 January 2025",
+      "stillValid": "Today"
+    },
+    "background": "/iceland_test.jpg",
+    "summary": "Iceland is a land of dramatic landscapes, including volcanoes, glaciers, waterfalls, and geothermal hot springs. It’s a country that thrives on natural beauty and unique geological features. Visit Reykjavik, the capital, where you can explore vibrant culture, modern architecture, and rich history. Iceland’s natural wonders, such as the Blue Lagoon, the Golden Circle, and the Northern Lights, draw visitors from all over the world. It’s an ideal destination for nature lovers, adventure seekers, and those wanting to experience one of the most unspoiled environments on Earth.",
+    "recommendation": {
+      "title": "Golden Circle",
+      "description": "The Golden Circle is a popular tourist route that showcases some of Iceland’s most stunning natural wonders, including the Gullfoss waterfall, the geothermal area of Geysir, and Thingvellir National Park. This route offers a glimpse into the volcanic activity that shapes Iceland’s landscape, as well as its rich history as the site of the first Icelandic parliament.",
+      "image": "/golden_circle_test.jpg",
+      "flag": "/iceland_flag.png",
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Minimal border control",
+      "details": "Iceland has minimal border controls for travelers, especially from EU countries, but there may be occasional checks for those coming from outside the Schengen Area."
+    },
+    "memberships": {
+      "EU": false,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay informed on any regional safety updates."
+      },
+      {
+        "label": "Economy",
+        "description": "Get the latest economic updates on Iceland."
+      },
+      {
+        "label": "Politics",
+        "description": "Stay updated on Iceland's political situation."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Visa information and entry requirements."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Iceland is considered one of the safest countries in the world, with very low crime rates. The main safety concerns for travelers are related to the unpredictable weather, including strong winds, heavy rain, and occasional snowstorms. Travelers should be cautious when hiking or exploring remote areas, especially in winter.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Icelandic culture is deeply rooted in its Viking heritage, with a strong tradition of storytelling, literature, and music. The Icelandic people value nature, and sustainability is important in their daily lives. Reykjavik, the capital, is known for its vibrant arts scene, museums, and festivals. Iceland also boasts a rich history of literature, especially medieval sagas, that have shaped its modern identity.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Icelandic cuisine is heavily influenced by the country’s cold climate and its reliance on fish, lamb, and dairy products. Traditional dishes include fermented shark (hákarl), lamb stew, and Icelandic yogurt (skyr). Seafood lovers will also enjoy fresh fish dishes, especially cod and salmon. Icelandic cuisine has modernized in recent years, with a growing emphasis on locally sourced ingredients and international influences.",
+        "image": "/iceland_food.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Iceland offers high-quality education with a strong emphasis on sustainability and environmental studies. Reykjavik University and the University of Iceland are the two main higher education institutions, both offering a range of undergraduate and graduate programs. The country also attracts international students due to its unique cultural and environmental studies programs.",
+        "image": "/university_iceland.jpg"
+      }
+    ]
+  },
+  "Portugal": {
+    "risk": {
+      "riskLevel": "Low safety risk",
+      "description": "Portugal is a safe destination with low crime rates, though visitors should exercise caution in busy tourist areas.",
+      "lastUpdated": "18 January 2025",
+      "stillValid": "Today"
+    },
+    "background": "/lisbon_test.jpg",
+    "summary": "Portugal, located on the Iberian Peninsula, is known for its beautiful coastline, rich history, and vibrant culture. From the historic streets of Lisbon to the scenic beauty of the Algarve, Portugal offers a diverse range of experiences. Its wine regions, particularly in Porto and the Douro Valley, are internationally renowned. Portugal is famous for its delicious cuisine, including seafood dishes like bacalhau (salted cod) and pastéis de nata (custard tarts). With its Mediterranean climate, beautiful beaches, and warm hospitality, Portugal is a must-visit destination for anyone traveling to Europe.",
+    "recommendation": {
+      "title": "Porto",
+      "description": "Porto, located in the north of Portugal, is a vibrant city known for its rich history, stunning architecture, and famous port wine. Stroll along the riverfront, visit the beautiful Livraria Lello, and try a glass of port wine at one of the city’s wine cellars. Porto also offers incredible gastronomy, with dishes like francesinha (a hearty sandwich) and bacalhau.",
+      "image": "/porto_test.jpg",
+      "flag": "/portugal_flag.png",
+      "buttonText": "Open in trip planner"
+    },
+    "borderControl": {
+      "description": "Minimal border control",
+      "details": "Portugal is part of the Schengen Area, so border checks are minimal for travelers from other Schengen countries. There are occasional checks for visitors coming from outside the Schengen Zone."
+    },
+    "memberships": {
+      "EU": true,
+      "Schengen": true,
+      "NATO": true
+    },
+    "notifications": [
+      {
+        "label": "Safety risks",
+        "description": "Stay informed on any regional safety updates."
+      },
+      {
+        "label": "Economy",
+        "description": "Get the latest economic updates on Portugal."
+      },
+      {
+        "label": "Politics",
+        "description": "Stay updated on Portugal's political situation."
+      },
+      {
+        "label": "Customs and Immigration",
+        "description": "Visa information and entry requirements."
+      },
+      {
+        "label": "Important local news",
+        "description": null
+      }
+    ],
+    "sections": [
+      {
+        "title": "Safety risks",
+        "content": "Portugal is one of the safest countries in Europe, with low crime rates. However, like in most tourist destinations, visitors should be cautious in crowded areas to avoid pickpocketing. Additionally, travelers should be aware of potential forest fires during the summer months in rural regions.",
+        "image": null
+      },
+      {
+        "title": "Culture",
+        "content": "Portugal is renowned for its music, particularly fado, a traditional genre that reflects the country's melancholic and soulful nature. Portuguese culture is also heavily influenced by its maritime history, evident in the architecture, cuisine, and festivals. Lisbon and Porto are cultural hubs with a rich heritage of art, literature, and music. Portugal also celebrates numerous festivals, including the famous Carnival and the Festa de São João in Porto.",
+        "image": null
+      },
+      {
+        "title": "Local cuisine",
+        "content": "Portuguese cuisine is characterized by fresh seafood, hearty stews, and delicious pastries. Dishes like bacalhau (salted cod), sardinhas assadas (grilled sardines), and caldo verde (green soup) are popular. The country is also famous for its wines, particularly port and vinho verde, as well as sweet treats like pastéis de nata (custard tarts). Food is central to Portuguese culture, and dining is an important social activity.",
+        "image": "/portugal_food.jpg"
+      },
+      {
+        "title": "Higher education",
+        "content": "Portugal has a well-established higher education system with several prestigious universities, including the University of Lisbon, the University of Porto, and the University of Coimbra. Portuguese universities are recognized for their research programs and quality of education, particularly in fields like engineering, medicine, and the arts. Portugal also offers various scholarships for international students.",
+        "image": "/university_portugal.jpg"
+      }
+    ]
   }
 }
+
+
+
+
+
+
+
+
+

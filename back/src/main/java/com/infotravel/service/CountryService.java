@@ -17,6 +17,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 
+import static java.lang.String.join;
+
 @Service
 public class CountryService {
     private final CountryRepository countryRepository;
@@ -39,7 +41,20 @@ public class CountryService {
     }
 
     public Optional<Country> getCountryByName(String name){
-        return countryRepository.findCountryByName(name);
+        String[] words = name.split("\\s+");
+        StringBuilder result = new StringBuilder();
+
+        // Loop through each word
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                // Capitalize the first letter and append the rest
+                result.append(Character.toUpperCase(word.charAt(0)))
+                        .append(word.substring(1))
+                        .append(" ");
+            }
+        }
+
+        return countryRepository.findCountryByName(result.toString().trim());
     }
     public Country updateCountry(int countryId, Country country){
         Optional<Country> existingCountry = countryRepository.findById(countryId);
