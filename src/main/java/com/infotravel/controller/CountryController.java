@@ -42,6 +42,27 @@ public class CountryController {
         }
     }
 
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Object> getCountryByName(@PathVariable String name) {
+        try {
+            Country country = countryService.getCountryByName(name)
+                    .orElseThrow(() -> new CountryNotFoundException("Country with name " + name + " not found"));
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "Country retrieved successfully",
+                    "data", country
+            ));
+        } catch (CountryNotFoundException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of(
+                            "timestamp", System.currentTimeMillis(),
+                            "status", HttpStatus.NOT_FOUND.value(),
+                            "message", ex.getMessage()
+                    ));
+        }
+    }
+
     @PostMapping
     public ResponseEntity<Object> createCountry(@Valid @RequestBody Country country){
         Country createdCountry = countryService.createCountry(country);

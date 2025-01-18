@@ -37,6 +37,10 @@ public class CountryService {
     public Optional<Country> getCountryById(int countryId){
         return countryRepository.findById(countryId);
     }
+
+    public Optional<Country> getCountryByName(String name){
+        return countryRepository.findCountryByName(name);
+    }
     public Country updateCountry(int countryId, Country country){
         Optional<Country> existingCountry = countryRepository.findById(countryId);
 
