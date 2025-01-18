@@ -27,16 +27,16 @@ const Preferences = () => {
             <SettingsHeader/>
             <Label text={"General"}/>
             <div className={"flex justify-between flex-wrap gap-x-10 gap-y-5"}>
-                <div className={"min-w-60"}><Button type={"select"} color={"amber"} selectType={"simple"} label={"theme"} selectData={tempData}
+                <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"theme"} selectData={tempData}
                 selectDefault={mapper(tempData, "dark")}/></div>
-                <div className={"min-w-60"}><Button type={"select"} color={"amber"} selectType={"simple"} label={"language"} selectData={tempLanguageData}
+                <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"language"} selectData={tempLanguageData}
                 selectDefault={mapper(tempLanguageData, "enus")}/></div>
-                <div className={"min-w-60"}><Button type={"select"} color={"amber"} selectType={"simple"} label={"units"} selectData={tempData}/></div>
-                <div className={"min-w-60"}><Button type={"select"} color={"amber"} selectType={"simple"} label={"currency"} selectData={tempData}/></div>
+                <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"units"} selectData={tempData}/></div>
+                <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"currency"} selectData={tempData}/></div>
             </div>
             <Label text={"Profile"}/>
             <div className={"flex justify-between pb-4"}>
-                <div className={"min-w-60"}><Button type={"select"} color={"amber"} selectType={"simple"} label={"profile theme"} selectData={tempData}/></div>
+                <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"profile theme"} selectData={tempData}/></div>
             </div>
             <ToggleBox text={"Display following/followers count"} type={"on"}/>
             <ToggleBox text={"Display nickname instead of first name"} type={"disabled"}/>

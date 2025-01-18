@@ -53,7 +53,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             hex = "#7E1C1C";
             break;
         case "grey":
-            type = "normal";
+            type = "button";
             hex = "#1E1E1E";
             break;
         default:
@@ -167,7 +167,11 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                     //TODO: hide/show password on eye-button click
 
                     return (
-                        <div>
+                        <div className="flex flex-col">
+                            <label className="relative w-fit pb-1 text-xs">
+                                <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
+                                <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
+                            </label>
                             <div className="relative flex items-center text-white/[0.4] focus-within:text-white/[0.9]">
                                 <input
                                 type="password"
@@ -179,23 +183,48 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                             </div>
                         </div>
                     );
+                case "textarea":
+                    return (
+                        <div className="flex flex-col">
+                            <label className="relative pb-1 text-xs">
+                                <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
+                                <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
+                            </label>
+                            <div className="text-white/[0.4] focus-within:text-white/[0.9]">
+                                <textarea
+                                    autoComplete="off"
+                                    placeholder={inputPlaceholder}
+                                    defaultValue={selectDefault}
+                                    className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-2xl min-h-24 max-h-96 min-w-64 w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                                ${color === "blue" ? 'focus:ring-it-blue' : color === "amber" ? 'focus:ring-it-amber' : color === "red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                            </div>
+                        </div>
+                    );
                 default:
                 case "none":
                     return (
-                        <div className="text-white/[0.4] focus-within:text-white/[0.9]">
-                            <input
-                            type="text"
-                            autoComplete="off"
-                            placeholder={inputPlaceholder}
-                            className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
-                            ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                        <div className="flex flex-col">
+                            <label className="relative w-fit pb-1 text-xs">
+                                <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
+                                <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
+                            </label>
+                            <div className="text-white/[0.4] focus-within:text-white/[0.9]">
+                                <input
+                                    type="text"
+                                    autoComplete="off"
+                                    placeholder={inputPlaceholder}
+                                    defaultValue={selectDefault}
+                                    className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
+                                ${color === "blue" ? 'focus:ring-it-blue' : color === "amber" ? 'focus:ring-it-amber' : color === "red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}/>
+                            </div>
                         </div>
                     );
             }
             break;
         case "logout":
             return (
-                <div className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
+                <div
+                    className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
                     <div className="w-8 h-8 flex flex-col justify-center ml-8">
                         <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
                     </div>
