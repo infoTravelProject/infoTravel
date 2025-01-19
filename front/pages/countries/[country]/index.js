@@ -137,7 +137,7 @@ export default function CountryPage() {
                             <RecommendationCard {...countryData.recommendation} />
                         </div>
                         <div className="space-y-1">
-                            <ExchangeRate/>
+                            <ExchangeRate fromCurrency={"gbp"}/>
 
                             <CountrySelector currentCountry={normalizedCountry} />
                             <CurrencyInfo
