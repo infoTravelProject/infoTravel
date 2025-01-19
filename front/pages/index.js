@@ -6,10 +6,8 @@ export default function Home() {
     setSidebarPage("Home");
 
     return (
-        <div>
-            <h1 className="text-white text-5xl font-inter p-56 font-bold flex items-center justify-center">
-                <MapComponent/>
-            </h1>
+        <div className={"w-full"}>
+            <MapComponent/>
         </div>
     );
 }

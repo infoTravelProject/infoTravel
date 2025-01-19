@@ -13,7 +13,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {africa.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>
@@ -29,7 +30,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {asia.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>
@@ -46,7 +48,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {europe.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>
@@ -63,7 +66,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {northAmerica.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>
@@ -80,7 +84,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {southAmerica.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>
@@ -97,7 +102,8 @@ const CountryList = ({africa, asia, europe, northAmerica, southAmerica, oceania}
                 </thead>
                 <tbody>
                 {oceania.map((item, index) => (<tr key={index}>
-                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer">{item}</td>
+                    <td className="px-7 py-1.5 hover:bg-black/[0.2] cursor-pointer"
+                        onClick={()=>window.location.href = "/countries/"+item.toLowerCase()}>{item}</td>
                 </tr>))}
                 </tbody>
             </table>

@@ -32,6 +32,7 @@ export default {
       backgroundImage: {
         'it-gradient': 'linear-gradient(to bottom, rgba(31, 144, 224, 0.12) 0%, rgba(40, 80, 140, 0.1) 25%, rgba(50, 50, 100, 0.06) 50%, rgba(20, 20, 50, 0.03) 75%, rgba(0, 0, 0, 0) 100%)',
         'it-airport': "url('/airport.jpg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },

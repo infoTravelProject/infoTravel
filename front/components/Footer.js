@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -35,9 +36,10 @@ export default function Footer() {
                         <li className="space-y-2">
                             <h3 className="text-it-blue font-bold mb-4 text-lg">Product</h3>
                         </li>
+                        <li><Link href={"/countries"} className={"text-gray-400 hover:text-it-blue"}>Country list</Link></li>
                         <li><a href="#" className="text-gray-400 hover:text-it-blue">About infoTravel</a></li>
                         <li><a href="#" className="text-gray-400 hover:text-it-blue">App Guide</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-it-blue">Interactive map</a></li>
+                        <li><Link href={"/"} className={"text-gray-400 hover:text-it-blue"}>Interactive map</Link></li>
                         <li><a href="#" className="text-gray-400 hover:text-it-blue">Planner</a></li>
                         <li><a href="#" className="text-gray-400 hover:text-it-blue">Travel guides</a></li>
                         <li><a href="#" className="text-gray-400 hover:text-it-blue">Recommended</a></li>
