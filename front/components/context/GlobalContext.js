@@ -1,5 +1,6 @@
 'use client';
 import { createContext, useContext, useState, useEffect } from "react";
+import {useRouter} from "next/navigation";
 
 const GlobalContext = createContext(undefined, undefined);
 
@@ -11,6 +12,7 @@ export const GlobalProvider = ({ children }) => {
     const [sidebarPage, setSidebarPage] = useState(null);
     const [settingsPage, setSettingsPage] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState("poland");
+    const router = useRouter();
 
     useEffect(() => {
         const storedUser = localStorage.getItem('user');
@@ -63,6 +65,7 @@ export const GlobalProvider = ({ children }) => {
         setToken(null);
         localStorage.removeItem('user');
         localStorage.removeItem('token');
+        router.push('/login');
     }
 
     return (

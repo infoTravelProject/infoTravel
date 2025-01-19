@@ -239,7 +239,8 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             break;
         case "logout":
             return (
-                <div className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
+                <div className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2"
+                     onClick={buttonHandler}>
                     <div className="w-8 h-8 flex flex-col justify-center ml-8">
                         <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
                     </div>

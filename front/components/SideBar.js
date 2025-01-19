@@ -3,7 +3,7 @@ import {useGlobalContext} from "@/components/context/GlobalContext";
 import Button from "@/components/Button";
 
 export default function SideBar() {
-    const {sidebarOpen, sidebarPage} = useGlobalContext();
+    const {sidebarOpen, sidebarPage, logout} = useGlobalContext();
 
     if (sidebarOpen) return (
         <div className="fixed top-20 z-30 right-0 w-60 h-[calc(100%-5rem)] bg-[#1B1B1B]/[0.95] shadow-lg shadow-neutral-950">
@@ -45,7 +45,7 @@ export default function SideBar() {
                     link={"/#"}/>
             </div>
             <div className="absolute w-full bottom-12 h-fit flex flex-row justify-center">
-                <div className="scale-90"><Button type={"logout"} text={"Sign Out"}/></div>
+                <div className="scale-90"><Button type={"logout"} text={"Sign Out"} onPress={logout}/></div>
             </div>
         </div>
     );
