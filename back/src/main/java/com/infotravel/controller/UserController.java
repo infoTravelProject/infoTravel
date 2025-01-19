@@ -1,6 +1,7 @@
 package com.infotravel.controller;
 
 import com.infotravel.entity.User;
+import com.infotravel.exception.InvalidPasswordException;
 import com.infotravel.exception.UserNotFoundException;
 import com.infotravel.service.UserService;
 import jakarta.validation.Valid;
@@ -25,7 +26,7 @@ public class UserController {
         this.userService = userService;
     }
     // Create User
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
         try {
             User createdUser = userService.createUser(user);
@@ -43,6 +44,34 @@ public class UserController {
             ));
         }
     }
+    @PostMapping("/login")
+    public ResponseEntity<Object> login(@RequestBody Map<String, String> loginRequest) {
+        try {
+            // Extract nickname and password from the request body
+            String email = loginRequest.get("email");
+            String password = loginRequest.get("password");
+
+            // Use the login method from UserService to authenticate the user
+            User user = userService.login(email, password);
+
+            // Return a successful response with the user data
+            return ResponseEntity.ok(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.OK.value(),
+                    "message", "Login successful",
+                    "data", user
+            ));
+        } catch (UserNotFoundException | InvalidPasswordException ex) {
+            // Handle failed login attempts with a 401 Unauthorized response
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of(
+                    "timestamp", System.currentTimeMillis(),
+                    "status", HttpStatus.UNAUTHORIZED.value(),
+                    "message", ex.getMessage()
+            ));
+        }
+    }
+
+
 
     // Get User by ID
     @GetMapping("/{id}")

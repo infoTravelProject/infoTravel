@@ -1,10 +1,11 @@
 package com.infotravel.service;
 
 import com.infotravel.entity.User;
+import com.infotravel.exception.InvalidPasswordException;
 import com.infotravel.exception.UserNotFoundException;
 import com.infotravel.repository.UserRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -27,7 +29,24 @@ public class UserService {
         if (existingUser.isPresent()) {
             throw new IllegalArgumentException("Nickname '" + user.getNickname() + "' is already taken.");
         }
+        user.setPassword(PasswordUtils.hashPassword(user.getPassword()));
         return userRepository.save(user);
+    }
+    public User login(String email, String password) {
+        // Step 1: Find the user by nickname
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (userOptional.isEmpty()) {
+            throw new UserNotFoundException("User with email '" + email + "' not found");
+        }
+
+        // Step 2: Get the user and check the password
+        User user = userOptional.get();
+        if (!PasswordUtils.checkPassword(password, user.getPassword())) {
+            throw new InvalidPasswordException("Invalid password for user '" + email + "'");
+        }
+
+        // Step 3: If the password matches, return the user
+        return user;
     }
     @Transactional
     public void deleteUser(int userId) {
@@ -40,6 +59,7 @@ public class UserService {
     public Optional<User> getUserById(int userId) {
         return userRepository.findById(userId);
     }
+
 
     public User updateUser(int userId, User user) {
 
