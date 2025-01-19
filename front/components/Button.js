@@ -93,7 +93,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             return (
                 <div ref={dropdownRef} className="relative flex flex-col min-w-fit h-fit font-inter font-normal text-sm text-white/[0.9]">
 
-                    <label className="relative w-fit pb-1 text-xs">
+                    <label className="relative w-fit pb-1.5 text-xs">
                         <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
                         <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
                     </label>
@@ -168,7 +168,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
 
                     return (
                         <div className="flex flex-col">
-                            <label className="relative w-fit pb-1 text-xs">
+                            <label className="relative w-fit pb-1.5 text-xs">
                                 <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
                                 <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
                             </label>
@@ -186,7 +186,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                 case "textarea":
                     return (
                         <div className="flex flex-col">
-                            <label className="relative pb-1 text-xs">
+                            <label className="relative pb-1.5 text-xs">
                                 <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
                                 <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
                             </label>
@@ -204,7 +204,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                 case "none":
                     return (
                         <div className="flex flex-col">
-                            <label className="relative w-fit pb-1 text-xs">
+                            <label className="relative w-fit pb-1.5 text-xs">
                                 <span className="text-white/[0.5] pr-2">{label.toUpperCase()}</span>
                                 <span className={`${required ? 'text-it-amber' : 'text-transparent'} absolute right-0`}>*</span>
                             </label>
