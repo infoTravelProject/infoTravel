@@ -1,9 +1,7 @@
 import Image from "next/image";
 import {useGlobalContext} from "@/components/context/GlobalContext";
-import {useRouter} from "next/navigation";
 
 const SettingsHeader = () => {
-    const router = useRouter();
     const {user} = useGlobalContext();
     return (
         <div className="h-fit flex flex-col">

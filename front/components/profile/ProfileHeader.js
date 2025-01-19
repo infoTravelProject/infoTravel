@@ -1,7 +1,10 @@
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { FaCircleUser } from "react-icons/fa6";
+import {useGlobalContext} from "@/components/context/GlobalContext";
 
 export default function ProfileHeader() {
+
+    const {user} = useGlobalContext();
 
     return (
         <div className="bg-[#1F90E0]/[0.12] min-h-[30vh] min-w-screen flex flex-row text-white">
@@ -12,7 +15,7 @@ export default function ProfileHeader() {
                 <div className="flex flex-col">
 
                     {/*name*/}
-                    <h2 className="text-3xl mb-4"> Example User</h2>
+                    <h2 className="text-3xl mb-4">{user&& user.firstName + " " + user.lastName}</h2>
                     <div className="leading-3">
 
                         {/*level and rank*/}
