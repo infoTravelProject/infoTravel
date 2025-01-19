@@ -20,9 +20,9 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             onSelect(item);
         }
     }
-    const buttonHandler = (item)=>{
+    const buttonHandler = ()=>{
         if(typeof onPress === "function"){
-            onPress(item);
+            onPress();
         }
     }
     const inputHandler = (event)=>{
@@ -85,7 +85,8 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
         case "button-contrast":
             return (
                 <div className="w-fit rounded-full p-0.5" style={{backgroundColor: hex}}>
-                    <div className="flex flex-row items-center pr-9 py-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition">
+                    <div className="flex flex-row items-center pr-9 py-1.5 rounded-full text-sm font-normal font-inter hover:bg-black transition"
+                    onClick={buttonHandler}>
                         <div className="h-5 w-8 ml-0.5 mr-1 flex flex-row justify-end">
                             {icon && (
                                 <Image src={icon} alt={"?"} width={20} height={20}/>
@@ -238,8 +239,7 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
             break;
         case "logout":
             return (
-                <div
-                    className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
+                <div className="w-fit flex flex-row items-center bg-black/[0.25] rounded-full cursor-pointer transition hover:bg-black/[0.35] hover:border-amber-600 border-transparent border-2">
                     <div className="w-8 h-8 flex flex-col justify-center ml-8">
                         <Image src={"/logout.png"} width={500} height={500} alt={"?"} className="scale-75"/>
                     </div>
@@ -271,8 +271,8 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
         case "button":
             return (
                 <div className="w-fit rounded-full" style={{backgroundColor: hex}}>
-                    <div
-                        className={`flex flex-row items-center pr-10 py-2 rounded-full ${color === "grey" ? 'text-white/[0.7]' : 'text-white'} text-sm font-normal font-inter hover:bg-[#1E1E1E]/[0.15]`}>
+                    <div className={`flex flex-row items-center pr-10 py-2 rounded-full ${color === "grey" ? 'text-white/[0.7]' : 'text-white'} text-sm font-normal font-inter hover:bg-[#1E1E1E]/[0.15]`}
+                         onClick={buttonHandler}>
                         <div className="h-5 w-9 mr-1 flex flex-row justify-end">
                             {icon && (
                                 <Image src={icon} alt={"?"} width={20} height={20}/>

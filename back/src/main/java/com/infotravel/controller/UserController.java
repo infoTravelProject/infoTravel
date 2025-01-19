@@ -59,7 +59,8 @@ public class UserController {
                     "timestamp", System.currentTimeMillis(),
                     "status", HttpStatus.OK.value(),
                     "message", "Login successful",
-                    "data", user
+                    "data", user,
+                    "token", "testtoken"
             ));
         } catch (UserNotFoundException | InvalidPasswordException ex) {
             // Handle failed login attempts with a 401 Unauthorized response
