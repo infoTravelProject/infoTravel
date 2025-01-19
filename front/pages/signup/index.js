@@ -67,7 +67,7 @@ export default function Signup(){
                             <Button type={"input"} inputType={"password"} inputPlaceholder={"Enter password"} label={"password"} required={true} onChange={handlePasswordChange}/>
                             <Button type={"input"} inputType={"password"} inputPlaceholder={"Repeat password"} label={"repeat password"} required={true} onChange={handlePassword2Change}/>
                             <div className={"w-full flex justify-end pt-10"}><button><Button type={"button-contrast"} text={"Sign up"} onPress={handleSubmit}/></button></div>
-                            <div className={"w-full flex justify-end"}><Link href={"/login"} className={"text-white/[0.8] hover:text-it-blue transition"}>No account? Create one!</Link></div>
+                            <div className={"w-full flex justify-end"}><Link href={"/login"} className={"text-white/[0.8] hover:text-it-blue transition"}>Already have an account?</Link></div>
                         </div>
                     </div>
                 </div>

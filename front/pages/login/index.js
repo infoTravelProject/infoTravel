@@ -2,7 +2,7 @@
 import Button from "@/components/Button";
 import Link from "next/link";
 import {useState} from "react";
-import {useGlobalContext} from "@/components/context/GlobalContext";
+import {GlobalProvider, useGlobalContext} from "@/components/context/GlobalContext";
 import {useRouter} from "next/navigation";
 
 export default function Login(){
@@ -53,7 +53,8 @@ export default function Login(){
                     <label className={"font-inter text-white/[0.9] text-xl mb-4"}>Log in to your account</label>
                     <Button type={"input"} inputPlaceholder={"Enter email"} label={"Email"} required={true} onChange={handleEmailChange}/>
                     <div className={"flex flex-col gap-2"}>
-                        <Button type={"input"} inputType={"password"} inputPlaceholder={"Enter password"} label={"password"} required={true} onChange={handlePasswordChange}/>
+                        <Button type={"input"} inputType={"password"} inputPlaceholder={"Enter password"} label={"password"} required={true}
+                                onChange={handlePasswordChange} onSelect={handleSubmit}/>
                         <div><Link href={"#"} className={"text-white/[0.8] hover:text-it-amber transition"}>Forgot password?</Link></div>
                     </div>
                     <div className={"w-full flex flex-col items-end gap-2"}>
@@ -68,5 +69,5 @@ export default function Login(){
     );
 }
 Login.getLayout = function getLayout(page) {
-    return page;
+    return (<GlobalProvider>{page}</GlobalProvider>);
 }

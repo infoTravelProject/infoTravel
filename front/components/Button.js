@@ -169,7 +169,8 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                             placeholder={inputPlaceholder}
                             className={`pr-3 pl-10 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
                             ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}
-                            onChange={inputHandler}/>
+                            onChange={inputHandler}
+                            onKeyDown={inputHandler}/>
                             <button className="absolute right-0 w-10 h-10 rounded-full bg-white/[0.4] hover:bg-white/[0.9] hover:-rotate-90 transition flex items-center justify-center scale-90">
                             <IoIosArrowForward className="text-black rotate-90 w-6 h-6 pl-0.5"/>
                             </button>
@@ -193,7 +194,8 @@ const Button = ({type, text, color, icon, inputType, inputPlaceholder, selectDat
                                 placeholder={inputPlaceholder}
                                 className={`pr-3 pl-6 py-2 font-inter font-medium placeholder-white/[0.4] text-white/[0.9] rounded-full w-full border-none ring-2 ring-white/[0.4] focus:outline-none 
                                 ${color==="blue" ? 'focus:ring-it-blue' : color==="amber" ? 'focus:ring-it-amber' : color==="red" ? 'focus:ring-it-red-light' : 'focus:ring-white/[0.9]'} transition focus:placeholder-transparent`}
-                                onChange={inputHandler}/>
+                                onChange={inputHandler}
+                                onKeyDown={inputHandler}/>
                             </div>
                         </div>
                     );
