@@ -8,6 +8,7 @@ export default function Signup(){
     const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [password2, setPassword2] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [region, setRegion] = useState("");
@@ -15,27 +16,33 @@ export default function Signup(){
     const handleLastNameChange = (e) => {setLastName(e);}
     const handleEmailChange = (e) => {setEmail(e);}
     const handlePasswordChange = (e) => {setPassword(e);}
+    const handlePassword2Change = (e) => {setPassword2(e);}
     const handleRegionChange = (e) => {setRegion(e.value);}
     const handleSubmit = async () => {
-        try {
-            const response = await fetch("http://localhost:8080/api/users/create", {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    email: email,
-                    password: password,
-                    firstName: firstName,
-                    lastName: lastName,
-                    region: region
+        if(password === password2){
+            try {
+                const response = await fetch("http://localhost:8080/api/users/create", {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                        firstName: firstName,
+                        lastName: lastName,
+                        region: region
+                    })
                 })
-            })
-            const data = await response.json();
-            console.log(data);
+                const data = await response.json();
+                console.log(data);
 
-        } catch (err) {
-            console.log(err.message);
-        } finally {
-            router.push("/login");
+            } catch (err) {
+                console.log(err.message);
+            } finally {
+                router.push("/login");
+            }
+        }
+        else{
+            alert("passwords don't match!");
         }
     }
     return(
@@ -58,7 +65,7 @@ export default function Signup(){
                         <div className={"flex flex-col gap-4"}>
                             <Button type={"input"} inputPlaceholder={"Enter email"} label={"Email"} required={true} onChange={handleEmailChange}/>
                             <Button type={"input"} inputType={"password"} inputPlaceholder={"Enter password"} label={"password"} required={true} onChange={handlePasswordChange}/>
-                            <Button type={"input"} inputType={"password"} inputPlaceholder={"Repeat password"} label={"repeat password"} required={true}/>
+                            <Button type={"input"} inputType={"password"} inputPlaceholder={"Repeat password"} label={"repeat password"} required={true} onChange={handlePassword2Change}/>
                             <div className={"w-full flex justify-end pt-10"}><button><Button type={"button-contrast"} text={"Sign up"} onPress={handleSubmit}/></button></div>
                             <div className={"w-full flex justify-end"}><Link href={"/login"} className={"text-white/[0.8] hover:text-it-blue transition"}>No account? Create one!</Link></div>
                         </div>

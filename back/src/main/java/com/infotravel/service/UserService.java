@@ -25,9 +25,9 @@ public class UserService {
         return userRepository.findAll();
     }
     public User createUser(User user){
-        Optional<User> existingUser = userRepository.findByNickname(user.getNickname());
+        Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
         if (existingUser.isPresent()) {
-            throw new IllegalArgumentException("Nickname '" + user.getNickname() + "' is already taken.");
+            throw new IllegalArgumentException("Email '" + user.getEmail() + "' is already taken.");
         }
         user.setPassword(PasswordUtils.hashPassword(user.getPassword()));
         return userRepository.save(user);

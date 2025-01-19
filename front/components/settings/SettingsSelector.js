@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import {useGlobalContext} from "@/components/context/GlobalContext";
 
 const SettingsSelector = () =>{
-    const {settingsPage} = useGlobalContext();
+    const {settingsPage, logout} = useGlobalContext();
     return(
         <div className="flex flex-col items-center w-72 h-full min-h-screen bg-[#1E1E1E]/[0.8]">
             <div className="flex-none w-full h-20 bg-white/[0.1] shadow-lg text-white/[0.6] font-inter text-2xl flex flex-col justify-center text-center">SETTINGS</div>
@@ -33,7 +33,7 @@ const SettingsSelector = () =>{
                                  link={"/settings/payments"}
                                  icon={"/payments.png"}/>
                 </div>
-                <div className={"mb-24"}><Button type={"logout"} text={"Sign Out"}/></div>
+                <div className={"mb-24"}><Button type={"logout"} text={"Sign Out"} onPress={logout}/></div>
             </div>
         </div>
     );
