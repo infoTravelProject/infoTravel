@@ -41,6 +41,7 @@ const ExchangeRate = ({ fromCurrency }) => {
             for (const date of dates) {
                 try {
                     const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${date}/v1/currencies/${fromCurrency}.json`;
+                    console.log(url);
                     const response = await fetch(url);
 
                     if (!response.ok) {
