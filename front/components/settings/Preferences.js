@@ -23,10 +23,10 @@ const Preferences = () => {
     //</temp>
 
     return (
-        <div>
+        <div className={"mb-10"}>
             <SettingsHeader/>
             <Label text={"General"}/>
-            <div className={"flex justify-between flex-wrap gap-x-10 gap-y-5"}>
+            <div className={"flex justify-center lg:justify-between flex-wrap gap-x-10 gap-y-5"}>
                 <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"theme"} selectData={tempData}
                 selectDefault={mapper(tempData, "dark")}/></div>
                 <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"language"} selectData={tempLanguageData}
@@ -35,7 +35,7 @@ const Preferences = () => {
                 <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"currency"} selectData={tempData}/></div>
             </div>
             <Label text={"Profile"}/>
-            <div className={"flex justify-between pb-4"}>
+            <div className={"flex justify-center lg:justify-between pb-4"}>
                 <div className={"min-w-64"}><Button type={"select"} color={"blue"} selectType={"simple"} label={"profile theme"} selectData={tempData}/></div>
             </div>
             <ToggleBox text={"Display following/followers count"} type={"on"}/>

@@ -11,8 +11,11 @@ export const GlobalProvider = ({ children }) => {
     const [token, setToken] = useState(null);
     const [sidebarPage, setSidebarPage] = useState(null);
     const [settingsPage, setSettingsPage] = useState(null);
-    const [selectedCountry, setSelectedCountry] = useState("poland");
+    const [selectedCountry, setSelectedCountry] = useState(null);
     const router = useRouter();
+    const setSelectedCountryFromUserData = (data)=>{
+        setSelectedCountry(data);
+    }
 
     useEffect(() => {
         const storedUser = localStorage.getItem('user');
@@ -81,7 +84,8 @@ export const GlobalProvider = ({ children }) => {
                 setSelectedCountry,
                 login,
                 logout,
-                user
+                user,
+                setSelectedCountryFromUserData
             }}
         >
             {children}

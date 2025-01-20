@@ -6,7 +6,7 @@ export default function SideBar() {
     const {sidebarOpen, sidebarPage, logout} = useGlobalContext();
 
     if (sidebarOpen) return (
-        <div className="fixed top-20 z-30 right-0 w-60 h-[calc(100%-5rem)] bg-[#1B1B1B]/[0.95] shadow-lg shadow-neutral-950">
+        <div className="fixed top-20 z-30 right-0 w-full sm:w-60 h-[calc(100%-5rem)] bg-[#1B1B1B]/[0.95] shadow-lg shadow-neutral-950">
             <div className="w-full h-fit mt-1">
                 <SideBarBox
                     title={"Home"}

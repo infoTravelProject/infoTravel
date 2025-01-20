@@ -13,7 +13,6 @@ import Notifications from "../../../components/countries/Notifications";
 import AttractionsGallery from "../../../components/countries/AttractionsGallery";
 import CountrySelector from "../../../components/CountrySelector";
 import {useEffect, useState} from "react";
-import {notFound} from "next/navigation";
 import {useGlobalContext} from "@/components/context/GlobalContext";
 
 
@@ -22,7 +21,7 @@ export default function CountryPage() {
     const router = useRouter();
     const [countryDBData, setCountryDBData] = useState(null);
     const [selectedCountryDBData, setSelectedCountryDBData] = useState(null);
-    const { selectedCountry, setSelectedCountry } = useGlobalContext();
+    const { selectedCountry, setSelectedCountryFromUserData, user } = useGlobalContext();
     const { country } = router.query;
 
     const normalizeCountryName = (name) => {
@@ -105,6 +104,15 @@ export default function CountryPage() {
         return <p className="text-white">Country data not found.</p>;
     }
 
+    setSelectedCountryFromUserData(()=>{
+        if(user){
+            if(!normalizedCountry.includes(user.region.toLowerCase())){
+                return user.region.toLowerCase();
+            }
+        }
+        else return null;
+    });
+
     return (
         <div className="text-white bg-[#121212]">
             {/* Render only if countryDBData is available */}
@@ -120,7 +128,7 @@ export default function CountryPage() {
                     {/* Header bar */}
                     <HeaderBar {...countryData.risk} />
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-16 py-8">
+                    <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 px-16 py-8">
                         {/* Left column */}
                         <div className="md:col-span-2 space-y-8">
                             <CountryPageSection title="Summary" content={countryData.summary} />

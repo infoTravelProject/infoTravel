@@ -36,14 +36,14 @@ const HeaderBar = ({ riskLevel, description, lastUpdated, stillValid }) => {
     };
 
     return (
-        <div className={`flex justify-between ${safetyDescription[0][riskLevel].color || 'bg-neutral-800'} px-2 py-8 font-inter text-white/[0.9]`}>
-            <div className="ml-16 space-y-1">
+        <div className={`flex flex-col lg:flex-row justify-center lg:justify-between ${safetyDescription[0][riskLevel].color || 'bg-neutral-800'} px-2 py-8 font-inter text-white/[0.9]`}>
+            <div className="lg:ml-16 space-y-1 flex flex-col items-center lg:items-start flex-none">
                 <h2 className="text-xl font-bold">{safetyDescription[0][riskLevel].label || "Unknown"}</h2>
                 <p className="text-sm font-normal">{safetyDescription[0][riskLevel].description || "Unknown"}</p>
             </div>
-            <div className="flex justify-end items-center space-x-4 mr-12">
-                <div className={"w-2/5 italic flex text-sm text-white/[0.8]"}>{"\""}<div>{description&& description+"\""}</div></div>
-                <div className="flex flex-col space-y-1 text-xs border-l-2 border-white/[0.7] pl-8 py-1">
+            <div className="flex justify-center lg:justify-end items-center space-x-4 mr-12 mt-10 lg:mt-0">
+                <div className={"w-3/5 lg:w-2/5 italic flex text-sm text-white/[0.8] min-w-64"}>{"\""}<div>{description&& description+"\""}</div></div>
+                <div className="flex flex-col space-y-1 text-xs border-l-2 border-white/[0.7] pl-8 py-1 flex-none">
                     <p>
                         LAST UPDATED: <span className="font-semibold text-sm">{calculateTime(lastUpdated) || "Unknown"}</span>
                     </p>

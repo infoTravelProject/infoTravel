@@ -1,8 +1,8 @@
 import Button from "@/components/Button";
 import Link from "next/link";
-import tempLanguageData from "@/data/tempLanguageData.json";
 import {useState} from "react";
 import {useRouter} from "next/navigation";
+import countryJSON from "@/data/world.json";
 
 export default function Signup(){
     const router = useRouter();
@@ -18,6 +18,22 @@ export default function Signup(){
     const handlePasswordChange = (e) => {setPassword(e);}
     const handlePassword2Change = (e) => {setPassword2(e);}
     const handleRegionChange = (e) => {setRegion(e.value);}
+
+    const getAllCountriesSorted = (countryJSON) => {
+        const countries = [];
+        for (const region in countryJSON.regions) {
+            if (countryJSON.regions.hasOwnProperty(region)) {
+                countries.push(...countryJSON.regions[region]);
+            }
+        }
+        return countries.sort((a, b) => a.localeCompare(b));
+    };
+    const jsonArray = getAllCountriesSorted(countryJSON).map((item) =>({
+        id: item.toString(),
+        value: item.toString(),
+        label: item.toString()
+    }));
+
     const handleSubmit = async () => {
         if(password === password2){
             try {
@@ -60,7 +76,7 @@ export default function Signup(){
                         <div className={"flex flex-col gap-4"}>
                             <Button type={"input"} inputPlaceholder={"Enter your first name"} label={"First name"} required={true} onChange={handleFirstNameChange}/>
                             <Button type={"input"} inputPlaceholder={"Enter your last name"} label={"Last name"} required={true} onChange={handleLastNameChange}/>
-                            <Button type={"select"} selectType={"simple"} selectData={tempLanguageData} label={"Region"} required={true} onSelect={handleRegionChange}/>
+                            <Button type={"select"} selectType={"simple"} selectData={jsonArray} label={"Region"} required={true} onSelect={handleRegionChange}/>
                         </div>
                         <div className={"flex flex-col gap-4"}>
                             <Button type={"input"} inputPlaceholder={"Enter email"} label={"Email"} required={true} onChange={handleEmailChange}/>

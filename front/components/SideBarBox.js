@@ -12,7 +12,7 @@ const SideBarBox = ({title, icon, isActive, link}) => {
 
     return (
         <Link href={link}>
-            <div onClick={closeSidebar} className={`mt-1 w-full h-14 bg-black/[0.25] text-white/[0.8] text-lg ${isActive ? 'cursor-default' : 'hover:bg-black/[0.35] cursor-pointer'}`}>
+            <div onClick={closeSidebar} className={`mt-1 w-full h-16 sm:h-14 bg-black/[0.25] text-white/[0.8] text-lg ${isActive ? 'cursor-default' : 'hover:bg-black/[0.35] cursor-pointer'}`}>
                 <div className={`flex flex-row items-center ${isActive ? 'bg-gradient-to-l from-it-blue/[0.1] to-transparent' : 'bg-transparent'} h-full`}>
                     <div className="h-8 w-8 ml-6">
                         <Image src={icon} width={500} height={500} alt="?" className="scale-75 opacity-85"/>

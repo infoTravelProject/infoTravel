@@ -16,7 +16,7 @@ export default function Navbar() {
                     </div>
                 </Link>
                 <div className="flex font-inter items-center">
-                    <ul className="flex space-x-14 mr-20">
+                    <ul className="hidden lg:flex space-x-14 mr-20 ">
                         <li><a href="#" className="hover:text-it-blue transition">Planner</a></li>
                         <li><a href="#" className="hover:text-it-blue transition">Travel Guides</a></li>
                         <li><a href="#" className="hover:text-it-blue transition">Recommended</a></li>
