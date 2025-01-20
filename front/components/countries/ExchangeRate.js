@@ -15,9 +15,10 @@ import {
 } from "recharts";
 import {ReflectAdapter as axios} from "next/dist/server/web/spec-extension/adapters/reflect";
 
-const ExchangeRate = ({ fromCurrency }) => {
+const ExchangeRate = ({ fromCurrency, toCurrencyp }) => {
     // Zamienic na wymagana walute
-    const toCurrency = "pln"
+    const toCurrency = toCurrencyp.toString();
+    console.log("test: "+toCurrencyp);
     const [data, setData] = useState([]);
 
     // Helper function to calculate date for the past days
@@ -41,7 +42,6 @@ const ExchangeRate = ({ fromCurrency }) => {
             for (const date of dates) {
                 try {
                     const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${date}/v1/currencies/${fromCurrency}.json`;
-                    console.log(url);
                     const response = await fetch(url);
 
                     if (!response.ok) {
@@ -97,7 +97,7 @@ const ExchangeRate = ({ fromCurrency }) => {
         }
 
         fetchCurrencyData();
-    }, []);
+    }, [toCurrencyp]);
 
     return (
         <div className="bg-transparent text-white p-4 rounded" style={{ fontFamily: 'Helvetica', color: "red"}}>

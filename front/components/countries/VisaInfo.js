@@ -47,7 +47,7 @@ const getVisaClass = (details) => {
     if (normalizedDetails.includes("esta required") || normalizedDetails.includes("etias required")) {
         return visaStatusMap["ETIAS required"];
     }
-    if (normalizedDetails.includes("electronic travel authorization")) {
+    if (normalizedDetails.includes("Electronic Travel Authorization")) {
         return visaStatusMap["Electronic Travel Authorization"];
     }
     return visaStatusMap["Unknown"];

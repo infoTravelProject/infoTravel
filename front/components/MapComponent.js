@@ -31,7 +31,7 @@ const MapComponent = () => {
             country.setAttribute("stroke-linecap", "round");
 
             country.addEventListener("mouseenter", () => {
-                country.setAttribute("fill", "rgba(255,255,255,0.1)");
+                country.setAttribute("fill", "#1f72aa");
             });
 
             country.addEventListener("mouseleave", () => {

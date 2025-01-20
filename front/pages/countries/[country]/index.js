@@ -14,12 +14,15 @@ import AttractionsGallery from "../../../components/countries/AttractionsGallery
 import CountrySelector from "../../../components/CountrySelector";
 import {useEffect, useState} from "react";
 import {notFound} from "next/navigation";
+import {useGlobalContext} from "@/components/context/GlobalContext";
 
 
 
 export default function CountryPage() {
     const router = useRouter();
     const [countryDBData, setCountryDBData] = useState(null);
+    const [selectedCountryDBData, setSelectedCountryDBData] = useState(null);
+    const { selectedCountry, setSelectedCountry } = useGlobalContext();
     const { country } = router.query;
 
     const normalizeCountryName = (name) => {
@@ -56,6 +59,34 @@ export default function CountryPage() {
 
         fetchData();
     }, [normalizedCountry]);
+
+    useEffect(() => {
+        if (!selectedCountry) return;
+
+        const fetchData = async () => {
+            try {
+                console.log(selectedCountry);
+                const response = await fetch(`http://localhost:8080/api/country/name/${encodeURIComponent(selectedCountry)}`, {
+                    method: "GET",
+                });
+
+                if (!response.ok) {
+                    throw new Error("Country not found");
+                }
+
+                const countryFromDBData = await response.json();
+                setSelectedCountryDBData(countryFromDBData.data);
+                console.log(countryFromDBData);
+                console.log(selectedCountryDBData);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                // Optional cleanup or final actions
+            }
+        };
+
+        fetchData();
+    }, [selectedCountry]);
 
     const normalizedCountries = Object.entries(countries).reduce((acc, [key, value]) => {
         acc[normalizeCountryName(key)] = value;
@@ -100,8 +131,8 @@ export default function CountryPage() {
                         <div className="space-y-1">
                             <CountrySelector currentCountry={normalizedCountry} />
                             <CurrencyInfo
-                                currencyName="Great Britain Pound"
-                                currency="gbp"
+                                currency={!!countryDBData ? countryDBData.currency.toLowerCase() : "pln"}
+                                toCurrency={!!selectedCountryDBData ? selectedCountryDBData.currency.toLowerCase() : "pln"}
                             />
                             <VisaInfo currentCountry={normalizedCountry} />
                             <BorderInfo {...countryData.borderControl} />

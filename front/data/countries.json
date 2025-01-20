@@ -1,10 +1,10 @@
 {
   "The United Kingdom": {
     "risk": {
-      "riskLevel": "High safety risk",
-      "description": "Exercise a high degree of caution",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "1 day ago"
+      "riskLevel": 4,
+      "description": "Immigrant riots targeting private properties, and anti-government protests are to the detriment of public safety. We advise avoiding big municipalities if applicable.",
+      "lastUpdated": "2024-08-18",
+      "stillValid": "2025-01-19"
     },
     "background": "/london_test2.jpg",
     "summary": "The United Kingdom (UK) is a captivating destination that combines rich history, vibrant culture, and breathtaking landscapes. Comprised of England, Scotland, Wales, and Northern Ireland, the UK offers something for every traveler. Explore iconic landmarks like London's Big Ben, Edinburgh Castle, and Stonehenge, or lose yourself in the charming countryside of the Lake District and Scottish Highlands. Renowned for its world-class museums, traditional pubs, and diverse culinary scene, the UK seamlessly blends modernity with timeless traditions. Whether you're interested in historic cities, coastal escapes, or cultural festivals, the UK promises an unforgettable experience.",
@@ -71,10 +71,10 @@
   },
   "Poland": {
     "risk": {
-      "riskLevel": "Medium safety risk",
+      "riskLevel": 1,
       "description": "Exercise caution in certain areas",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "2 days ago"
+      "lastUpdated": "2022-10-01",
+      "stillValid": "2025-01-01"
     },
     "background": "/poland_test.jpg",
     "summary": "Poland is a country of rich history, diverse landscapes, and vibrant cities. With its medieval castles, stunning natural parks, and welcoming culture, Poland offers something for every traveler. Explore the historic Old Town of Kraków, the modern streets of Warsaw, or relax by the serene lakes of Mazury. The country’s cultural scene includes world-class museums, art galleries, and performances that reflect its deep artistic roots. Poland is also known for its hearty cuisine and lively festivals, making it a must-visit destination for cultural and outdoor enthusiasts alike.",
@@ -141,10 +141,10 @@
   },
   "Germany": {
     "risk": {
-      "riskLevel": "Extreme safety risk",
-      "description": "Not safe destination for travelers",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "1 day ago"
+      "riskLevel": 3,
+      "description": "Intense immigrant riots in Berlin",
+      "lastUpdated": "2024-12-31",
+      "stillValid": "2025-01-19"
     },
     "background": "/germany_test.jpg",
     "summary": "Germany is renowned for its precision, rich history, and cutting-edge culture. From the historical charm of Berlin to the scenic beauty of the Bavarian Alps, Germany has something for everyone. Explore the magnificent castles along the Rhine, wander through lush forests and lakes in the Black Forest, or enjoy a night out in Munich's famous beer gardens. The country is also known for its strong economy, efficient transportation systems, and a global influence in technology and innovation.",
@@ -211,10 +211,10 @@
   },
   "Ireland": {
     "risk": {
-      "riskLevel": "Low safety risk",
+      "riskLevel": 2,
       "description": "Generally safe, with minimal risks",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "3 days ago"
+      "lastUpdated": "2024-10-02",
+      "stillValid": "2025-01-15"
     },
     "background": "/ireland_test.jpg",
     "summary": "Ireland is a country of lush landscapes, rugged coastlines, and a rich cultural heritage. From the vibrant streets of Dublin to the peaceful Irish countryside, Ireland is an ideal destination for nature lovers and history enthusiasts alike. Explore ancient castles, visit the Cliffs of Moher, or experience the charm of the small coastal towns. With its legendary hospitality, music, and pubs, Ireland provides an experience that is both relaxing and exhilarating.",
@@ -281,10 +281,10 @@
   },
   "Norway": {
     "risk": {
-      "riskLevel": "Low safety risk",
+      "riskLevel": 1,
       "description": "Very safe destination for travelers",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "4 days ago"
+      "lastUpdated": "2023-03-01",
+      "stillValid": "2025-01-01"
     },
     "background": "/norway_test.jpg",
     "summary": "Norway is known for its dramatic fjords, stunning landscapes, and outdoor adventure opportunities. From the breathtaking Northern Lights in Tromsø to the scenic beauty of the Lofoten Islands, Norway offers endless outdoor experiences. The country's rich history and Viking heritage are complemented by modern cities like Oslo, which offers world-class museums and cultural sites. Norway is the perfect destination for nature lovers, thrill-seekers, and those who enjoy a peaceful, clean environment.",
@@ -351,10 +351,10 @@
   },
   "Italy": {
     "risk": {
-      "riskLevel": "Medium safety risk",
+      "riskLevel": 2,
       "description": "Exercise caution in certain areas",
-      "lastUpdated": "7 August 2024",
-      "stillValid": "2 days ago"
+      "lastUpdated": "2024-01-01",
+      "stillValid": "2025-01-01"
     },
     "background": "/italy_test.jpg",
     "summary": "Italy is a country of rich history, stunning art, delicious cuisine, and breathtaking landscapes. From the romantic canals of Venice to the historical landmarks of Rome, and the picturesque Amalfi Coast, Italy offers diverse experiences. Visitors can explore the ancient ruins of Pompeii, the iconic Colosseum, and the artistic treasures in Florence. Italy is also renowned for its world-class wine, cuisine, and vibrant culture, making it a top destination for travelers seeking history, beauty, and indulgence.",
@@ -421,10 +421,10 @@
   },
   "Japan": {
     "risk": {
-      "riskLevel": "Moderate safety risk",
-      "description": "Exercise caution, but Japan is generally very safe",
-      "lastUpdated": "18 January 2025",
-      "stillValid": "Today"
+      "riskLevel": 0,
+      "description": "Crime doesn't exist in Japan",
+      "lastUpdated": "2020-01-01",
+      "stillValid": "2025-01-01"
     },
     "background": "/tokyo_test.jpg",
     "summary": "Japan is a fascinating country that blends ancient traditions with cutting-edge technology. Known for its rich culture, scenic landscapes, and bustling cities, Japan offers a wide array of experiences. Explore Tokyo, a city that never sleeps, or visit Kyoto to immerse yourself in traditional temples and beautiful gardens. The natural beauty of Mount Fuji and the hot springs in Hakone are must-visit. Japanese cuisine, including sushi, ramen, and tempura, is internationally famous, and the country’s hospitality, or 'omotenashi,' ensures a warm welcome to all visitors.",
@@ -491,10 +491,10 @@
   },
   "Iceland": {
     "risk": {
-      "riskLevel": "Low safety risk",
+      "riskLevel": 0,
       "description": "Iceland is one of the safest countries, with very low crime rates.",
-      "lastUpdated": "18 January 2025",
-      "stillValid": "Today"
+      "lastUpdated": "2025-01-18",
+      "stillValid": "2025-01-20"
     },
     "background": "/iceland_test.jpg",
     "summary": "Iceland is a land of dramatic landscapes, including volcanoes, glaciers, waterfalls, and geothermal hot springs. It’s a country that thrives on natural beauty and unique geological features. Visit Reykjavik, the capital, where you can explore vibrant culture, modern architecture, and rich history. Iceland’s natural wonders, such as the Blue Lagoon, the Golden Circle, and the Northern Lights, draw visitors from all over the world. It’s an ideal destination for nature lovers, adventure seekers, and those wanting to experience one of the most unspoiled environments on Earth.",
@@ -561,10 +561,10 @@
   },
   "Portugal": {
     "risk": {
-      "riskLevel": "Low safety risk",
+      "riskLevel": 1,
       "description": "Portugal is a safe destination with low crime rates, though visitors should exercise caution in busy tourist areas.",
-      "lastUpdated": "18 January 2025",
-      "stillValid": "Today"
+      "lastUpdated": "2024-12-01",
+      "stillValid": "2025-01-01"
     },
     "background": "/lisbon_test.jpg",
     "summary": "Portugal, located on the Iberian Peninsula, is known for its beautiful coastline, rich history, and vibrant culture. From the historic streets of Lisbon to the scenic beauty of the Algarve, Portugal offers a diverse range of experiences. Its wine regions, particularly in Porto and the Douro Valley, are internationally renowned. Portugal is famous for its delicious cuisine, including seafood dishes like bacalhau (salted cod) and pastéis de nata (custard tarts). With its Mediterranean climate, beautiful beaches, and warm hospitality, Portugal is a must-visit destination for anyone traveling to Europe.",
