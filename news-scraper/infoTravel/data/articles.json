@@ -1,0 +1,706 @@
+[
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Match of the Day: Highlights of games including Brentford v Liverpool",
+    "description": "Highlights from all of the day’s Premier League fixtures, including pacesetters Liverpool’s visit to Brentford, who have impressed with their free-flowing football this season.",
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002764m/match-of-the-day-202425-18012025",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/1200x675/p0kk9xnp.jpg",
+    "publishedAt": "2025-01-18T23:59:00Z",
+    "content": "Highlights from all of the days Premier League fixtures, including pacesetters Liverpools visit to Brentford, who have impressed with their free-flowing football this season. More",
+    "category": "tourism",
+    "country": "World",
+    "summary": "The news article provides highlights from Premier League fixtures, including the match between Brentford and Liverpool. This type of content is related to sports and entertainment, attracting viewers interested in football matches and the performance of different teams."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jessie Yeung, Hanako Montgomery and Junko Ogura, CNN",
+    "title": "Japan’s elderly are lonely and struggling. Some women choose to go to jail instead",
+    "description": "The rooms are filled with elderly residents, their hands wrinkled and backs bent. They shuffle slowly down the corridors, some using walkers. Workers help...",
+    "url": "https://www.cnn.com/2025/01/18/asia/japan-elderly-largest-womens-prison-intl-hnk-dst/index.html",
+    "urlToImage": "https://media.zenfs.com/en/cnn_articles_875/49a7e5b8d56e522d2e509aafbb2c5cf5",
+    "publishedAt": "2025-01-19T01:20:05Z",
+    "content": "The rooms are filled with elderly residents, their hands wrinkled and backs bent. They shuffle slowly down the corridors, some using walkers. Workers help them bathe, eat, walk and take their medicat… [+6296 chars]",
+    "category": "safety",
+    "country": "Japan",
+    "summary": "The article is about the struggles faced by Japan's elderly population, who are lonely and find themselves in difficult situations. Some women in Japan are choosing to commit crimes and go to jail as a way to seek companionship and support."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Katie Hunt, CNN",
+    "title": "Scientists say they found oxygen where it shouldn’t be. Now, the hunt is on for more answers",
+    "description": "A project is underway to investigate the production of “dark” oxygen further. Understanding the phenomenon better could help space scientists find life...",
+    "url": "https://www.cnn.com/2025/01/17/science/dark-oxygen-research/index.html",
+    "urlToImage": "https://media.zenfs.com/en/cnn_articles_875/d108bde797856978255df4c87fa89ca7",
+    "publishedAt": "2025-01-18T01:02:32Z",
+    "content": "Sign up for CNNs Wonder Theory science newsletter. Explore the universe with news on fascinating discoveries, scientific advancements and more.\r\nA startling discovery made public in July that metalli… [+8618 chars]",
+    "category": "health",
+    "country": "World",
+    "summary": "Scientists are investigating the presence of 'dark' oxygen in a project to understand the phenomenon better. This discovery could potentially aid space scientists in their search for extraterrestrial life."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC World Service",
+    "title": "The Fifth Floor: IVF and me",
+    "description": "When BBC Mundo journalist Ana Maria Roura found out she couldn't get pregnant, she decided to turn the camera on herself and document her struggle to become a parent through in vitro fertilisation, or IVF. Her documentary, Infertile, is available in Spanish a…",
+    "url": "https://www.bbc.co.uk/programmes/p0kjpk1d",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/1200x675/p0hqg7fh.jpg",
+    "publishedAt": "2025-01-18T13:30:00Z",
+    "content": "When BBC Mundo journalist Ana Maria Roura found out she couldn't get pregnant, she decided to turn the camera on herself and document her struggle to become a parent through in vitro fertilisation, o… [+304 chars]",
+    "category": "health",
+    "country": "Spain",
+    "summary": "The news article is about BBC Mundo journalist Ana Maria Roura's struggle to become a parent through in vitro fertilisation (IVF). Her documentary, Infertile, is available in Spanish, indicating a focus on healthcare and medical research in Spain."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC World Service",
+    "title": "BBC OS Conversations: Living through the Los Angeles fires",
+    "description": "Vast areas of Los Angeles have been destroyed since these fires began on 7 January. Thousands of homes and businesses have been lost, and tens of thousands of people have been forced to evacuate. We hear from Kelly, who had just minutes to gather a few posses…",
+    "url": "https://www.bbc.co.uk/programmes/p0kkfn0r",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/1200x675/p0kkfn1n.jpg",
+    "publishedAt": "2025-01-18T01:30:00Z",
+    "content": "Vast areas of Los Angeles have been destroyed since these fires began on 7 January. Thousands of homes and businesses have been lost, and tens of thousands of people have been forced to evacuate. We … [+540 chars]",
+    "category": "safety",
+    "country": "United States",
+    "summary": "The news article is about the devastating fires in Los Angeles that have destroyed vast areas since January 7th. Thousands of homes and businesses have been lost, and tens of thousands of people have been forced to evacuate."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "BBC World Service",
+    "title": "The Coming Storm: Inaugrutaion",
+    "description": "America through the looking glass, a world where nothing is as it seems. Gabriel Gatehouse follows a cast of characters who have propelled Trump into the White House – twice. Many of them are now set to take power and inject their reality-bending world views …",
+    "url": "https://www.bbc.co.uk/programmes/p0kkfx50",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/1200x675/p0jrtrdr.jpg",
+    "publishedAt": "2025-01-19T01:30:00Z",
+    "content": "America through the looking glass, a world where nothing is as it seems. Gabriel Gatehouse follows a cast of characters who have propelled Trump into the White House twice. Many of them are now set t… [+131 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The article discusses the upcoming presidential inauguration in the United States, focusing on the transition of power and the individuals involved in the Trump administration. It highlights the unique political landscape and the impact of reality-bending world views on American politics."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "cnn",
+    "title": "Top French chef bans MICHELIN inspectors from his new restaurant... | 'I'm turning 75. I don't want to be getting ranked'...",
+    "description": "Marc Veyrat says he has put a warning sign over the door of his new venue, five years after unsuccessfully suing Michelin Guide when he was downgraded from three to two stars.",
+    "url": "https://www.cnn.com/2025/01/18/travel/marc-veyrat-top-french-chef-bans-michelin-guide-from-new-restaurant/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1197010006.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T18:00:04Z",
+    "content": "Editors note: Sign up for Unlocking the World, CNN Travels weekly newsletter. Get news about destinations, plus the latest in aviation, food and drink, and where to stay.\r\nFive years ago he took the … [+4823 chars]",
+    "category": "business & economy",
+    "country": "France",
+    "summary": "French chef Marc Veyrat has banned MICHELIN inspectors from his new restaurant, citing his dislike for rankings. This decision comes after Veyrat previously sued the Michelin Guide when his restaurant was downgraded from three to two stars."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Netanyahu says Israel 'reserves right to return to war'",
+    "description": "Israel's prime minister, Benjamin Netanyahu, says his country reserved the right to go back to war in Gaza if the negotiations for a second phase of the ceasefire are fruitless. \n\nAlso on the programme: pro-Trump and anti-Trump demonstrators are making their …",
+    "url": "https://www.bbc.co.uk/programmes/w172zb9b90js0jj",
+    "urlToImage": "https://ichef.bbci.co.uk/images/ic/1200x675/p0kkmb07.jpg",
+    "publishedAt": "2025-01-18T22:23:00Z",
+    "content": "Israel's prime minister, Benjamin Netanyahu, says his country reserved the right to go back to war in Gaza if the negotiations for a second phase of the ceasefire are fruitless. \r\nAlso on the program… [+337 chars]",
+    "category": "politics",
+    "country": "Israel",
+    "summary": "Israel's prime minister, Benjamin Netanyahu, stated that his country reserves the right to return to war in Gaza if negotiations for a second phase of the ceasefire fail. The statement highlights the ongoing political tensions in the region."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Sarah Ferris",
+    "title": "House conservative defies Johnson over remote voting for new moms in Congress | CNN Politics",
+    "description": "GOP Rep. Anna Paulina Luna repeatedly tried to convince Speaker Mike Johnson that he — as a pro-family champion — should back her push to allow new mothers to vote remotely for six weeks while they are recovering from birth.",
+    "url": "https://www.cnn.com/2025/01/18/politics/house-remote-voting-new-moms-congress/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap25014749185876.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T13:01:01Z",
+    "content": "GOP Rep. Anna Paulina Luna repeatedly tried to convince Speaker Mike Johnson that he as a pro-family champion should back her push to allow new mothers to vote remotely for six weeks while they are r… [+7787 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The news article is about GOP Rep. Anna Paulina Luna's efforts to allow new mothers in Congress to vote remotely for six weeks after giving birth. This political issue involves Speaker Mike Johnson and the debate over accommodating new moms in the legislative process."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Leah Dolan",
+    "title": "What fashion-watchers expect from Melania Trump’s second term as FLOTUS",
+    "description": "On Monday, Trump will resume her post as first lady. Will American designers embrace her this time around?",
+    "url": "https://www.cnn.com/2025/01/18/style/melania-trump-fashion-flotus/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-632228984.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T12:00:58Z",
+    "content": "Its one of the most important jobs never applied for. Unelected, yet inextricable from politics; constantly visible on the world stage, but rarely the one behind the microphone for all its glamour, t… [+10119 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The news article discusses the expectations from Melania Trump's second term as the First Lady of the United States. It focuses on whether American designers will embrace her during her time in office."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Lisa Young",
+    "title": "Number of whale sightings off Cornwall 'gone through the roof'",
+    "description": "A wildlife charity says rising numbers of humpback whales is \"one of the greatest recovery stories\".",
+    "url": "https://www.bbc.co.uk/news/articles/c8d99r31yymo",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/829e/live/fe309110-d4f0-11ef-9ebc-89cc26d89c1b.jpg",
+    "publishedAt": "2025-01-18T14:22:46Z",
+    "content": "A wildlife charity has said the number of whale sightings off the Cornish coast has \"gone through the roof\" in the last few years.\r\nBex Allen from Cornwall Wildlife Trust, said monthly surveys show a… [+458 chars]",
+    "category": "tourism",
+    "country": "United Kingdom",
+    "summary": "The news article is about the United Kingdom, specifically Cornwall, where there has been a significant increase in the number of whale sightings. A wildlife charity has highlighted the rising numbers of humpback whales as 'one of the greatest recovery stories', which could potentially boost tourism in the region."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Michelle Shen, Maureen Chowdhury, Matt Meyer, Serena Golden",
+    "title": "Live updates: Trump rally, inauguration and presidential transition news",
+    "description": "President-elect Donald Trump will hold a rally in Washington on Sunday, one day before his inauguration inside the Capitol rotunda. Follow for live updates on the final day of the presidential transition.",
+    "url": "https://www.cnn.com/politics/live-news/trump-transition-inauguration-news-01-19-25/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/05-gettyimages-2182353524.JPG?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-19T13:32:36Z",
+    "content": "President Joe Biden is visiting Charleston, South Carolina, on Sunday for his final trip in office to speak at a church service ahead of Martin Luther King Jr. Day and President-elect Donald Trumps i… [+1720 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The news article is about President-elect Donald Trump holding a rally in Washington one day before his inauguration inside the Capitol rotunda. It covers the final day of the presidential transition in the United States."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Aaron Pellish",
+    "title": "Trump says he will ‘most likely’ delay TikTok ban temporarily, but has not made final decision | CNN Business",
+    "description": "President-elect Donald Trump said he will “most likely” delay a ban on TikTok for 90 days after he takes office on Monday but noted he has not made a final decision in a phone interview with NBC News on Saturday.",
+    "url": "https://www.cnn.com/2025/01/18/business/trump-tiktok-ban/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/150325082132-social-gfx-breaking-news.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T18:23:21Z",
+    "content": "President-elect Donald Trump said he will most likely delay a ban on TikTok for 90 days after he takes office on Monday but noted he has not made a final decision in a phone interview with NBC News o… [+1055 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "President-elect Donald Trump stated that he will 'most likely' delay the ban on TikTok for 90 days after taking office. However, he emphasized that a final decision has not been made yet in a phone interview with NBC News."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Leah Asmelash",
+    "title": "These LGBTQ couples are getting married ahead of Trump’s inauguration",
+    "description": "While overturning marriage equality does not appear to be a high priority for the incoming Trump administration, some LGBTQ couples are worried their right to marry could be stripped.",
+    "url": "https://www.cnn.com/2025/01/18/us/lgbtq-same-sex-marriage-trump-cec/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/16-9-20250110174156482.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T18:59:28Z",
+    "content": "The results of the 2024 election left some LGBTQ couples with a particularly gripping worry.\r\nScarred by the many ways President-elect Donald Trumps first administration rolled back LGBTQ rights, and… [+8296 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "Some LGBTQ couples in the United States are getting married ahead of Trump's inauguration amid concerns about their right to marry being stripped. While overturning marriage equality does not seem to be a top priority for the incoming administration, these couples are taking preemptive action."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Nectar Gan, Alex Stambaugh, Lucas Lilieholm, Antoinette Radford, Eve Brennan, Lauren Said-Moorhouse, Catherine Nicholls, Sophie Tanno",
+    "title": "Live updates: Gaza ceasefire begins with three Israeli hostages set to be freed | CNN",
+    "description": "A long-awaited ceasefire has started in Gaza following a three-hour delay, bringing respite to the besieged enclave after a bloody 15 months. Follow for live updates.",
+    "url": "https://www.cnn.com/world/live-news/israel-hamas-ceasefire-war-palestine-01-19-25/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/still-21302747-334660-862-still.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-19T04:36:23Z",
+    "content": "Thousands of people gathered on streets across Israel on the eve of a ceasefire deal with Hamas, as the nation awaits the return of hostages who have been held captive for the past 15 months in Gaza.… [+2023 chars]",
+    "category": "safety",
+    "country": "Israel",
+    "summary": "The news article is about a ceasefire in Gaza, with three Israeli hostages set to be freed. The ceasefire brings respite to the besieged enclave after a bloody 15 months of conflict."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Amy Walker",
+    "title": "Sophie, Duchess of Edinburgh, marks 60th birthday in new portrait",
+    "description": "The picture of a relaxed looking Sophie was taken by fashion photographer Christina Ebenezer.",
+    "url": "https://www.bbc.co.uk/news/articles/c5ye446vv7no",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/79a6/live/383f5540-d5e0-11ef-87df-d575b9a434a4.jpg",
+    "publishedAt": "2025-01-18T22:25:43Z",
+    "content": "The photo, taken at Bagshot Park, shows the duchess wearing a black turtleneck jumper and a pleated cream skirt.\r\nSophie's public profile has grown in recent years, having been hailed as a dependable… [+467 chars]",
+    "category": "politics",
+    "country": "United Kingdom",
+    "summary": "The news article is about Sophie, Duchess of Edinburgh, marking her 60th birthday in a new portrait. The portrait was taken by fashion photographer Christina Ebenezer. As the Duchess of Edinburgh, Sophie is a member of the British royal family, making this news related to politics in the United Kingdom."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Maia Davies",
+    "title": "Digital driving licences to be introduced this year",
+    "description": "The government says technology should \"make people's lives easier\" but any system won't be mandatory.",
+    "url": "https://www.bbc.co.uk/news/articles/cgkjjkjy4p8o",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/80dc/live/daa5b990-d587-11ef-a539-11b54b0e7ff3.jpg",
+    "publishedAt": "2025-01-18T11:18:15Z",
+    "content": "\"Technology now makes it possible for digital identities to be more secure than physical ones, but we remain clear that they will not be made mandatory.\"\r\nThe virtual licences could be used at superm… [+1742 chars]",
+    "category": "politics",
+    "country": "United Kingdom",
+    "summary": "The United Kingdom government plans to introduce digital driving licences this year, aiming to use technology to improve people's lives. The system will not be mandatory, providing flexibility for individuals to choose whether to adopt the new digital format."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Alex Boyd",
+    "title": "Fuel tanker explosion kills 77 people in Suleja area of Nigeria",
+    "description": "People had rushed to collect fuel from the tanker after it overturned in a crash.",
+    "url": "https://www.bbc.co.uk/news/articles/c17eqedkwz9o",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/23ef/live/dfee1580-d5d4-11ef-87df-d575b9a434a4.jpg",
+    "publishedAt": "2025-01-18T20:14:12Z",
+    "content": "Those injured in Saturday's explosion are being treated in nearby hospitals, the emergency management agency said.\r\nNigeria has seen a number of similar incidents in recent months.\r\nTwo weeks ago, a … [+579 chars]",
+    "category": "safety",
+    "country": "Nigeria",
+    "summary": "A fuel tanker explosion in the Suleja area of Nigeria has resulted in the tragic death of 77 people. The incident occurred after the tanker overturned in a crash, leading to people rushing to collect fuel."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Hafsa Khalil",
+    "title": "Cameron Diaz's 10-year retirement 'best years' of her life",
+    "description": "The Holiday star says \"this is maybe the beginning\" as she returns to the big screen after a decade.",
+    "url": "https://www.bbc.co.uk/news/articles/c93qq2ywk6po",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7138/live/55da6aa0-d567-11ef-94cb-5f844ceb9e30.jpg",
+    "publishedAt": "2025-01-18T04:04:57Z",
+    "content": "Talking about her hiatus, Diaz called it the \"best\" 10 years of her life.\r\n\"I was free to be [like] 'I'm a mum, I'm a wife, I'm living my life' - it was so lovely.\"\r\n\"Ten years in, this made sense fo… [+782 chars]",
+    "category": "general",
+    "country": "World",
+    "summary": "Cameron Diaz, known for her roles in movies like The Holiday, has returned to the big screen after a 10-year retirement. She describes the past decade as the 'best years' of her life and hints that this may be just the beginning of her comeback in the entertainment industry."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Rachel Looker",
+    "title": "Thousands hold anti-Trump rally in Washington before inauguration",
+    "description": "The march took place ahead of Trump's arrival to the nation's capital as he prepares to be sworn in on Monday.",
+    "url": "https://www.bbc.co.uk/news/articles/c9831lrn6nzo",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/05a7/live/8e771160-d5cb-11ef-a825-33052ed7b1ff.jpg",
+    "publishedAt": "2025-01-18T21:04:50Z",
+    "content": "The groups behind the march are described on its website as holding \"intersecting identities\" and having \"varied issue-based interests\" with different causes such as climate change, immigration and w… [+692 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "Thousands gathered in Washington for an anti-Trump rally before his presidential inauguration. The protest occurred as Trump was set to be sworn in on Monday in the nation's capital."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Alex Boyd",
+    "title": "Iran: Two supreme court judges shot dead in Tehran",
+    "description": "The attacker reportedly used a handgun to shoot both judges, before killing himself.",
+    "url": "https://www.bbc.co.uk/news/articles/cy4mvllgd1mo",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/90ac/live/5fc97f30-d59c-11ef-be52-cfb0fb5f2514.png",
+    "publishedAt": "2025-01-18T13:38:56Z",
+    "content": "In a statement, the judiciary's media office described the attack as premeditated assassination.\r\nIt also said that, according to initial findings, the attacker had not been involved in any case cons… [+444 chars]",
+    "category": "safety",
+    "country": "Iran",
+    "summary": "Two supreme court judges were shot dead in Tehran by an attacker who used a handgun to carry out the shooting before taking his own life. The incident highlights a serious safety concern within the judicial system in Iran."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Dalia Faheid",
+    "title": "Bird flu: Georgia suspended all poultry activities after case confirmed in a commercial operation",
+    "description": "Georgia has suspended all poultry activities after bird flu was confirmed in a commercial poultry operation, officials said Friday.",
+    "url": "https://www.cnn.com/2025/01/18/us/bird-flu-georgia-suspends-poultry-activities-commercial-flock/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/screen-shot-2025-01-18-at-6-59-44-pm.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-19T01:02:51Z",
+    "content": "All poultry activities have been suspended in Georgia after bird flu was confirmed in a commercial poultry operation, officials said Friday.\r\nThe positive bird flu case in Elbert County was confirmed… [+3274 chars]",
+    "category": "health",
+    "country": "Georgia",
+    "summary": "Georgia has suspended all poultry activities after bird flu was confirmed in a commercial poultry operation. This measure was taken by officials in response to the bird flu case in the country."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Sophie Tanno",
+    "title": "Ukraine opens a new front against Russia – flattering Trump | CNN",
+    "description": "World leaders have been rushing to get on Donald Trump’s good side since his reelection as US president, arguably none more so than Ukraine.",
+    "url": "https://www.cnn.com/2025/01/19/europe/ukraine-russia-president-elect-trump-flattery-intl/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2169770840.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-19T10:03:40Z",
+    "content": "World leaders have been rushing to get on Donald Trumps good side since his reelection as US president, arguably none more so than Ukraine.\r\nIn his annual New Year address, Ukrainian President Volody… [+6468 chars]",
+    "category": "politics",
+    "country": "Ukraine",
+    "summary": "Ukraine is opening a new front against Russia by flattering US President Donald Trump. The article highlights how world leaders, including Ukraine, are trying to get on Trump's good side since his reelection as US president."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Issy Ronald",
+    "title": "In this ski World Cup event, the men’s winner won more than $3,000. The women got towels and shampoo.",
+    "description": "As a reward for finishing first in qualifying at a ski jumping World Cup event, organizers presented the male winner Jan Haerl with 3,000 Swiss francs ($3,290), and the female winner Selina Freitag with towels and shampoo.",
+    "url": "https://www.cnn.com/2025/01/18/sport/ski-world-cup-prizes-selina-freitag-spt-intl/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2192057109.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T17:07:16Z",
+    "content": "As a reward for finishing first in qualifying at a ski jumping World Cup event, organizers presented the male winner Jan Haerl with 3,000 Swiss francs ($3,290), and the female winner Selina Freitag w… [+1626 chars]",
+    "category": "business & economy",
+    "country": "Switzerland",
+    "summary": "The news article is about a ski World Cup event where the male winner received a cash prize of 3,000 Swiss francs, while the female winner only received towels and shampoo. This highlights a gender disparity in prize money distribution in the event."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Anna Lamche",
+    "title": "Trump administration raids on illegal immigrants to start on day one",
+    "description": "Tom Homan, the incoming \"border tsar\", has promised a big raid on illegal immigrants in Chicago and elsewhere.",
+    "url": "https://www.bbc.co.uk/news/articles/cgrnn8zxdego",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/128b/live/89bcb910-d588-11ef-9502-835d7ef7ecca.jpg",
+    "publishedAt": "2025-01-18T10:11:06Z",
+    "content": "Homan expanded on the administration's plans on Fox News on Saturday, saying the deportations will not be \"raids\", but \"targeted enforcement operations\". \r\nHe described these efforts as \"well planned… [+3300 chars]",
+    "category": "immigration",
+    "country": "United States",
+    "summary": "The Trump administration is planning to conduct raids on illegal immigrants, with a focus on Chicago and other locations. Tom Homan, the incoming 'border tsar', has announced the intention to carry out a significant operation targeting undocumented individuals."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Adrienne Vogt, Tori B. Powell, Shania Shelton",
+    "title": "Live updates: Trump’s inauguration moves inside as TikTok ban looms",
+    "description": "President-elect Donald Trump’s inauguration will be held indoors Monday at the Capitol due to dangerously cold temperatures. Follow for live updates on the final days of the presidential transition.",
+    "url": "https://www.cnn.com/politics/live-news/trump-transition-inauguration-news-01-18-25/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2158793494.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T13:32:10Z",
+    "content": "On the last day of federal court before Donald Trump takes office, the judge who presided over the president-elects now-dismissed criminal January 6, 2021, case told a defendant who admitted to disor… [+1589 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "President-elect Donald Trump's inauguration will be held indoors at the Capitol due to cold temperatures. Follow for live updates on the final days of the presidential transition."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": null,
+    "title": "Former Oakland mayor Sheng Thao indicted on federal corruption charges",
+    "description": "Former Oakland Mayor Sheng Thao, her longtime partner and two local businessmen were named in an indictment unsealed Friday alleging the four conspired to funnel city business to companies owned by the men in exchange for money and benefits to Thao and her pa…",
+    "url": "https://www.cnn.com/2025/01/18/us/sheng-thao-indictment-oakland/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2182522943.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T18:16:14Z",
+    "content": "Former Oakland Mayor Sheng Thao, her longtime partner and two local businessmen were named in an indictment unsealed Friday alleging the four conspired to funnel city business to companies owned by t… [+2827 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "Former Oakland Mayor Sheng Thao, her partner, and two local businessmen in the United States were indicted on federal corruption charges. The indictment alleges that they conspired to funnel city business to companies owned by the men in exchange for money and benefits."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Alayna Treene",
+    "title": "Trump privately expresses interest in visiting China | CNN Politics",
+    "description": "Donald Trump has privately told his advisers he wants to visit China after being sworn in to office, three sources familiar with the talks told CNN, as the president-elect seeks to facilitate an open dialogue with Beijing while also pursuing hardline stance o…",
+    "url": "https://www.cnn.com/2025/01/18/politics/trump-interest-visiting-china/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2185637598-20241219003233342.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-19T03:56:42Z",
+    "content": "Donald Trump has privately told his advisers he wants to visit China after being sworn in to office, three sources familiar with the talks told CNN, as the president-elect seeks to facilitate an open… [+2609 chars]",
+    "category": "politics",
+    "country": "China",
+    "summary": "The news article is about Donald Trump expressing interest in visiting China after being sworn in to office. He aims to facilitate an open dialogue with Beijing while also maintaining a hardline stance on certain issues."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Auzinea Bacon",
+    "title": "TikTok users are scrambling to save memories ahead of Sunday’s ban | CNN Business",
+    "description": "Some users are holding out hope that TikTok won’t be banned forever. Others are saving their videos and saying goodbye in the app’s final hours.",
+    "url": "https://www.cnn.com/2025/01/18/business/tiktok-users-sunday-ban/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/10-tiktokapp-bej.JPG?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T23:29:16Z",
+    "content": "TikTok users who procrastinated in saving their favorite videos have been doing some last-minute housecleaning with the app set to shut down.\r\nOn Friday, the Supreme Court upheld a ban on TikTok over… [+3091 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "TikTok users in the United States are scrambling to save their memories ahead of a potential ban on the app. Some users are hopeful that the ban won't be permanent, while others are preparing to say goodbye to the platform in its final hours."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Meena Duerson",
+    "title": "They lost their insurance. Then their homes burned | CNN Business",
+    "description": "When Chad Comey heard sirens outside the Palisades condo he lived in with his parents last Tuesday, he didn’t think much of it. Then the fire alerts started.",
+    "url": "https://www.cnn.com/2025/01/18/business/home-insurance-california-fires-burned/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2192534460.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T13:50:17Z",
+    "content": "When Chad Comey heard sirens outside thePalisadescondo he lived in with his parentslast Tuesday, he didnt think much of it. Thenthe fire alerts started.\r\nIm holding out hope, Im rationalizing things,… [+8689 chars]",
+    "category": "safety",
+    "country": "United States",
+    "summary": "The news article is about a fire incident that affected residents in a condo in Palisades. Chad Comey and his parents lost their homes due to the fire after losing their insurance. The focus is on the safety aspect of the story."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "David Culver, Yong Xiong, Norma Galeana, Evelio Contreras, Rachel Clarke",
+    "title": "An industrial Chinatown near the US southern border readies its options should Trump tariffs come | CNN Business",
+    "description": "Chinese companies moved production to Mexico to have tariff-free access to the US market under the USMCA trade deal. With President-elect Donald Trump now threatening tariffs, these companies and their Mexican hosts are planning their options if the trade res…",
+    "url": "https://www.cnn.com/2025/01/18/business/mexico-china-industry-trump-tariffs/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/img-3689.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T10:56:21Z",
+    "content": "The huge industrial park sprawls across the rural landscape with row upon row of warehouse-sized manufacturing units. Logos and signs plastered with red and gold lucky colors in Chinese tradition bri… [+11075 chars]",
+    "category": "business & economy",
+    "country": "Mexico",
+    "summary": "Chinese companies in Mexico are preparing for potential tariffs by President-elect Donald Trump. They had moved production to Mexico to benefit from tariff-free access to the US market under the USMCA trade deal."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Auzinea Bacon",
+    "title": "FTC alleges Pepsi engaged in illegal price discrimination with ‘big box retailer’ | CNN Business",
+    "description": "The commission alleges that the retailer, whose name was redacted in the statement from commissioners, received “unfair pricing advantages” that were not made available to others.",
+    "url": "https://www.cnn.com/2025/01/17/business/pepsi-walmart-ftc-prices/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1998425999.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T00:44:59Z",
+    "content": "The Federal Trade Commission on Friday sued PepsiCo for allegedly engaging in illegal price discrimination with a large retailer.\r\nThe commission alleges that the retailer, whose name was redacted in… [+1980 chars]",
+    "category": "business & economy",
+    "country": "World",
+    "summary": "The Federal Trade Commission (FTC) has alleged that Pepsi engaged in illegal price discrimination with a 'big box retailer'. The retailer, whose name was redacted, allegedly received unfair pricing advantages not available to others, according to the commission."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": null,
+    "title": "US accuses Walgreens of filling unlawful opioid prescriptions | CNN Business",
+    "description": "The U.S. Justice Department on Friday accused pharmacy chain operator Walgreens Boots Alliance of contributing to the U.S. opioid epidemic by filling millions of unlawful prescriptions for addictive painkillers and other drugs.",
+    "url": "https://www.cnn.com/2025/01/18/business/walgreens-doj-opioid-prescriptions/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-916579290.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T14:02:06Z",
+    "content": "The U.S. Justice Department on Friday accused pharmacy chain operator Walgreens Boots Alliance of contributing to the U.S. opioid epidemic by filling millions of unlawful prescriptions for addictive … [+2740 chars]",
+    "category": "safety",
+    "country": "United States",
+    "summary": "The U.S. Justice Department accused pharmacy chain operator Walgreens Boots Alliance of contributing to the U.S. opioid epidemic by filling millions of unlawful prescriptions for addictive painkillers and other drugs."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Maureen O'Hare",
+    "title": "The ‘magic bus’ that survived the Southern California wildfires | CNN",
+    "description": "In travel news this week: the world’s 50 best cities according to Time Out, huge religious festivals in Italy and India, plus the little blue bus that faced down wildfires and is ready to hit the road.",
+    "url": "https://www.cnn.com/2025/01/18/travel/travel-news-blue-volkswagen-malibu-wildfires-photo/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/02-ap25013268881521-jpg.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T11:00:57Z",
+    "content": "Editors note: Sign up for Unlocking the World, CNN Travels weekly newsletter. Get news about destinations, plus the latest in aviation, food and drink, and where to stay.\r\nIn travel news this week: t… [+3514 chars]",
+    "category": "tourism",
+    "country": "World",
+    "summary": "The article discusses travel news, including the world's best cities, religious festivals in Italy and India, and a blue bus that survived wildfires. Since no specific country is mentioned in the context, the news is related to tourism on a global scale."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Aaron Pellish",
+    "title": "Trump says mass deportations will happen quickly, stresses importance of Israel-Hamas deal in wide-ranging NBC News interview | CNN Politics",
+    "description": "President-elect Donald Trump said mass deportations will begin “very quickly” after taking office, one of a number of plans he discussed in a phone interview with NBC News on Saturday.",
+    "url": "https://www.cnn.com/2025/01/18/politics/trump-interview-first-week-priorities/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2167290418.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T21:02:02Z",
+    "content": "President-elect Donald Trump said mass deportations will begin very quickly after taking office, one of a number of plans he discussed in a phone interview with NBC News on Saturday.\r\nAs Trump prepar… [+5460 chars]",
+    "category": "immigration",
+    "country": "United States",
+    "summary": "President-elect Donald Trump announced in an interview with NBC News that mass deportations will begin quickly after he takes office. This statement highlights the immigration policies that are expected to be implemented in the United States under the new administration."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Joan Biskupic",
+    "title": "Since Donald Trump last entered the White House, the Supreme Court created a more powerful president | CNN Politics",
+    "description": "When the Supreme Court justices first shared an inaugural stage with Donald Trump, they heard the new president deliver a 16-minute declaration against the country and vow, “This American carnage stops right here and stops right now.”",
+    "url": "https://www.cnn.com/2025/01/18/politics/trump-relationship-with-supreme-court-second-term/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-994988380.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T11:36:14Z",
+    "content": "When the Supreme Court justices first shared an inaugural stage with Donald Trump, they heard the new president deliver a 16-minute declaration against the country and vow, This American carnage stop… [+10997 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The news article discusses the impact of the Supreme Court decisions on the presidency since Donald Trump took office. It highlights a pivotal moment during Trump's inauguration speech where he addressed issues within the United States."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Dalia Faheid",
+    "title": "‘Evacuation fatigue’ sets in for Southern Californians yet to return home after Los Angeles wildfires",
+    "description": "Frustrated Los Angeles County evacuees are anxious to return to their houses to survey damage, retrieve necessities, figure out what their insured losses are and assess what can be salvaged of their remaining property.",
+    "url": "https://www.cnn.com/2025/01/18/us/los-angeles-wildfires-evacuees-return/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap25008789681360.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T14:21:44Z",
+    "content": "No stranger to natural disasters, Pasadena resident Pedro Rojas keeps a safety bag in his car with essentials like a jacket, gloves and running shoes in case he needs to flee at a moments notice.\r\nRo… [+8724 chars]",
+    "category": "safety",
+    "country": "United States",
+    "summary": "Southern Californians affected by the Los Angeles wildfires are experiencing 'evacuation fatigue' as they await to return home. They are eager to assess the damage, retrieve essentials, and determine their losses and salvageable belongings."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jeff Zeleny, Kevin Liptak, Arlette Saenz",
+    "title": "Biden leaves office nostalgic about five-decade career, and frustrated by how it ended | CNN Politics",
+    "description": "As President Joe Biden was making one final lap around town this week, delivering farewell speeches to his diplomatic corps, military leaders and the nation at large, his appearances belied a grim reality: This is not how he’d hoped his half-century career in…",
+    "url": "https://www.cnn.com/2025/01/18/politics/president-joe-biden-legacy-kamala-harris/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2193654168.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T12:00:57Z",
+    "content": "As President Joe Biden was making one final lap around town this week, delivering farewell speeches to his diplomatic corps, military leaders and the nation at large, his appearances belied a grim re… [+10668 chars]",
+    "category": "politics",
+    "country": "United States",
+    "summary": "The news article is about President Joe Biden's farewell speeches as he leaves office after a five-decade career. The focus is on his sentiments and frustrations about how his career ended."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Bbc News",
+    "title": "Gaza ceasefire latest: Three released hostages back in Israel after being freed in Gaza ceasefire",
+    "description": "The three hostages - including UK-Israel national Emily Damari - were earlier handed to the Red Cross in Gaza City.",
+    "url": "https://www.bbc.co.uk/news/live/ckg0znng8x2t",
+    "urlToImage": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+    "publishedAt": "2025-01-19T05:50:05Z",
+    "content": "Lyse DoucetChief international correspondent\r\nThe history of the Middle East is of wars, peace-making, and deal breaking. So many agreements, signed with cautious hope, have come and gone. Every brea… [+1061 chars]",
+    "category": "safety",
+    "country": "Israel",
+    "summary": "Three hostages, including UK-Israel national Emily Damari, have been released and are back in Israel after being freed in Gaza ceasefire. They were handed over to the Red Cross in Gaza City."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Susie Rack",
+    "title": "Boy, 7, inspired parents' mission for patient gifts in Birmingham",
+    "description": "Their son Ethan's cancer has inspired Carl and Laura, from Brownhills, to raise £12,500 for toys.",
+    "url": "https://www.bbc.co.uk/news/articles/cdd96y175yjo",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/5417/live/3eed4e80-d426-11ef-943c-b5e53c85fbbb.png",
+    "publishedAt": "2025-01-18T07:18:03Z",
+    "content": "As Ethan went into remission, in December 2021, his parents decided to reach out to the community to help organise a local truck show as a treat.\r\n\"It was amazing the amount of money we raised,\" Carl… [+371 chars]",
+    "category": "health",
+    "country": "United Kingdom",
+    "summary": "A couple from Brownhills, United Kingdom, has raised £12,500 for toys to be given to patients inspired by their 7-year-old son Ethan's battle with cancer. The initiative aims to bring joy and comfort to children undergoing medical treatment in Birmingham."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": null,
+    "title": "As the wildfires grew closer, people with disabilities say they often had to fend for themselves | CNN",
+    "description": "When people with disabilities aren’t included in disaster plans, the results can be deadly, advocates say. They advise that people make plans in case of wildfires or other emergencies.",
+    "url": "https://www.cnn.com/2025/01/18/health/disability-la-fire-evacuations-wellness/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2192352117-20250108154131793.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T14:50:55Z",
+    "content": "As the Pacific Palisades and Eaton fires began last week, Jo-Marie Lawrence was watching a movie in Burbank with her friend when the mall lost power.\r\nThat meant Lawrence, 32, a quadriplegic actor an… [+9350 chars]",
+    "category": "safety",
+    "country": "United States",
+    "summary": "The news article is about the United States. It highlights the challenges faced by people with disabilities during disasters like wildfires. Advocates emphasize the importance of including people with disabilities in disaster plans to prevent deadly outcomes."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Michelle Roberts",
+    "title": "Contraceptive dilemma: Why some women are ditching pills and coils for fertility apps",
+    "description": "Some women are opting for fertility tracking apps to avoid mood swings and weight gain on \"hormonal\" contraception.",
+    "url": "https://www.bbc.co.uk/news/articles/c93lq2w5n44o",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6bb9/live/202def90-d3fe-11ef-bcce-a16f350759fd.png",
+    "publishedAt": "2025-01-18T17:05:52Z",
+    "content": "Emily, who is 39 and from Glasgow, had an abortion in 2021 after finding out she was pregnant while using a tracking app as contraception.\r\nIn 2018 she came off the pill which she'd been on since the… [+1685 chars]",
+    "category": "health",
+    "country": "World",
+    "summary": "The article discusses how some women are choosing fertility tracking apps over traditional hormonal contraception to avoid side effects like mood swings and weight gain. This trend reflects a growing interest in natural and non-hormonal methods of birth control among women worldwide."
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Brenda Goodman",
+    "title": "With bird flu cases rising, certain kinds of pet food may be risky for animals",
+    "description": "The US Food and Drug Administration said it is tracking multiple cases of H5N1 bird flu in domestic and wild cats, including cases linked to contaminated pet food.",
+    "url": "https://www.cnn.com/2025/01/18/health/bird-flu-pet-food-cat-deaths/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/img-1398.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2025-01-18T14:12:48Z",
+    "content": "When Jamila Acfalle decided to get her first cat, she had one requirement: It had to be brave.\r\nAcfalle is a dog trainer in a suburb of Portland, Oregon. She works with dogs that have behavior proble… [+19444 chars]",
+    "category": "health",
+    "country": "United States",
+    "summary": "The US Food and Drug Administration is monitoring multiple cases of H5N1 bird flu in domestic and wild cats, some of which are linked to contaminated pet food. This raises concerns about the risks certain kinds of pet food may pose to animals as bird flu cases continue to rise."
+  },
+  {
+    "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+    },
+    "author": "Alastair Fee And Ben Robinson",
+    "title": "'I break the law to buy my child's life-saving cannabis drug'",
+    "description": "Parents going to extreme lengths to get medicinal cannabis oils for their epileptic children speak to the BBC.",
+    "url": "https://www.bbc.co.uk/news/articles/c93lq2lvvgeo",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6664/live/0df48400-d4cc-11ef-9789-03dbac2525e2.png",
+    "publishedAt": "2025-01-19T06:00:46Z",
+    "content": "Parent support charity MedCan, which campaigns for wider access to medical cannabis, has attempted to quantify how many UK parents are accessing the medicines illegally online.\r\nAfter conducting a re… [+1392 chars]",
+    "category": "health",
+    "country": "UK",
+    "summary": "Parents in the UK are breaking the law to obtain life-saving cannabis oils for their epileptic children. They are resorting to extreme measures to access medicinal cannabis, highlighting the challenges faced by families in need of such treatment."
+  }
+]
