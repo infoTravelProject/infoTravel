@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>infoTravel News</title>
+   <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+   <h1>infoTravel News</h1>
+
+   <div class="debug-info">
+       <p>Total articles: {{ articles|length }}</p>
+       <p>Categories: {{ categories|join(', ') }}</p>
+   </div>
+
+   {% for category in categories %}
+       <section class="category-section">
+           <h2 class="category-title">{{ category|title }}</h2>
+           <div class="news-grid">
+               {% for article in articles %}
+                   {% if article.get('category', 'general') == category %}
+                       <article class="news-card">
+    {% if article.urlToImage %}
+<!--        <div class="image-container">-->
+<!--            <img src="{{ article.urlToImage }}" alt="{{ article.title }}" class="news-image">-->
+<!--        </div>-->
+    {% endif %}
+    <h3 class="news-title">{{ article.title }}</h3>
+    <div class="news-meta">
+        <span class="meta-item">🌍 {{ article.country }}</span>
+        <span class="meta-item">📰 {{ article.source.name }}</span>
+        <span class="meta-item">📅 {{ article.publishedAt[:10] }}</span>
+    </div>
+    <p class="news-content">
+        {% if article.summary %}
+            {{ article.summary }}
+        {% else %}
+            {{ article.description }}
+        {% endif %}
+    </p>
+    {% if article.url %}
+        <a href="{{ article.url }}" class="read-more" target="_blank">Read more</a>
+    {% endif %}
+</article>
+                   {% endif %}
+               {% endfor %}
+           </div>
+       </section>
+   {% endfor %}
+</body>
+</html>
