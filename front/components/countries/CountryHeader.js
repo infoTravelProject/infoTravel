@@ -3,7 +3,7 @@ const CountryHeader = ({ countryName, flagSrc, backgroundSrc }) => (
         className="relative w-full h-[60vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundSrc})` }}
     >
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/[0.7] to-transparent"></div>
         <div className="absolute top-8 left-16">
             <img src={flagSrc} alt={`${countryName} flag`} className="w-18 h-16" />
         </div>

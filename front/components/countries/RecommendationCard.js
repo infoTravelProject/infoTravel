@@ -14,9 +14,9 @@ const RecommendationCard = ({ title, description, image, flag, buttonText }) => 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
 
             {/* flag */}
-            <div className="absolute top-6 right-6">
-                <img src={flag} alt="Recommendation flag" className="w-18 h-16" />
-            </div>
+            {/*<div className="absolute top-6 right-6">*/}
+            {/*    <img src={flag} alt="Recommendation flag" className="w-18 h-16" />*/}
+            {/*</div>*/}
 
             {/* content */}
             <div className="relative p-6">

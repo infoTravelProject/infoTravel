@@ -6,7 +6,7 @@
       "lastUpdated": "2024-08-18",
       "stillValid": "2025-01-19"
     },
-    "background": "/london_test2.jpg",
+    "background": "/UK_background.jpg",
     "summary": "The United Kingdom (UK) is a captivating destination that combines rich history, vibrant culture, and breathtaking landscapes. Comprised of England, Scotland, Wales, and Northern Ireland, the UK offers something for every traveler. Explore iconic landmarks like London's Big Ben, Edinburgh Castle, and Stonehenge, or lose yourself in the charming countryside of the Lake District and Scottish Highlands. Renowned for its world-class museums, traditional pubs, and diverse culinary scene, the UK seamlessly blends modernity with timeless traditions. Whether you're interested in historic cities, coastal escapes, or cultural festivals, the UK promises an unforgettable experience.",
     "recommendation": {
       "title": "Skye",
@@ -76,7 +76,7 @@
       "lastUpdated": "2022-10-01",
       "stillValid": "2025-01-01"
     },
-    "background": "/poland_test.jpg",
+    "background": "/Poland_background.jpg",
     "summary": "Poland is a country of rich history, diverse landscapes, and vibrant cities. With its medieval castles, stunning natural parks, and welcoming culture, Poland offers something for every traveler. Explore the historic Old Town of Kraków, the modern streets of Warsaw, or relax by the serene lakes of Mazury. The country’s cultural scene includes world-class museums, art galleries, and performances that reflect its deep artistic roots. Poland is also known for its hearty cuisine and lively festivals, making it a must-visit destination for cultural and outdoor enthusiasts alike.",
     "recommendation": {
       "title": "Zakopane",
@@ -286,12 +286,12 @@
       "lastUpdated": "2023-03-01",
       "stillValid": "2025-01-01"
     },
-    "background": "/norway_test.jpg",
+    "background": "/Norway_background.webp",
     "summary": "Norway is known for its dramatic fjords, stunning landscapes, and outdoor adventure opportunities. From the breathtaking Northern Lights in Tromsø to the scenic beauty of the Lofoten Islands, Norway offers endless outdoor experiences. The country's rich history and Viking heritage are complemented by modern cities like Oslo, which offers world-class museums and cultural sites. Norway is the perfect destination for nature lovers, thrill-seekers, and those who enjoy a peaceful, clean environment.",
     "recommendation": {
       "title": "Geirangerfjord",
       "description": "Geirangerfjord is one of Norway's most famous natural wonders, with towering cliffs, waterfalls, and crystal-clear waters. The fjord offers plenty of activities, including cruises, kayaking, and hiking. It’s a perfect destination for nature lovers and photographers.",
-      "image": "/geirangerfjord_test.jpg",
+      "image": "/Geiranger.jpg",
       "flag": null,
       "buttonText": "Open in trip planner"
     },
@@ -340,12 +340,12 @@
       {
         "title": "Local cuisine",
         "content": "Norwegian cuisine is simple, focusing on fresh, locally sourced ingredients. Common dishes include salmon, cod, and reindeer. Traditional dishes like klippfisk (dried cod) and raspeballer (potato dumplings) provide an authentic taste of Norway.",
-        "image": "/norwegian_salmon.jpg"
+        "image": "/salmon.jpg"
       },
       {
         "title": "Higher education",
         "content": "Norway offers high-quality education with institutions like the University of Oslo and the Norwegian School of Economics. The country is known for its focus on research, environmental studies, and technology.",
-        "image": "/university_of_oslo.jpg"
+        "image": "/oslo.jpg"
       }
     ]
   },
@@ -426,12 +426,12 @@
       "lastUpdated": "2020-01-01",
       "stillValid": "2025-01-01"
     },
-    "background": "/tokyo_test.jpg",
+    "background": "/Japan_background.jpg",
     "summary": "Japan is a fascinating country that blends ancient traditions with cutting-edge technology. Known for its rich culture, scenic landscapes, and bustling cities, Japan offers a wide array of experiences. Explore Tokyo, a city that never sleeps, or visit Kyoto to immerse yourself in traditional temples and beautiful gardens. The natural beauty of Mount Fuji and the hot springs in Hakone are must-visit. Japanese cuisine, including sushi, ramen, and tempura, is internationally famous, and the country’s hospitality, or 'omotenashi,' ensures a warm welcome to all visitors.",
     "recommendation": {
       "title": "Kyoto",
       "description": "Kyoto, the heart of traditional Japan, is home to stunning temples, shrines, and gardens. Its ancient atmosphere, combined with the beauty of the changing seasons, offers a unique experience. Visit the iconic Fushimi Inari Shrine, the tranquil Arashiyama Bamboo Grove, or the serene Kinkaku-ji (Golden Pavilion). Kyoto is also famous for its tea ceremonies and traditional ryokan inns.",
-      "image": "/kyoto_test.jpg",
+      "image": "/kyoto.webp",
       "flag": null,
       "buttonText": "Open in trip planner"
     },
@@ -475,17 +475,17 @@
       {
         "title": "Culture",
         "content": "Japan is rich in cultural traditions, from tea ceremonies and kimono-wearing to its ancient temples and festivals. Etiquette is important in Japan, and travelers should be aware of practices such as bowing as a greeting, removing shoes when entering homes or certain traditional establishments, and handling chopsticks with care. The Japanese are also known for their hospitality and politeness, making it a very welcoming place to visit.",
-        "image": null
+        "image": "/japan_idk.webp"
       },
       {
         "title": "Local cuisine",
         "content": "Japan’s cuisine is world-renowned, with dishes like sushi, sashimi, ramen, tempura, and takoyaki being staples of the culinary scene. For dessert lovers, Japanese sweets like mochi, matcha-flavored treats, and dorayaki are popular choices. Don't forget to try some local specialties such as okonomiyaki (savory pancake) in Osaka or kaiseki (traditional multi-course meal) in Kyoto. Japanese food culture is also heavily based on seasonal ingredients, so there’s always something new to try.",
-        "image": "/sushi.jpg"
+        "image": "/sushi.png"
       },
       {
         "title": "Higher education",
         "content": "Japan has a strong reputation for its advanced technology and scientific research. Leading universities like the University of Tokyo, Kyoto University, and Osaka University offer world-class education, especially in fields like engineering, technology, and medicine. Japan also has an increasing number of international students, supported by scholarships and exchange programs. The country’s rigorous academic system provides students with a strong foundation for their future careers.",
-        "image": "/university_tokyo.jpg"
+        "image": null
       }
     ]
   },
@@ -496,12 +496,12 @@
       "lastUpdated": "2025-01-18",
       "stillValid": "2025-01-20"
     },
-    "background": "/iceland_test.jpg",
+    "background": "/Iceland_background.jpg",
     "summary": "Iceland is a land of dramatic landscapes, including volcanoes, glaciers, waterfalls, and geothermal hot springs. It’s a country that thrives on natural beauty and unique geological features. Visit Reykjavik, the capital, where you can explore vibrant culture, modern architecture, and rich history. Iceland’s natural wonders, such as the Blue Lagoon, the Golden Circle, and the Northern Lights, draw visitors from all over the world. It’s an ideal destination for nature lovers, adventure seekers, and those wanting to experience one of the most unspoiled environments on Earth.",
     "recommendation": {
       "title": "Golden Circle",
       "description": "The Golden Circle is a popular tourist route that showcases some of Iceland’s most stunning natural wonders, including the Gullfoss waterfall, the geothermal area of Geysir, and Thingvellir National Park. This route offers a glimpse into the volcanic activity that shapes Iceland’s landscape, as well as its rich history as the site of the first Icelandic parliament.",
-      "image": "/golden_circle_test.jpg",
+      "image": "/Iceland_golden.png",
       "flag": "/iceland_flag.png",
       "buttonText": "Open in trip planner"
     },
@@ -545,17 +545,17 @@
       {
         "title": "Culture",
         "content": "Icelandic culture is deeply rooted in its Viking heritage, with a strong tradition of storytelling, literature, and music. The Icelandic people value nature, and sustainability is important in their daily lives. Reykjavik, the capital, is known for its vibrant arts scene, museums, and festivals. Iceland also boasts a rich history of literature, especially medieval sagas, that have shaped its modern identity.",
-        "image": null
+        "image": "/viking.png"
       },
       {
         "title": "Local cuisine",
         "content": "Icelandic cuisine is heavily influenced by the country’s cold climate and its reliance on fish, lamb, and dairy products. Traditional dishes include fermented shark (hákarl), lamb stew, and Icelandic yogurt (skyr). Seafood lovers will also enjoy fresh fish dishes, especially cod and salmon. Icelandic cuisine has modernized in recent years, with a growing emphasis on locally sourced ingredients and international influences.",
-        "image": "/iceland_food.jpg"
+        "image": "/Iceland_food.png"
       },
       {
         "title": "Higher education",
         "content": "Iceland offers high-quality education with a strong emphasis on sustainability and environmental studies. Reykjavik University and the University of Iceland are the two main higher education institutions, both offering a range of undergraduate and graduate programs. The country also attracts international students due to its unique cultural and environmental studies programs.",
-        "image": "/university_iceland.jpg"
+        "image": null
       }
     ]
   },
@@ -630,12 +630,3 @@
     ]
   }
 }
-
-
-
-
-
-
-
-
-
