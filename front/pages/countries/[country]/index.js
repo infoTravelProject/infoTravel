@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from "next/router";
 import countries from "../../../data/countries.json";
 import attractionsData from "../../../data/attractions_all_countries.json";
@@ -12,10 +13,8 @@ import CurrencyInfo from "../../../components/countries/CurrencyInfo";
 import Notifications from "../../../components/countries/Notifications";
 import AttractionsGallery from "../../../components/countries/AttractionsGallery";
 import CountrySelector from "../../../components/CountrySelector";
-import {useEffect, useState} from "react";
-import {useGlobalContext} from "@/components/context/GlobalContext";
-
-
+import { useEffect, useState } from "react";
+import { useGlobalContext } from "@/components/context/GlobalContext";
 
 export default function CountryPage() {
     const router = useRouter();
@@ -25,9 +24,8 @@ export default function CountryPage() {
     const { country } = router.query;
 
     const normalizeCountryName = (name) => {
-        return name?.toLowerCase().replace(/^the\s+/i, "").trim();
+        return (name?.toLowerCase().replace(/^the\s+/i, "").trim()) || "";
     };
-
 
     const normalizedCountry = normalizeCountryName(country);
 
@@ -36,7 +34,6 @@ export default function CountryPage() {
 
         const fetchData = async () => {
             try {
-                console.log(normalizedCountry);
                 const response = await fetch(`http://localhost:8080/api/country/name/${encodeURIComponent(normalizedCountry)}`, {
                     method: "GET",
                 });
@@ -47,12 +44,8 @@ export default function CountryPage() {
 
                 const countryFromDBData = await response.json();
                 setCountryDBData(countryFromDBData.data);
-                console.log(countryFromDBData);
-                console.log(countryDBData);
             } catch (error) {
-                console.log(error);
-            } finally {
-                // Optional cleanup or final actions
+                console.error(error);
             }
         };
 
@@ -64,7 +57,6 @@ export default function CountryPage() {
 
         const fetchData = async () => {
             try {
-                console.log(selectedCountry);
                 const response = await fetch(`http://localhost:8080/api/country/name/${encodeURIComponent(selectedCountry)}`, {
                     method: "GET",
                 });
@@ -75,17 +67,19 @@ export default function CountryPage() {
 
                 const countryFromDBData = await response.json();
                 setSelectedCountryDBData(countryFromDBData.data);
-                console.log(countryFromDBData);
-                console.log(selectedCountryDBData);
             } catch (error) {
-                console.log(error);
-            } finally {
-                // Optional cleanup or final actions
+                console.error(error);
             }
         };
 
         fetchData();
     }, [selectedCountry]);
+
+    useEffect(() => {
+        if (user && typeof normalizedCountry === "string" && !normalizedCountry.includes(user.region.toLowerCase())) {
+            setSelectedCountryFromUserData(user.region.toLowerCase());
+        }
+    }, [user, normalizedCountry]);
 
     const normalizedCountries = Object.entries(countries).reduce((acc, [key, value]) => {
         acc[normalizeCountryName(key)] = value;
@@ -98,49 +92,32 @@ export default function CountryPage() {
         acc[normalizeCountryName(key)] = value;
         return acc;
     }, {});
+
     const countryAttractions = normalizedAttractionsData[normalizedCountry] || [];
 
     if (!countryData) {
         return <p className="text-white">Country data not found.</p>;
     }
-
-    setSelectedCountryFromUserData(()=>{
-        if(user){
-            if(!normalizedCountry.includes(user.region.toLowerCase())){
-                return user.region.toLowerCase();
-            }
-        }
-        else return null;
-    });
-
     return (
         <div className="text-white bg-[#121212]">
-            {/* Render only if countryDBData is available */}
             {countryDBData ? (
                 <>
-                    {/* Country header */}
                     <CountryHeader
                         countryName={countryDBData.name}
                         flagSrc={countryDBData.flagUrl}
                         backgroundSrc={countryData.background}
                     />
-
-                    {/* Header bar */}
                     <HeaderBar {...countryData.risk} />
-
                     <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 px-16 py-8">
-                        {/* Left column */}
                         <div className="md:col-span-2 space-y-8">
                             <CountryPageSection title="Summary" content={countryData.summary} />
                             <RecommendationCard {...countryData.recommendation} />
                         </div>
-
-                        {/* Right column */}
                         <div className="space-y-1">
                             <CountrySelector currentCountry={normalizedCountry} />
                             <CurrencyInfo
-                                currency={!!countryDBData ? countryDBData.currency.toLowerCase() : "pln"}
-                                toCurrency={!!selectedCountryDBData ? selectedCountryDBData.currency.toLowerCase() : "pln"}
+                                currency={countryDBData?.currency?.toLowerCase() || "usd"}
+                                toCurrency={selectedCountryDBData?.currency?.toLowerCase() || "usd"}
                             />
                             <VisaInfo currentCountry={normalizedCountry} />
                             <BorderInfo {...countryData.borderControl} />
@@ -148,15 +125,11 @@ export default function CountryPage() {
                             <Notifications items={countryData.notifications} />
                         </div>
                     </div>
-
-                    {/* Gallery of attractions */}
                     <div className="px-16 py-4">
                         <h2 className="text-2xl font-bold mb-2">Recommended Points of Interest</h2>
                         <hr className="h-px mb-12 bg-gray-700 border-0" />
                         <AttractionsGallery attractions={countryAttractions} />
                     </div>
-
-                    {/* Additional sections */}
                     <div className="px-16 py-8 mb-8">
                         {countryData.sections.map((section, index) => (
                             <CountryPageSection key={index} {...section} />
