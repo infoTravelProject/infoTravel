@@ -2,8 +2,10 @@
 #
 >**infoTravel** _is a personalized online service that collects and shares data from all countries worldwide. This online application is intended to facilitate the integration of scattered data and provide the user with easier, coherent access to comprehensive, up-to-date information. The provided data covers statistics, culture, visa regulations, public safety, currency exchange, and more._
 
-### UI Design (Figma) link:
+### Desktop UI Design (Figma) link:
 https://www.figma.com/proto/HxRNGBntYsGaqtBJYrNXvK/infoTravel---proto?node-id=13-3&starting-point-node-id=13%3A3&t=n3tOTN5lWPIuF7bU-1
+### Mobile UI Design (Figma) link:
+https://www.figma.com/proto/VNjN08GoENGL46TsF7US2U/ICK---infoTravel?node-id=91-310&starting-point-node-id=77%3A30&t=Sm4TuQrvRKw38WyX-1
 ### Frontend technologies
 ---
 - Next.js
